@@ -25,6 +25,10 @@ setup(
     entry_points={
         'console_scripts': [ 'robot_status_publisher = robot_status_demo.robot_status_publisher:main',
         'robot_status_monitor = robot_status_demo.robot_status_monitor:main',
+        'robot_grasp_server = robot_status_demo.robot_grasp_server:main',
+        'robot_grasp_client = robot_status_demo.robot_grasp_client:main',
+        'robot_gripper_control_server = robot_status_demo.robot_gripper_control_server:main',
+        'robot_gripper_control_client = robot_status_demo.robot_gripper_control_client:main',
         ],
     },
 )
