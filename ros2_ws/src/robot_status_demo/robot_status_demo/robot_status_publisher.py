@@ -19,9 +19,15 @@ class RobotStatusPublisher(Node):
         ]
 
         self.status_index = 0
-
-        self.timer_ = self.create_timer(
-            1.0,
+        self.declare_parameter(
+            'publish_interval',
+            1.0
+        )
+        publish_interval = self.get_parameter(
+        'publish_interval'
+        ).value
+        self.timer = self.create_timer(
+            publish_interval,
             self.timer_callback
         )
     def timer_callback(self):
