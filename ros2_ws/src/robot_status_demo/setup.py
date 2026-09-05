@@ -29,6 +29,8 @@ setup(
         'robot_grasp_client = robot_status_demo.robot_grasp_client:main',
         'robot_gripper_control_server = robot_status_demo.robot_gripper_control_server:main',
         'robot_gripper_control_client = robot_status_demo.robot_gripper_control_client:main',
+        'robot_move_action_client = robot_status_demo.robot_move_action_client:main',
+        'robot_move_action_server = robot_status_demo.robot_move_action_server:main',
         ],
     },
 )
