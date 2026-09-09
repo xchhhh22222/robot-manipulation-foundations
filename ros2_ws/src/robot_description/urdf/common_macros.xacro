@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- 长方体 Link 模板 -->
+  <xacro:macro
+    name="box_link"
+    params="name size_x size_y size_z origin_xyz color">
+
+    <link name="${name}">
+      <visual>
+
+        <origin
+          xyz="${origin_xyz}"
+          rpy="0 0 0"
+        />
+
+        <geometry>
+          <box size="${size_x} ${size_y} ${size_z}"/>
+        </geometry>
+
+        <material name="${name}_material">
+          <color rgba="${color}"/>
+        </material>
+
+      </visual>
+    </link>
+
+  </xacro:macro>
+
+
+  <!-- 旋转关节模板 -->
+  <xacro:macro
+    name="revolute_joint"
+    params="name parent child origin_xyz axis_xyz lower upper">
+
+    <joint name="${name}" type="revolute">
+
+      <parent link="${parent}"/>
+      <child link="${child}"/>
+
+      <origin
+        xyz="${origin_xyz}"
+        rpy="0 0 0"
+      />
+
+      <axis xyz="${axis_xyz}"/>
+
+      <limit
+        lower="${lower}"
+        upper="${upper}"
+        effort="10.0"
+        velocity="1.0"
+      />
+
+    </joint>
+
+  </xacro:macro>
+
+</robot>

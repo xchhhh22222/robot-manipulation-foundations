@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+
+<robot
+  xmlns:xacro="http://www.ros.org/wiki/xacro"
+  name="simple_arm">
+ <xacro:include
+    filename="$(find robot_description)/urdf/common_macros.xacro"
+  />
+  <!-- ========================= -->
+  <!-- ① 参数区：放 property -->
+  <!-- ========================= -->
+
+  <xacro:property name="base_width" value="0.4"/>
+  <xacro:property name="base_height" value="0.1"/>
+
+  <xacro:property name="link1_width" value="0.1"/>
+  <xacro:property name="link1_length" value="0.5"/>
+
+  <xacro:property name="link2_width" value="0.08"/>
+  <xacro:property name="link2_length" value="0.4"/>
+
+  <xacro:property name="joint_limit" value="1.57"/>
+
+
+ 
+
+
+
+  <!-- ========================= -->
+  <!-- ③ 真正生成机器人 -->
+  <!-- ========================= -->
+
+  <!-- base_link -->
+  <xacro:box_link
+    name="base_link"
+    size_x="${base_width}"
+    size_y="${base_width}"
+    size_z="${base_height}"
+    origin_xyz="0 0 ${base_height / 2.0}"
+    color="0.6 0.6 0.6 1.0"
+  />
+
+
+  <!-- link1 -->
+  <xacro:box_link
+    name="link1"
+    size_x="${link1_width}"
+    size_y="${link1_width}"
+    size_z="${link1_length}"
+    origin_xyz="0 0 ${link1_length / 2.0}"
+    color="0.2 0.4 0.8 1.0"
+  />
+
+
+  <!-- joint1 -->
+  <xacro:revolute_joint
+    name="joint1"
+    parent="base_link"
+    child="link1"
+    origin_xyz="0 0 ${base_height}"
+    axis_xyz="0 1 0"
+    lower="${-joint_limit}"
+    upper="${joint_limit}"
+  />
+
+
+  <!-- link2 -->
+  <xacro:box_link
+    name="link2"
+    size_x="${link2_length}"
+    size_y="${link2_width}"
+    size_z="${link2_width}"
+    origin_xyz="${link2_length / 2.0} 0 0"
+    color="1.0 0.5 0.1 1.0"
+  />
+
+
+  <!-- joint2 -->
+  <xacro:revolute_joint
+    name="joint2"
+    parent="link1"
+    child="link2"
+    origin_xyz="0 0 ${link1_length}"
+    axis_xyz="0 1 0"
+    lower="${-joint_limit}"
+    upper="${joint_limit}"
+  />
+
+
+  <!-- tool_link -->
+  <link name="tool_link"/>
+
+  <joint name="tool_joint" type="fixed">
+
+    <parent link="link2"/>
+    <child link="tool_link"/>
+
+    <origin
+      xyz="${link2_length} 0 0"
+      rpy="0 0 0"
+    />
+
+  </joint>
+
+
+</robot>
