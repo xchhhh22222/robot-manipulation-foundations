@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro
+    name="simple_arm_ros2_control"
+    params="name">
+
+    <ros2_control
+      name="${name}"
+      type="system">
+
+      <!-- 现在没有真实机械臂，所以使用 Mock Hardware -->
+      <hardware>
+        <plugin>mock_components/GenericSystem</plugin>
+      </hardware>
+
+
+      <!-- joint1 -->
+      <joint name="joint1">
+
+        <!-- MoveIt 可以发送位置命令 -->
+        <command_interface name="position"/>
+
+        <!-- ros2_control 可以读取当前位置 -->
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+
+        <state_interface name="velocity"/>
+
+      </joint>
+
+
+      <!-- joint2 -->
+      <joint name="joint2">
+
+        <command_interface name="position"/>
+
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+
+        <state_interface name="velocity"/>
+
+      </joint>
+
+    </ros2_control>
+
+  </xacro:macro>
+
+</robot>

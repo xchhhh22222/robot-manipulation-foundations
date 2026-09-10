@@ -1,0 +1,27 @@
+# MoveIt 的轨迹执行设置
+trajectory_execution:
+  allowed_execution_duration_scaling: 1.2
+  allowed_goal_duration_margin: 0.5
+  allowed_start_tolerance: 0.01
+  execution_duration_monitoring: true
+
+
+# MoveIt 使用的 Controller Manager
+moveit_controller_manager:
+  moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+
+# 告诉 MoveIt 有哪些控制器
+moveit_simple_controller_manager:
+
+  controller_names:
+    - arm_controller
+
+  arm_controller:
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+
+    joints:
+      - joint1
+      - joint2

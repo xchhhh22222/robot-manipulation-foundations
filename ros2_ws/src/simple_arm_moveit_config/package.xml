@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<package format="3">
+
+  <name>simple_arm_moveit_config</name>
+  <version>0.0.0</version>
+
+  <description>
+    MoveIt2 configuration package for the simple arm robot.
+  </description>
+
+  <maintainer email="3324049617@qq.com">
+    wanxincheng
+  </maintainer>
+
+  <license>Apache-2.0</license>
+
+
+  <!-- 构建系统 -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+
+  <!-- Launch / Xacro -->
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+
+  <!-- 机器人模型 -->
+  <exec_depend>robot_description</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+
+
+  <!-- ros2_control -->
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>joint_trajectory_controller</exec_depend>
+
+
+  <!-- MoveIt2 -->
+  <exec_depend>moveit_configs_utils</exec_depend>
+  <exec_depend>moveit_ros_move_group</exec_depend>
+  <exec_depend>moveit_planners_ompl</exec_depend>
+  <exec_depend>moveit_simple_controller_manager</exec_depend>
+
+
+  <!-- 测试 -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>
