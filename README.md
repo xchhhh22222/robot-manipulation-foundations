@@ -35,3 +35,30 @@ Build a complete robot manipulation pipeline from:
 - ROS2 Jazzy
 - Python 3
 - C++
+## MoveIt2 Collision-Aware Motion Planning
+
+A 2-DOF robot arm is planned from the same `home` configuration
+to the same `ready` configuration under two different planning scenes:
+
+- No obstacle
+- A box collision object added to the MoveIt Planning Scene
+
+The robot uses:
+
+- MoveIt2
+- MoveItPy
+- OMPL / RRTConnect
+- ros2_control
+- JointTrajectoryController
+- Mock Hardware
+
+### Planning pipeline
+
+```text
+MoveItPy
+→ Planning Scene
+→ OMPL / RRTConnect
+→ FollowJointTrajectory
+→ arm_controller
+→ ros2_control
+→ Mock Hardware

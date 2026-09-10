@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<robot name="simple_arm">
+
+  <!-- MoveIt 规划组 -->
+  <group name="arm">
+    <chain
+      base_link="base_link"
+      tip_link="tool_link"
+    />
+  </group>
+
+  <!-- 命名姿态 -->
+  <group_state name="home" group="arm">
+    <joint name="joint1" value="0"/>
+    <joint name="joint2" value="0"/>
+  </group_state>
+  <group_state name="ready" group="arm">
+    <joint name="joint1" value="-0.6"/>
+    <joint name="joint2" value="0.8"/>
+  </group_state>
+    <!-- 相邻连杆在关节处允许接触 -->
+  <disable_collisions
+    link1="base_link"
+    link2="link1"
+    reason="Adjacent"
+  />
+
+  <disable_collisions
+    link1="link1"
+    link2="link2"
+    reason="Adjacent"
+  />
+</robot>
