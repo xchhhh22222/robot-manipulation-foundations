@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="simple_6dof_arm">
+
+
+    <!-- ===================== -->
+    <!-- Base -->
+    <!-- ===================== -->
+
+    <link name="base_link">
+
+        <visual>
+
+            <geometry>
+                <box size="0.3 0.3 0.1"/>
+            </geometry>
+
+            <origin xyz="0 0 0"/>
+
+        </visual>
+
+    </link>
+
+
+
+    <!-- ===================== -->
+    <!-- Joint 1 : Base rotate -->
+    <!-- ===================== -->
+
+    <joint name="joint1"
+           type="revolute">
+
+        <parent link="base_link"/>
+
+        <child link="link1"/>
+
+        <origin xyz="0 0 0.1"
+                rpy="0 0 0"/>
+
+        <!-- 绕Z轴旋转 -->
+        <axis xyz="0 0 1"/>
+
+
+        <limit
+            lower="-3.14"
+            upper="3.14"
+            effort="10"
+            velocity="1"/>
+
+    </joint>
+
+
+
+    <link name="link1">
+
+        <visual>
+
+            <geometry>
+
+                <cylinder radius="0.05"
+                          length="0.3"/>
+
+            </geometry>
+
+
+            <origin xyz="0 0 0.15"/>
+
+        </visual>
+
+    </link>
+
+
+
+
+    <!-- ===================== -->
+    <!-- Joint 2 : Shoulder -->
+    <!-- ===================== -->
+
+    <joint name="joint2"
+           type="revolute">
+
+
+        <parent link="link1"/>
+
+
+        <child link="link2"/>
+
+
+        <origin xyz="0 0 0.3"
+                rpy="0 0 0"/>
+
+
+        <!-- 绕Y轴旋转 -->
+        <axis xyz="0 1 0"/>
+
+
+        <limit
+            lower="-1.57"
+            upper="1.57"
+            effort="10"
+            velocity="1"/>
+
+    </joint>
+
+
+
+
+   <link name="link2">
+
+    <visual>
+
+        <geometry>
+
+            <box size="0.3 0.08 0.08"/>
+
+        </geometry>
+
+
+        <origin xyz="0.15 0 0"/>
+
+
+    </visual>
+
+</link>
+
+
+</robot>
