@@ -364,15 +364,27 @@ def main():
         flush=True
     )
 
-    moveit.execute(
+    execution_status = moveit.execute(
         avoidance_plan.trajectory,
         controllers=[]
     )
 
     print(
-        "避障轨迹执行完成 ✅",
+        f"执行状态：{execution_status.status}",
         flush=True
     )
+
+    if execution_status.status == "SUCCEEDED":
+        print(
+            "避障轨迹执行成功 ✅",
+            flush=True
+        )
+    else:
+        print(
+            f"避障轨迹执行失败 ❌：{execution_status.status}",
+            flush=True
+        )
+    os._exit(1)
 
     time.sleep(3.0)
 
