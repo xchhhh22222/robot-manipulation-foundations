@@ -39,6 +39,7 @@ setup(
             'joint_target_demo = moveit_6dof_demos.joint_target_demo:main',
             'pose_target_demo = moveit_6dof_demos.pose_target_demo:main',
             'obstacle_avoidance_demo = moveit_6dof_demos.obstacle_avoidance_demo:main',
+            'planning_scene_demo = moveit_6dof_demos.planning_scene_demo:main',
         ],
     },
 )
