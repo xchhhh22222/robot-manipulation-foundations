@@ -41,6 +41,7 @@ setup(
             'obstacle_avoidance_demo = moveit_6dof_demos.obstacle_avoidance_demo:main',
             'planning_scene_demo = moveit_6dof_demos.planning_scene_demo:main',
             'attach_detach_demo = moveit_6dof_demos.attach_detach_demo:main',
+            'pick_demo = moveit_6dof_demos.pick_demo:main',
         ],
     },
 )
