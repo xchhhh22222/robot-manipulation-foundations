@@ -1,6 +1,6 @@
 import os
 import time
-
+from dataclasses import dataclass
 import rclpy
 from rclpy.action import ActionClient
 
@@ -19,7 +19,16 @@ from moveit_msgs.msg import (
 
 from shape_msgs.msg import SolidPrimitive
 
+# ============================================================
+# Task Stage Result
+# ============================================================
 
+@dataclass
+class StageResult:
+    success: bool
+    stage: str
+    failure_type: str
+    detail: str
 # ============================================================
 # 夹爪控制函数
 # ============================================================
@@ -135,6 +144,167 @@ def move_gripper(
 
     return True
 
+# ============================================================
+# 机械臂阶段执行函数
+# ============================================================
+
+def run_arm_stage(
+    moveit,
+    arm,
+    robot_model,
+    stage_name,
+    display_name,
+    joint_positions,
+):
+    """
+    执行一个标准机械臂阶段：
+
+    current state
+        -> joint goal
+        -> planning
+        -> execution
+        -> structured result
+    """
+
+    joint_state = RobotState(
+        robot_model
+    )
+
+    joint_state.joint_positions = (
+        joint_positions
+    )
+
+    arm.set_start_state_to_current_state()
+
+    arm.set_goal_state(
+        robot_state=joint_state
+    )
+
+    print(
+        f"开始规划 "
+        f"{display_name} Joint Goal...",
+        flush=True,
+    )
+
+    plan = arm.plan()
+
+    if not plan:
+
+        detail = (
+            f"{display_name} "
+            f"Joint Goal 规划失败"
+        )
+
+        print(
+            f"{detail} ❌",
+            flush=True,
+        )
+
+        return StageResult(
+            success=False,
+            stage=stage_name,
+            failure_type="PLAN_FAILED",
+            detail=detail,
+        )
+
+    print(
+        f"{display_name} "
+        f"Joint Goal 规划成功，开始执行...",
+        flush=True,
+    )
+
+    execution_status = moveit.execute(
+        plan.trajectory,
+        controllers=[],
+    )
+
+    print(
+        f"{display_name} 执行状态："
+        f"{execution_status.status}",
+        flush=True,
+    )
+
+    if (
+        execution_status.status
+        != "SUCCEEDED"
+    ):
+
+        detail = (
+            f"{display_name} 执行失败"
+        )
+
+        print(
+            f"{detail} ❌",
+            flush=True,
+        )
+
+        return StageResult(
+            success=False,
+            stage=stage_name,
+            failure_type="EXECUTION_FAILED",
+            detail=detail,
+        )
+
+    print(
+        f"{display_name} 执行成功 ✅",
+        flush=True,
+    )
+
+    return StageResult(
+        success=True,
+        stage=stage_name,
+        failure_type="NONE",
+        detail=(
+            f"{display_name} "
+            f"completed successfully"
+        ),
+    )
+
+
+    # ============================================================
+# Allowed Collision Matrix 辅助函数
+# ============================================================
+
+def set_allowed_collision(
+    moveit,
+    name1,
+    name2,
+    allowed,
+):
+    """
+    修改当前 Planning Scene 中两个对象之间的
+    Allowed Collision Matrix 条目。
+
+    allowed=True:
+        暂时允许 name1 与 name2 接触。
+
+    allowed=False:
+        恢复正常碰撞检查。
+    """
+
+    planning_scene_monitor = (
+        moveit.get_planning_scene_monitor()
+    )
+
+    with planning_scene_monitor.read_write() as scene:
+
+        scene.allowed_collision_matrix.set_entry(
+            name1,
+            name2,
+            allowed,
+        )
+
+    state = (
+        "ALLOWED"
+        if allowed
+        else "NOT ALLOWED"
+    )
+
+    print(
+        f"碰撞规则更新："
+        f"{name1} <-> {name2} = {state}",
+        flush=True,
+    )
 
 # ============================================================
 # 主程序
@@ -480,15 +650,11 @@ def main():
 
     time.sleep(0.5)
 
-    # ========================================================
+        # ========================================================
     # 11. Pre-grasp Joint Goal
     # ========================================================
 
-    pregrasp_joint_state = RobotState(
-        robot_model
-    )
-
-    pregrasp_joint_state.joint_positions = {
+    pregrasp_joint_positions = {
         "joint1": 0.0,
         "joint2": -1.2331146600407434,
         "joint3": 1.787024702765567,
@@ -497,65 +663,36 @@ def main():
         "joint6": 0.0,
     }
 
-    arm.set_start_state_to_current_state()
-
-    arm.set_goal_state(
-        robot_state=pregrasp_joint_state
+    # 暂时保留给尚未重构的 Lift 使用
+    pregrasp_joint_state = RobotState(
+        robot_model
     )
 
-    print(
-        "开始规划 Pre-grasp Joint Goal...",
-        flush=True,
+    pregrasp_joint_state.joint_positions = (
+        pregrasp_joint_positions
     )
 
-    pregrasp_plan = arm.plan()
+    pregrasp_result = run_arm_stage(
+        moveit=moveit,
+        arm=arm,
+        robot_model=robot_model,
+        stage_name="PREGRASP",
+        display_name="Pre-grasp",
+        joint_positions=pregrasp_joint_positions,
+    )
 
-    if not pregrasp_plan:
+    if not pregrasp_result.success:
 
         print(
-            "Pre-grasp Joint Goal 规划失败 ❌",
+            f"PREGRASP 阶段失败："
+            f"{pregrasp_result.failure_type} | "
+            f"{pregrasp_result.detail}",
             flush=True,
         )
 
         os._exit(1)
-
-    print(
-        "Pre-grasp Joint Goal 规划成功，开始执行...",
-        flush=True,
-    )
-
-    pregrasp_execution_status = (
-        moveit.execute(
-            pregrasp_plan.trajectory,
-            controllers=[],
-        )
-    )
-
-    print(
-        f"Pre-grasp 执行状态："
-        f"{pregrasp_execution_status.status}",
-        flush=True,
-    )
-
-    if (
-        pregrasp_execution_status.status
-        != "SUCCEEDED"
-    ):
-
-        print(
-            "Pre-grasp 执行失败 ❌",
-            flush=True,
-        )
-
-        os._exit(1)
-
-    print(
-        "Pre-grasp 执行成功 ✅",
-        flush=True,
-    )
 
     time.sleep(1.0)
-
     # ========================================================
     # 12. Grasp Joint Goal
     # ========================================================
@@ -718,6 +855,17 @@ def main():
     # 给 Planning Scene 一点时间同步
     time.sleep(0.5)
 
+    # 抓取完成后，物体仍然与桌面接触。
+    # Initial Lift 阶段暂时允许 pick_object 与 table 接触。
+    set_allowed_collision(
+        moveit,
+        "pick_object",
+        "table",
+        True,
+    )
+
+
+
     # ========================================================
     # 16. Lift
     #
@@ -783,6 +931,14 @@ def main():
         )
 
         os._exit(1)
+    # Lift 已完成，物体已经离开桌面。
+    # 恢复 pick_object 与 table 的正常碰撞检查。
+    set_allowed_collision(
+        moveit,
+        "pick_object",
+        "table",
+        False,
+    )
 
     print(
         "Lift 执行成功 ✅",
