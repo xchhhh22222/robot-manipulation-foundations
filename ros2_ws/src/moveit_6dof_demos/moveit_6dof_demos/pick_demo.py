@@ -663,14 +663,6 @@ def main():
         "joint6": 0.0,
     }
 
-    # 暂时保留给尚未重构的 Lift 使用
-    pregrasp_joint_state = RobotState(
-        robot_model
-    )
-
-    pregrasp_joint_state.joint_positions = (
-        pregrasp_joint_positions
-    )
 
     pregrasp_result = run_arm_stage(
         moveit=moveit,
@@ -693,15 +685,13 @@ def main():
         os._exit(1)
 
     time.sleep(1.0)
+
+
     # ========================================================
     # 12. Grasp Joint Goal
     # ========================================================
 
-    grasp_joint_state = RobotState(
-        robot_model
-    )
-
-    grasp_joint_state.joint_positions = {
+    grasp_joint_positions = {
         "joint1": 0.0,
         "joint2": -1.1670343358001434,
         "joint3": 2.002495044675828,
@@ -710,62 +700,25 @@ def main():
         "joint6": 0.0,
     }
 
-    arm.set_start_state_to_current_state()
-
-    arm.set_goal_state(
-        robot_state=grasp_joint_state
+    grasp_result = run_arm_stage(
+        moveit=moveit,
+        arm=arm,
+        robot_model=robot_model,
+        stage_name="GRASP",
+        display_name="Grasp",
+        joint_positions=grasp_joint_positions,
     )
 
-    print(
-        "开始规划 Grasp Joint Goal...",
-        flush=True,
-    )
-
-    grasp_plan = arm.plan()
-
-    if not grasp_plan:
+    if not grasp_result.success:
 
         print(
-            "Grasp Joint Goal 规划失败 ❌",
+            f"GRASP 阶段失败："
+            f"{grasp_result.failure_type} | "
+            f"{grasp_result.detail}",
             flush=True,
         )
 
         os._exit(1)
-
-    print(
-        "Grasp Joint Goal 规划成功，开始执行...",
-        flush=True,
-    )
-
-    grasp_execution_status = (
-        moveit.execute(
-            grasp_plan.trajectory,
-            controllers=[],
-        )
-    )
-
-    print(
-        f"Grasp 执行状态："
-        f"{grasp_execution_status.status}",
-        flush=True,
-    )
-
-    if (
-        grasp_execution_status.status
-        != "SUCCEEDED"
-    ):
-
-        print(
-            "Grasp 执行失败 ❌",
-            flush=True,
-        )
-
-        os._exit(1)
-
-    print(
-        "Grasp 执行成功 ✅",
-        flush=True,
-    )
 
     time.sleep(0.5)
 
@@ -880,59 +833,18 @@ def main():
     # 所以规划时 MoveIt 会把物体一起参与碰撞检测。
     # ========================================================
 
-    arm.set_start_state_to_current_state()
 
-    arm.set_goal_state(
-        robot_state=pregrasp_joint_state
+    lift_result = run_arm_stage(
+        moveit=moveit,
+        arm=arm,
+        robot_model=robot_model,
+        stage_name="LIFT",
+        display_name="Lift",
+        joint_positions=pregrasp_joint_positions,
     )
 
-    print(
-        "开始规划 Lift Joint Goal...",
-        flush=True,
-    )
-
-    lift_plan = arm.plan()
-
-    if not lift_plan:
-
-        print(
-            "Lift Joint Goal 规划失败 ❌",
-            flush=True,
-        )
-
-        os._exit(1)
-
-    print(
-        "Lift Joint Goal 规划成功，开始执行...",
-        flush=True,
-    )
-
-    lift_execution_status = (
-        moveit.execute(
-            lift_plan.trajectory,
-            controllers=[],
-        )
-    )
-
-    print(
-        f"Lift 执行状态："
-        f"{lift_execution_status.status}",
-        flush=True,
-    )
-
-    if (
-        lift_execution_status.status
-        != "SUCCEEDED"
-    ):
-
-        print(
-            "Lift 执行失败 ❌",
-            flush=True,
-        )
-
-        os._exit(1)
-    # Lift 已完成，物体已经离开桌面。
-    # 恢复 pick_object 与 table 的正常碰撞检查。
+    # 无论 LIFT 成功还是失败，
+    # 都先恢复 pick_object 与 table 的正常碰撞检查。
     set_allowed_collision(
         moveit,
         "pick_object",
@@ -940,10 +852,16 @@ def main():
         False,
     )
 
-    print(
-        "Lift 执行成功 ✅",
-        flush=True,
-    )
+    if not lift_result.success:
+
+        print(
+            f"LIFT 阶段失败："
+            f"{lift_result.failure_type} | "
+            f"{lift_result.detail}",
+            flush=True,
+        )
+
+        os._exit(1)
 
     time.sleep(0.5)
 
@@ -959,11 +877,7 @@ def main():
     # z = 0.60
     # ========================================================
 
-    preplace_joint_state = RobotState(
-        robot_model
-    )
-
-    preplace_joint_state.joint_positions = {
+    preplace_joint_positions = {
         "joint1": 0.4182243279696196,
         "joint2": -1.1047595287565142,
         "joint3": 1.6062046631007914,
@@ -972,60 +886,23 @@ def main():
         "joint6": 0.4182243450892588,
     }
 
-    arm.set_start_state_to_current_state()
-
-    arm.set_goal_state(
-        robot_state=preplace_joint_state
+    preplace_result = run_arm_stage(
+        moveit=moveit,
+        arm=arm,
+        robot_model=robot_model,
+        stage_name="PREPLACE",
+        display_name="Pre-place",
+        joint_positions=preplace_joint_positions,
     )
 
-    print(
-        "开始规划 Pre-place Joint Goal...",
-        flush=True,
-    )
-
-    preplace_plan = arm.plan()
-
-    if not preplace_plan:
-
+    if not preplace_result.success:
         print(
-            "Pre-place Joint Goal 规划失败 ❌",
+            f"PREPLACE 阶段失败："
+            f"{preplace_result.failure_type} | "
+            f"{preplace_result.detail}",
             flush=True,
         )
-
         os._exit(1)
-
-    print(
-        "Pre-place Joint Goal 规划成功，开始执行...",
-        flush=True,
-    )
-
-    preplace_execution_status = moveit.execute(
-        preplace_plan.trajectory,
-        controllers=[],
-    )
-
-    print(
-        f"Pre-place 执行状态："
-        f"{preplace_execution_status.status}",
-        flush=True,
-    )
-
-    if (
-        preplace_execution_status.status
-        != "SUCCEEDED"
-    ):
-
-        print(
-            "Pre-place 执行失败 ❌",
-            flush=True,
-        )
-
-        os._exit(1)
-
-    print(
-        "Pre-place 执行成功 ✅",
-        flush=True,
-    )
 
     time.sleep(0.5)
 
@@ -1041,11 +918,8 @@ def main():
     # 此时 pick_object 仍然 Attached。
     # ========================================================
 
-    place_joint_state = RobotState(
-        robot_model
-    )
 
-    place_joint_state.joint_positions = {
+    place_joint_positions = {
         "joint1": 0.4182212534967785,
         "joint2": -1.0519938354622829,
         "joint3": 1.8307318555930925,
@@ -1054,60 +928,23 @@ def main():
         "joint6": 0.41823097807435416,
     }
 
-    arm.set_start_state_to_current_state()
-
-    arm.set_goal_state(
-        robot_state=place_joint_state
+    place_result = run_arm_stage(
+        moveit=moveit,
+        arm=arm,
+        robot_model=robot_model,
+        stage_name="PLACE",
+        display_name="Place",
+        joint_positions=place_joint_positions,
     )
 
-    print(
-        "开始规划 Place Joint Goal...",
-        flush=True,
-    )
-
-    place_plan = arm.plan()
-
-    if not place_plan:
-
+    if not place_result.success:
         print(
-            "Place Joint Goal 规划失败 ❌",
+            f"PLACE 阶段失败："
+            f"{place_result.failure_type} | "
+            f"{place_result.detail}",
             flush=True,
         )
-
         os._exit(1)
-
-    print(
-        "Place Joint Goal 规划成功，开始执行...",
-        flush=True,
-    )
-
-    place_execution_status = moveit.execute(
-        place_plan.trajectory,
-        controllers=[],
-    )
-
-    print(
-        f"Place 执行状态："
-        f"{place_execution_status.status}",
-        flush=True,
-    )
-
-    if (
-        place_execution_status.status
-        != "SUCCEEDED"
-    ):
-
-        print(
-            "Place 执行失败 ❌",
-            flush=True,
-        )
-
-        os._exit(1)
-
-    print(
-        "Place 执行成功 ✅",
-        flush=True,
-    )
 
     time.sleep(0.5)
 
@@ -1193,61 +1030,24 @@ def main():
     # 机械臂重新回到 Pre-place 高度。
     # ========================================================
 
-    arm.set_start_state_to_current_state()
-
-    arm.set_goal_state(
-        robot_state=preplace_joint_state
+    retreat_result = run_arm_stage(
+        moveit=moveit,
+        arm=arm,
+        robot_model=robot_model,
+        stage_name="RETREAT",
+        display_name="Retreat",
+        joint_positions=preplace_joint_positions,
     )
 
-    print(
-        "开始规划 Retreat Joint Goal...",
-        flush=True,
-    )
-
-    retreat_plan = arm.plan()
-
-    if not retreat_plan:
-
+    if not retreat_result.success:
         print(
-            "Retreat Joint Goal 规划失败 ❌",
+            f"RETREAT 阶段失败："
+            f"{retreat_result.failure_type} | "
+            f"{retreat_result.detail}",
             flush=True,
         )
-
         os._exit(1)
-
-    print(
-        "Retreat Joint Goal 规划成功，开始执行...",
-        flush=True,
-    )
-
-    retreat_execution_status = moveit.execute(
-        retreat_plan.trajectory,
-        controllers=[],
-    )
-
-    print(
-        f"Retreat 执行状态："
-        f"{retreat_execution_status.status}",
-        flush=True,
-    )
-
-    if (
-        retreat_execution_status.status
-        != "SUCCEEDED"
-    ):
-
-        print(
-            "Retreat 执行失败 ❌",
-            flush=True,
-        )
-
-        os._exit(1)
-
-    print(
-        "Retreat 执行成功 ✅",
-        flush=True,
-    )
-
+    time.sleep(0.5)
     # ========================================================
     # Pick & Place 完成
     #
