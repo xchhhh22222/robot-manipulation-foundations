@@ -1,39 +1,129 @@
-# CURRENT HANDOFF — 2026-09-29 — Day25 End
+# CURRENT HANDOFF — 2026-09-30 — Day26 End
 
-> This is the current cross-chat handoff for `xchhhh22222/robot-manipulation-foundations`.
+> Repository: `xchhhh22222/robot-manipulation-foundations`
 >
-> A new GPT must **first read** `docs/EMBODIED_AI_MASTER_PLAN.md`, then read the latest `main` code from GitHub, then read this file. Do not treat this handoff as a substitute for the real repository state.
+> This is the current cross-chat handoff after Day26.
+>
+> A new GPT must **first read** `docs/EMBODIED_AI_MASTER_PLAN.md`, then verify the actual latest `main` state and read the latest `pick_demo.py`. Do not treat this handoff as a substitute for the real repository state.
 
-## 1. User / teaching mode
+---
+
+## 0. New GPT: start here
+
+The user is learning Embodied AI / robot manipulation deeply. The goal is not merely to make code run; the user must understand the system layers, data flow, failure semantics, and engineering tradeoffs.
+
+Before changing code:
+
+1. Read `docs/EMBODIED_AI_MASTER_PLAN.md`.
+2. Read this handoff completely.
+3. Verify Git state:
+   ```bash
+   git status -sb
+   git log --oneline --decorate --graph -6
+   git log origin/main..HEAD --oneline
+   ```
+4. Read the actual latest:
+   - `ros2_ws/src/moveit_6dof_demos/moveit_6dof_demos/pick_demo.py`
+   - `ros2_ws/src/moveit_6dof_demos/launch/pick_demo.launch.py`
+   - relevant MoveIt / ros2_control configs when needed.
+5. Tell the user:
+   - actual local HEAD;
+   - actual remote `origin/main` HEAD;
+   - whether they differ;
+   - the current milestone;
+   - the **single next atomic step**.
+
+Do not jump to Pose-driven manipulation yet.
+
+The immediate next milestone is:
+
+```text
+StageResult
+→ task-level failure policy
+→ retry / recovery / reset / abort
+```
+
+---
+
+## 1. Repository / environment
 
 Environment:
 
-- Windows 11 + WSL2 Ubuntu 24.04
+- Windows 11
+- WSL2 Ubuntu 24.04
 - ROS2 Jazzy
 - Workspace: `~/robotics/robot-manipulation-foundations/ros2_ws`
-- Main repo: `xchhhh22222/robot-manipulation-foundations`
+- Repository: `xchhhh22222/robot-manipulation-foundations`
 - Main branch: `main`
-- Local GPU: Radeon 780M; no local CUDA
+- Local GPU: Radeon 780M, no local CUDA
 - Heavy Robot Learning training should use cloud GPU later
+- Current robot backend: mock `ros2_control GenericSystem` / mock hardware behavior
 
-User goal:
+Known local build behavior:
 
-- Build a complete Embodied AI / robot manipulation skill chain for internships and later recruiting.
-- Do not optimize for “knowing many frameworks”; optimize for a reproducible, explainable robot manipulation system with measurable failure analysis.
+- `colcon build --symlink-install` previously caused a Python package metadata / legacy egg-link issue:
+  `PackageNotFoundError: No package metadata was found for moveit-6dof-demos`
+- After cleaning only this package's generated build/install output, normal build worked:
+  ```bash
+  colcon build --packages-select moveit_6dof_demos
+  ```
+- Do not generalize this into “symlink-install is bad”. It is a local toolchain issue.
+- For now, after Python edits, use regular `colcon build --packages-select moveit_6dof_demos` before runtime validation.
 
-Teaching constraints:
+---
 
-- One hypothesis → one verification → one modification.
-- Do not dump many changes at once.
-- Explain Git commands before asking the user to run them.
-- Prefer VS Code with absolute path for edits.
-- Diagnose from logs before guessing.
-- The user wants to understand the code, especially the core data flow and system logic.
-- For large source edits, prefer giving a complete replacement file plus explanation of the core logic, rather than many fragile patch snippets.
+## 2. Teaching / debugging protocol
 
-## 2. Long-term roadmap
+Strict protocol:
 
-The current master sequence is:
+```text
+one hypothesis
+→ one verification
+→ one modification
+```
+
+Rules:
+
+- One atomic step at a time.
+- Do not dump many edits at once.
+- Explain shell / Git commands before asking the user to run them.
+- Prefer logs over guesses.
+- Prefer explicit file paths / VS Code for edits.
+- Build and runtime-verify after meaningful changes.
+- Do not silently change architecture just because a shorter implementation exists.
+- The user wants to understand why each layer exists.
+
+Useful semantic mappings the user already understands:
+
+```text
+joint_positions
+= where the robot should go
+
+run_arm_stage()
+= how MoveIt plans / executes / checks
+
+StageResult
+= what happened
+
+Task Policy
+= what the task should do next
+```
+
+Important conceptual boundary:
+
+```text
+low-level motion
+= report facts
+
+task-level policy
+= make decisions
+```
+
+---
+
+## 3. Long-term roadmap
+
+The master sequence remains:
 
 ```text
 ROS2
@@ -58,11 +148,23 @@ ROS2
 → VLA
 ```
 
-Do not jump directly to VLA or heavy learning before the robot-system foundation is stable.
+Current position:
 
-## 3. Day24 baseline already completed
+```text
+Pick & Place
+        ↓
+Failure Handling / Task State   ← NOW
+        ↓
+Pose-driven manipulation        ← NOT YET
+```
 
-Current Pick & Place task sequence:
+Do not jump directly to VLA / heavy learning before the robot-system foundation is stable.
+
+---
+
+## 4. Current Pick & Place sequence
+
+Current task sequence:
 
 ```text
 OPEN
@@ -78,38 +180,67 @@ OPEN
 → RETREAT
 ```
 
-Important scene semantics:
+Semantic meanings:
 
-- Table center z = 0.20, height = 0.05, so top z = 0.225.
-- Pick object center z = 0.275, height = 0.10, so its bottom is exactly z = 0.225.
-- Therefore the object initially has zero-gap support contact with the table.
-- A real failure occurred at LIFT because MoveIt detected `pick_object - table` collision after ATTACH.
-- Correct fix: temporarily allow `pick_object <-> table` during initial LIFT, then restore collision checking after the lift.
-- Do not “fix” this primarily by moving the object upward by an arbitrary epsilon.
-- `touch_links` already handles expected object/finger contact.
+```text
+PREGRASP = move above the object
+GRASP    = descend to grasp position
+LIFT     = lift object away from the table
+PREPLACE = carry object in the air to above destination
+PLACE    = descend to the final placement position
+RETREAT  = after release/detach, move the arm back upward
+```
 
-Current backend is mock `ros2_control GenericSystem`.
+---
 
-## 4. Day25 work completed today
+## 5. Planning Scene support-contact semantics — DO NOT REGRESS
 
-### 4.1 Support-contact collision semantics
+Table:
 
-The current code contains `set_allowed_collision(...)` using MoveIt's Planning Scene Monitor / Allowed Collision Matrix.
+- center z = `0.20`
+- height = `0.05`
+- top z = `0.225`
 
-The intended sequence is:
+Pick object:
+
+- center z = `0.275`
+- height = `0.10`
+- bottom z = `0.225`
+
+Therefore:
+
+```text
+object bottom == table top
+```
+
+The object starts in intentional zero-gap support contact with the table.
+
+A historical real failure occurred during LIFT after ATTACH because MoveIt detected:
+
+```text
+pick_object <-> table
+```
+
+as collision.
+
+Correct semantic fix:
 
 ```text
 ATTACH
-→ pick_object <-> table = ALLOWED
+→ temporarily allow pick_object <-> table
 → LIFT
-→ pick_object <-> table = NOT ALLOWED
+→ restore normal collision checking
 ```
 
-This behavior was previously runtime-verified on the Day24 implementation.
+Do not “fix” this primarily by moving the object upward by an arbitrary epsilon.
 
-### 4.2 Structured stage result foundation
+`touch_links` already handles intended gripper/object contact.
 
-The source now defines:
+---
+
+## 6. Structured arm-stage foundation
+
+The code defines:
 
 ```python
 @dataclass
@@ -120,85 +251,263 @@ class StageResult:
     detail: str
 ```
 
-Purpose: arm stages should return structured information instead of only killing the process or returning an ambiguous boolean.
-
-Current planned failure types include:
-
-- `PLAN_FAILED`
-- `EXECUTION_FAILED`
-- later: gripper / scene / startup / recovery categories
-
-### 4.3 Common arm-stage function
-
-The source now defines `run_arm_stage(...)`.
-
-Its responsibility is:
+The shared `run_arm_stage(...)` owns the common arm-motion flow:
 
 ```text
 joint target
 → RobotState
 → current start state
-→ set goal
+→ goal state
 → MoveIt planning
-→ execute trajectory
+→ trajectory execution
 → inspect execution status
-→ return StageResult
+→ StageResult
 ```
 
-Conceptual split that the user now understands:
+Current important failure categories include:
 
-- `joint_positions` = **where the robot should go** in joint space.
-- `run_arm_stage()` = **how MoveIt plans and executes the move, plus result checking**.
+- `PLAN_FAILED`
+- `EXECUTION_FAILED`
 
-Also distinguish:
+Do not teach these incorrectly:
 
-- Joint goal = six joint angles.
-- Pose goal = end-effector position/orientation.
-- Current Pick & Place still primarily uses hard-coded Joint Goals.
-- Pose-driven manipulation is a later mainline step.
+- Planning failure is not automatically “software failure”.
+- Geometric unreachability / IK infeasibility normally appears on the planning side.
+- Controller rejection / tracking / execution problems appear on execution side.
+- Robot-state problems can influence both.
 
-### 4.4 Exact end-of-day source state — IMPORTANT
+---
 
-Do not assume all six arm stages are refactored.
+## 7. Day26 completed work — exact architectural result
 
-The exact source uploaded at the end of Day25 has:
+All six arm-motion stages now use `run_arm_stage()`.
 
-- `StageResult`: added.
-- `run_arm_stage()`: added.
-- PREGRASP: migrated to `run_arm_stage()`.
-- GRASP: still legacy inline planning/execution code.
-- LIFT: still legacy inline planning/execution code.
-- PREPLACE: still legacy inline planning/execution code.
-- PLACE: still legacy inline planning/execution code.
-- RETREAT: still legacy inline planning/execution code.
+Current structure:
 
-PREGRASP still creates a temporary `pregrasp_joint_state` because the old LIFT block currently depends on it.
+```text
+PREGRASP
+pregrasp_joint_positions
+→ run_arm_stage()
+→ pregrasp_result
 
-A later draft of a full six-stage refactor was discussed, but it was **not the user's runtime-verified local state at handoff time**. Do not silently assume that draft is active.
+GRASP
+grasp_joint_positions
+→ run_arm_stage()
+→ grasp_result
 
-The GitHub update made with this handoff intentionally tracks the user's actual uploaded Day25 source, not an unverified future refactor.
+LIFT
+pregrasp_joint_positions
+→ run_arm_stage()
+→ lift_result
 
-## 5. Benchmark / failure taxonomy work completed
+PREPLACE
+preplace_joint_positions
+→ run_arm_stage()
+→ preplace_result
 
-A local runner was built at:
+PLACE
+place_joint_positions
+→ run_arm_stage()
+→ place_result
 
-`tools/run_pick_benchmark.py`
+RETREAT
+preplace_joint_positions
+→ run_arm_stage()
+→ retreat_result
+```
 
-Capabilities already tested locally:
+Status:
 
-- launch one Pick & Place run automatically;
-- stream output to terminal and a unique log file;
+```text
+PREGRASP ✅ migrated + runtime verified
+GRASP    ✅ migrated + runtime verified
+LIFT     ✅ migrated + runtime verified
+PREPLACE ✅ migrated + runtime verified
+PLACE    ✅ migrated + runtime verified
+RETREAT  ✅ migrated + runtime verified
+```
+
+Target reuse is intentional:
+
+```text
+LIFT:
+GRASP low position
+→ pregrasp_joint_positions
+
+RETREAT:
+PLACE low position
+→ OPEN / DETACH
+→ preplace_joint_positions
+```
+
+---
+
+## 8. LIFT special logic
+
+LIFT is intentionally not identical to other stages because it has stage-specific Planning Scene semantics.
+
+Correct order:
+
+```text
+pick_object <-> table = ALLOWED
+        ↓
+run_arm_stage(LIFT)
+        ↓
+pick_object <-> table = NOT ALLOWED
+        ↓
+inspect lift_result / task policy
+```
+
+The restore to `NOT ALLOWED` must happen before failure abort / later task-policy handling.
+
+Reason:
+
+```text
+LIFT fails
+→ environment cleanup must still happen
+```
+
+Do not move this collision-semantic behavior into generic `run_arm_stage()`.
+
+Key Day26 lesson:
+
+> Common motion behavior belongs in the common motion function; stage-specific task semantics stay in the task/stage layer.
+
+---
+
+## 9. Temporary compatibility RobotState variables were removed
+
+During migration, these were temporarily retained because legacy stages depended on them:
+
+```text
+pregrasp_joint_state
+preplace_joint_state
+```
+
+After LIFT and RETREAT migration, both became unused and were deleted.
+
+A final grep:
+
+```bash
+grep -n "pregrasp_joint_state\|preplace_joint_state" \
+src/moveit_6dof_demos/moveit_6dof_demos/pick_demo.py
+```
+
+returned no output.
+
+The latest remote code was also checked after the Day26 push:
+
+- all six `stage_name="..."` calls are present;
+- `pregrasp_joint_state` is absent;
+- `preplace_joint_state` is absent;
+- `set_allowed_collision(...)` is still present.
+
+Do not recreate these compatibility variables unless a new real dependency requires them.
+
+---
+
+## 10. Day26 verification evidence
+
+After final cleanup:
+
+```bash
+python3 -m py_compile \
+src/moveit_6dof_demos/moveit_6dof_demos/pick_demo.py
+```
+
+passed with no output.
+
+Then:
+
+```bash
+colcon build --packages-select moveit_6dof_demos
+```
+
+passed.
+
+Then a full Pick & Place run passed.
+
+Final runtime tail included:
+
+```text
+Place 执行状态：SUCCEEDED
+Place 执行成功 ✅
+PLACE OPEN ✅
+pick_object detach 消息已发布 ✅
+Retreat Joint Goal 规划成功，开始执行...
+Retreat 执行状态：SUCCEEDED
+Retreat 执行成功 ✅
+完整 Pick & Place 执行成功 ✅
+process has finished cleanly
+```
+
+Therefore Day26 is:
+
+```text
+CODED ✅
+SYNTAX VERIFIED ✅
+BUILT ✅
+RUNTIME VERIFIED ✅
+```
+
+---
+
+## 11. Git state / important commits
+
+The Day26 source commit is:
+
+```text
+3029568 day26: unify arm stages with structured execution
+```
+
+Before it, the local benchmark commit is:
+
+```text
+128c40d day25: add pick and place benchmark runner
+```
+
+The user pushed both commits to remote `main` successfully on 2026-09-30.
+
+The push advanced remote:
+
+```text
+182ac2f..3029568  main -> main
+```
+
+This documentation update is a later commit on top of `3029568`, so a future GPT must still verify the actual current HEAD rather than hard-code this SHA.
+
+At the time immediately before this docs update, the user's local working tree had one intentionally untracked path:
+
+```text
+?? ../artifacts/
+```
+
+Do not use `git add .` casually.
+
+---
+
+## 12. Benchmark status
+
+`tools/run_pick_benchmark.py` is tracked from:
+
+```text
+128c40d day25: add pick and place benchmark runner
+```
+
+Capabilities already tested:
+
+- launch Pick & Place automatically;
+- stream output to terminal;
+- create unique logs;
 - classify PASS / FAIL;
-- classify historical:
-  - LIFT planning failure → `PLAN_FAILED`
-  - startup `PackageNotFoundError` → `PACKAGE_ERROR`
-  - successful run → PASS
+- classify historical LIFT planning failure as `PLAN_FAILED`;
+- classify startup package failure as `PACKAGE_ERROR`;
 - append one CSV row per run;
 - support `--runs N`;
-- collect per-run structured results;
+- collect structured per-run results;
 - print batch summary.
 
-A formal 3-run smoke test completed:
+Formal 3-run smoke test:
 
 ```text
 Runs: 3
@@ -207,95 +516,344 @@ FAIL: 0
 Success Rate: 100.0%
 ```
 
-CSV rows for that batch were confirmed.
+User decision:
 
-Important user decision:
+> Do not spend time on a 20-run benchmark now. Prioritize the mainline.
 
-> Do NOT spend time on a 20-run benchmark now. Prioritize the mainline.
+---
 
-The exact local `tools/run_pick_benchmark.py` file was not uploaded in the handoff turn, so it is **not being reconstructed from memory and pushed automatically**. Ask for the exact local file before committing it if it is still absent from GitHub.
+## 13. Controller / launch reminder
 
-## 6. Important failure-handling concepts already taught
-
-Do not teach these incorrectly:
-
-- Planning failure is not equivalent to “software failure”.
-- Execution failure is not equivalent to “hardware unreachable”.
-- Geometric unreachability / IK failure normally appears on the planning side.
-- Controller rejection, tracking, communication, etc. are execution-side failures.
-- Robot state problems can influence both.
-
-Current target architecture:
+A previous attempt to launch `pick_demo.launch.py` without the needed controller/demo infrastructure reached:
 
 ```text
-Task stage
-→ plan
-→ execute
-→ structured StageResult
-→ task-level policy
-   ├── retry
-   ├── scene reset
-   ├── recovery
-   └── abort
+等待 gripper_controller：OPEN...
+gripper_controller 不可用
 ```
 
-Low-level motion functions should eventually report failure; task-level logic should decide what to do about it.
+Do not interpret that as a Pick & Place logic bug.
 
-## 7. Known environment issue
+If it happens again:
 
-On this machine, `colcon build --symlink-install` caused a Python package metadata / legacy egg-link issue:
+- inspect the controller/demo launch state;
+- do not immediately edit motion code.
 
-`PackageNotFoundError: No package metadata was found for moveit-6dof-demos`
+---
 
-After cleaning only this package's generated build/install directories and rebuilding with:
+## 14. Exact Day27 boundary
+
+After Day26, the low-level arm-motion layer already reports structured results.
+
+Example:
+
+```python
+pregrasp_result = run_arm_stage(...)
+```
+
+The outer task layer still does:
+
+```python
+if not pregrasp_result.success:
+    print(...)
+    os._exit(1)
+```
+
+So the architecture is currently:
+
+```text
+run_arm_stage()
+= diagnoses / reports what happened
+
+main()
+= currently makes only one task decision:
+  ABORT
+```
+
+This is exactly where Day27 begins.
+
+At Day26 end, `pick_demo.py` contained 10 direct `os._exit(1)` sites.
+
+Conceptually they fall into three groups:
+
+```text
+A. startup / infrastructure failure
+
+B. gripper-action failure
+   OPEN / CLOSED / PLACE OPEN
+
+C. six arm StageResult failures
+   PREGRASP
+   GRASP
+   LIFT
+   PREPLACE
+   PLACE
+   RETREAT
+```
+
+Do **not** globally replace all `os._exit(1)`.
+
+The arm stages already have `StageResult`.
+The gripper and startup paths are not yet modeled in exactly the same way.
+
+---
+
+## 15. Day27 goal — Failure Handling / Task State
+
+The user already understands the high-level goal as:
+
+```text
+以前：
+每个阶段报错
+→ os._exit(1)
+
+现在想要：
+每个阶段报错
+→ structured result
+→ recovery / decision layer
+→ decide what to do
+```
+
+More precise architecture:
+
+```text
+Task Stage
+↓
+run_arm_stage()
+↓
+StageResult
+↓
+Task Policy
+├── RETRY
+├── RECOVER
+├── RESET
+└── ABORT
+```
+
+Separation:
+
+```text
+run_arm_stage()
+= report facts
+
+task-level policy
+= decide next action
+```
+
+Low-level motion should not decide that the entire Pick & Place must terminate just because planning failed.
+
+---
+
+## 16. Day27 recommended atomic sequence
+
+Do not build a large state machine in one edit.
+
+### Step 0 — Git reality check
+
+Before editing:
 
 ```bash
-colcon build --packages-select moveit_6dof_demos
+git fetch origin
+git status -sb
+git log --oneline --decorate --graph -6
 ```
 
-the direct package metadata was generated correctly.
+If this documentation commit was made remotely after the user's Day26 push, the user's local branch may simply need:
 
-Do not generalize this into “symlink-install is bad”. It is a local toolchain behavior. For now, use regular `colcon build` for this package; after Python edits, rebuild before launching.
+```bash
+git pull --ff-only
+```
 
-## 8. Day26 / next-session plan
+Verify before running it.
 
-Continue the mainline, not benchmark repetition.
+### Step 1 — inspect only PREGRASP failure path
 
-First verify the real repository state and local/remote synchronization.
+Start with:
 
-Then proceed atomically:
+```text
+pregrasp_result
+→ if not success
+→ current os._exit(1)
+```
 
-1. Migrate GRASP from duplicated inline `set goal → plan → execute` into `run_arm_stage()`.
-2. Build / syntax-check / run to verify behavior equivalence.
-3. Migrate LIFT carefully. Preserve ACM semantics and ensure temporary `pick_object <-> table = ALLOWED` is restored even when LIFT fails.
-4. Migrate PREPLACE.
-5. Migrate PLACE.
-6. Migrate RETREAT.
-7. After the refactor is runtime-stable, remove temporary `pregrasp_joint_state` / `preplace_joint_state` dependencies.
-8. Only then change behavior from immediate `os._exit(1)` to task-level failure handling / retry / recovery.
-9. After Failure Handling / Task State is stable, advance to Pose-driven manipulation.
+Explain that this is already the task-policy boundary.
 
-Do not combine all steps into one edit unless the user explicitly requests a full replacement file. Even then, explain the core logic and verify runtime behavior before calling it complete.
+Do not modify all six stages yet.
 
-## 9. Recommended first action for the next GPT
+### Step 2 — introduce an explicit task-decision concept
 
-Use the GitHub connector to read:
+A likely minimal concept:
 
-- `docs/EMBODIED_AI_MASTER_PLAN.md`
-- `docs/CURRENT_HANDOFF.md`
-- `ros2_ws/src/moveit_6dof_demos/moveit_6dof_demos/pick_demo.py`
-- `ros2_ws/src/moveit_6dof_demos/launch/pick_demo.launch.py`
-- `ros2_ws/src/moveit_6dof_demos/config/simple_6dof_arm.srdf`
-- `ros2_ws/src/moveit_6dof_demos/config/ros2_controllers.yaml`
-- `ros2_ws/src/moveit_6dof_demos/config/moveit_controllers.yaml`
-- `ros2_ws/src/moveit_6dof_demos/urdf/simple_6dof_arm.urdf.xacro`
+```text
+TaskAction
+├── ABORT
+├── RETRY
+└── RECOVER
+```
 
-Do not rely only on this document's code summary.
+Potentially add `RESET` later when its semantics are concrete.
 
-Then tell the user:
+The first refactor should preserve current behavior:
 
-- the actual `main` HEAD;
-- what is truly implemented;
-- the single next atomic step.
+```text
+StageResult
+→ Task Policy
+→ ABORT
+```
 
-The next atomic coding step should normally be **GRASP migration into `run_arm_stage()`**, unless the repository has changed since this handoff.
+This gives architecture without changing robot behavior yet.
+
+### Step 3 — centralize task decision while preserving behavior
+
+Goal:
+
+```text
+StageResult
+→ one task-level decision function
+→ existing ABORT behavior
+```
+
+Then verify:
+
+```text
+py_compile
+→ build
+→ runtime equivalence
+```
+
+### Step 4 — add bounded retry to one safe failure type
+
+Only after Step 3 is stable.
+
+Likely first experiment:
+
+```text
+PLAN_FAILED
+→ retry planning once
+→ if still failed, ABORT
+```
+
+No infinite retry loops.
+
+Do not automatically retry every `EXECUTION_FAILED`.
+
+### Step 5 — later expand policy
+
+Possible later semantics:
+
+```text
+PLAN_FAILED
+→ bounded replan
+
+EXECUTION_FAILED
+→ inspect / recover robot state before retry
+
+scene inconsistency
+→ scene reset
+
+unrecoverable failure
+→ abort
+```
+
+### Step 6 — preserve LIFT cleanup
+
+Whatever retry/recovery design is introduced:
+
+```text
+pick_object <-> table
+```
+
+temporary collision allowance must still be restored correctly.
+
+Do not reintroduce the historical LIFT cleanup bug.
+
+### Step 7 — only after arm policy is stable
+
+Then decide whether to bring:
+
+- gripper failures;
+- startup failures;
+- Planning Scene failures;
+
+into a unified task-failure model.
+
+Do not mix all categories in the first Day27 edit.
+
+---
+
+## 17. What NOT to do next
+
+Do not:
+
+- jump directly to Pose-driven manipulation;
+- jump to camera / perception;
+- jump to MuJoCo;
+- add a giant retry/recovery state machine in one patch;
+- globally remove all `os._exit(1)`;
+- mix gripper/startup failures into arm policy immediately;
+- remove or bypass LIFT collision cleanup;
+- reintroduce deleted compatibility RobotState variables;
+- spend time on a 20-run benchmark;
+- assume local and remote Git state are synchronized without checking.
+
+---
+
+## 18. Recommended first response from a new GPT
+
+After reading the master plan, this handoff, and the actual latest code, a new GPT should say approximately:
+
+```text
+Day26 is complete:
+all six arm-motion stages use run_arm_stage() and return StageResult,
+and the final full Pick & Place run passed after compatibility-state cleanup.
+
+We are now at Failure Handling / Task State.
+
+First I will verify local vs origin/main.
+Then Day27 will start with PREGRASP only:
+we will introduce an explicit task-level decision boundary while initially
+preserving the current ABORT behavior.
+```
+
+Then continue one atomic step at a time.
+
+---
+
+## 19. Later milestones after Day27
+
+Only after Failure Handling / Task State is stable:
+
+```text
+Failure Handling / Task State
+↓
+Pose-driven manipulation
+↓
+dynamic object pose
+↓
+fake perception
+↓
+camera frame / TF
+↓
+camera geometry / PnP
+↓
+hand-eye calibration foundation
+↓
+MuJoCo tabletop
+↓
+robot data / benchmark
+↓
+LeRobot
+↓
+ACT
+↓
+Diffusion Policy
+↓
+LIBERO / robustness
+↓
+VLA
+```
+
+---
+
+## 20. Day26 one-sentence summary
+
+> Day26 converted all six arm-motion stages from duplicated inline MoveIt planning/execution code into the shared `run_arm_stage()` + `StageResult` architecture, preserved LIFT-specific collision semantics, removed temporary compatibility `RobotState` variables, and runtime-verified the complete Pick & Place task after cleanup.
