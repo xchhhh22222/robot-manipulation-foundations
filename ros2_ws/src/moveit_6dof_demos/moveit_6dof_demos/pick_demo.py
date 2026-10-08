@@ -36,13 +36,24 @@ class TaskAction(Enum):
     RECOVER = "RECOVER"
     ABORT = "ABORT"
 
-def decide_task_action(result: StageResult) -> TaskAction:
+def decide_task_action(
+    result: StageResult,
+    retry_count: int = 0,
+) -> TaskAction:
     """
-    根据阶段执行结果，决定下一步任务动作。
+    根据阶段执行结果和重试次数决定任务动作。
 
-    Day27 第一版：
-    所有失败暂时统一返回 ABORT。
+    Day27 有限重试策略：
+    PLAN_FAILED 最多允许重试一次。
+    其他失败返回 ABORT。
     """
+
+    if (
+        result.failure_type == "PLAN_FAILED"
+        and retry_count == 0
+    ):
+        return TaskAction.RETRY
+
     return TaskAction.ABORT
 # ============================================================
 # 夹爪控制函数
@@ -679,16 +690,20 @@ def main():
     }
 
 
-    pregrasp_result = run_arm_stage(
-        moveit=moveit,
-        arm=arm,
-        robot_model=robot_model,
-        stage_name="PREGRASP",
-        display_name="Pre-grasp",
-        joint_positions=pregrasp_joint_positions,
-    )
+    retry_count = 0
 
-    if not pregrasp_result.success:
+    while True:
+        pregrasp_result = run_arm_stage(
+            moveit=moveit,
+            arm=arm,
+            robot_model=robot_model,
+            stage_name="PREGRASP",
+            display_name="Pre-grasp",
+            joint_positions=pregrasp_joint_positions,
+        )
+
+        if pregrasp_result.success:
+            break
 
         print(
             f"PREGRASP 阶段失败："
@@ -697,14 +712,25 @@ def main():
             flush=True,
         )
 
-        action = decide_task_action(pregrasp_result)
+        action = decide_task_action(
+            pregrasp_result,
+            retry_count=retry_count,
+        )
+
+        if action == TaskAction.RETRY:
+            retry_count += 1
+            print(
+                f"PREGRASP 开始第 {retry_count} 次重试",
+                flush=True,
+            )
+            continue
 
         if action == TaskAction.ABORT:
             os._exit(1)
-        else:
-            raise NotImplementedError(
-                f"尚未实现的任务动作：{action.value}"
-            )
+
+        raise NotImplementedError(
+            f"尚未实现的任务动作：{action.value}"
+        )
 
     time.sleep(1.0)
 
