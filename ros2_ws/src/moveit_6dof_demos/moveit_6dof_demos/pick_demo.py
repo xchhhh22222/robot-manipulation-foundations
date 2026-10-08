@@ -1,6 +1,7 @@
 import os
 import time
 from dataclasses import dataclass
+from enum import Enum
 import rclpy
 from rclpy.action import ActionClient
 
@@ -29,6 +30,20 @@ class StageResult:
     stage: str
     failure_type: str
     detail: str
+
+class TaskAction(Enum):
+    RETRY = "RETRY"
+    RECOVER = "RECOVER"
+    ABORT = "ABORT"
+
+def decide_task_action(result: StageResult) -> TaskAction:
+    """
+    根据阶段执行结果，决定下一步任务动作。
+
+    Day27 第一版：
+    所有失败暂时统一返回 ABORT。
+    """
+    return TaskAction.ABORT
 # ============================================================
 # 夹爪控制函数
 # ============================================================
@@ -682,7 +697,14 @@ def main():
             flush=True,
         )
 
-        os._exit(1)
+        action = decide_task_action(pregrasp_result)
+
+        if action == TaskAction.ABORT:
+            os._exit(1)
+        else:
+            raise NotImplementedError(
+                f"尚未实现的任务动作：{action.value}"
+            )
 
     time.sleep(1.0)
 
@@ -1047,6 +1069,8 @@ def main():
             flush=True,
         )
         os._exit(1)
+
+
     time.sleep(0.5)
     # ========================================================
     # Pick & Place 完成
