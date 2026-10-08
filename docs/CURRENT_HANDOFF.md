@@ -1,10 +1,12 @@
-# CURRENT HANDOFF — 2026-09-30 — Day26 End
+# CURRENT HANDOFF — 2026-10-08 — Day27 PREGRASP Bounded Retry Verified
 
 > Repository: `xchhhh22222/robot-manipulation-foundations`
 >
-> This is the current cross-chat handoff after Day26.
+> Current as of 2026-10-08: Day26 complete; Day27 PREGRASP bounded planning retry implemented and validated. Day27 recovery / broader task-state handling is NOT complete.
 >
 > A new GPT must **first read** `docs/EMBODIED_AI_MASTER_PLAN.md`, then verify the actual latest `main` state and read the latest `pick_demo.py`. Do not treat this handoff as a substitute for the real repository state.
+>
+> **Important:** Sections 14–20 retain the historical Day26→Day27 starting plan. For actual progress and the next task, read **Section 21 (2026-10-08 update)**.
 
 ---
 
@@ -35,29 +37,28 @@ Before changing code:
 
 Do not jump to Pose-driven manipulation yet.
 
-The immediate next milestone is:
+The current milestone is **Day27: Failure Handling / Task State**. PREGRASP has a tested single-retry policy; the **next atomic learning topic is RECOVER semantics and state inspection for execution failures**, not Pose-driven manipulation or a wholesale refactor.
 
 ```text
-StageResult
-→ task-level failure policy
-→ retry / recovery / reset / abort
+StageResult → TaskAction policy → bounded PREGRASP retry  ✅
+EXECUTION_FAILED → state inspection / safe RECOVER design  NEXT
+Other stages, startup/gripper failures, RESET       NOT IMPLEMENTED
 ```
 
 ---
 
 ## 1. Repository / environment
 
-Environment:
+Environment (updated 2026-10-08):
 
-- Windows 11
-- WSL2 Ubuntu 24.04
-- ROS2 Jazzy
-- Workspace: `~/robotics/robot-manipulation-foundations/ros2_ws`
-- Repository: `xchhhh22222/robot-manipulation-foundations`
-- Main branch: `main`
-- Local GPU: Radeon 780M, no local CUDA
-- Heavy Robot Learning training should use cloud GPU later
-- Current robot backend: mock `ros2_control GenericSystem` / mock hardware behavior
+- **Main development:** Windows 11 + WSL2 Ubuntu 24.04. Edit with VS Code, study ROS2, run small tests, build, and commit from WSL.
+- **Experiment / training host:** native Ubuntu 24.04.5 LTS desktop with NVIDIA RTX 4090; use for heavier MoveIt2 / simulation experiments and local GPU training.
+- ROS2 Jazzy; each environment has its **own** workspace under `~/robotics/robot-manipulation-foundations/ros2_ws` and must build/source independently.
+- Repository: `xchhhh22222/robot-manipulation-foundations`; branch: `main`. Use GitHub commits to synchronize WSL and native Ubuntu; **do not** assume either clone has pulled new commits.
+- WSL development machine has Radeon 780M integrated GPU (no CUDA on that machine); do not confuse it with the separate native Ubuntu RTX 4090 host.
+- Cloud GPU is optional if local GPU capacity is insufficient; no longer treat cloud GPU as the only training path.
+- Current robot backend: mock `ros2_control GenericSystem` / mock hardware behavior.
+- Native Ubuntu remote desktop was too laggy for frequent editing; SSH / remote command execution can be considered for experiments without requiring GUI interaction.
 
 Known local build behavior:
 
@@ -540,7 +541,7 @@ If it happens again:
 
 ---
 
-## 14. Exact Day27 boundary
+## 14. Exact Day27 boundary (historical state at Day26 end)
 
 After Day26, the low-level arm-motion layer already reports structured results.
 
@@ -643,7 +644,7 @@ Low-level motion should not decide that the entire Pick & Place must terminate j
 
 ---
 
-## 16. Day27 recommended atomic sequence
+## 16. Day27 recommended atomic sequence (original plan; early steps now completed)
 
 Do not build a large state machine in one edit.
 
@@ -797,7 +798,7 @@ Do not:
 
 ---
 
-## 18. Recommended first response from a new GPT
+## 18. Recommended first response from a new GPT (historical Day26 snapshot; see §21 for current)
 
 After reading the master plan, this handoff, and the actual latest code, a new GPT should say approximately:
 
@@ -857,3 +858,120 @@ VLA
 ## 20. Day26 one-sentence summary
 
 > Day26 converted all six arm-motion stages from duplicated inline MoveIt planning/execution code into the shared `run_arm_stage()` + `StageResult` architecture, preserved LIFT-specific collision semantics, removed temporary compatibility `RobotState` variables, and runtime-verified the complete Pick & Place task after cleanup.
+
+---
+
+## 21. 2026-10-08 — Day27 PREGRASP bounded retry: implemented and verified
+
+This section is the **current state of the project** and supersedes the historical Day26→Day27 starting instructions in Sections 14–18. Do not repeat already completed Day27 steps.
+
+### 21.1 Git truth and environment transition
+
+Confirmed GitHub \`main\` at the start of this update:
+
+\`\`\`text
+418b372 day27: add bounded pregrasp planning retry
+cd23216 day27: introduce task action policy for pregrasp
+327b217 fix: declare MoveItPy dependency and remove missing rviz path
+b1d789b docs: update day26 current handoff
+3029568 day26: unify arm stages with structured execution
+\`\`\`
+
+- Work originally continued on native Ubuntu, then moved back to **Windows + WSL2 as the primary development environment** because GUI remote access to native Ubuntu was laggy.
+- \`327b217\` fixed native Ubuntu portability: declare the \`moveit_py\` runtime dependency, and remove a nonexistent \`rviz\` install directory from the description package.
+- WSL initially remained at \`b1d789b\` with an untracked \`artifacts/\` directory; after \`git fetch origin\` and \`git merge --ff-only origin/main\`, WSL moved to \`cd23216\`. \`artifacts/\` was preserved.
+- WSL then completed and pushed \`418b372\`. Source was syntax-checked, built, and runtime-verified in WSL.
+- At the end of that push, \`main\` matched \`origin/main\`; \`artifacts/\` remained **untracked**. Never casually run \`git add .\` or remove that directory.
+- **This documentation update itself creates a newer remote commit**. Any existing local clone, including WSL and native Ubuntu, must check \`git status -sb\` and fetch/fast-forward safely before editing further. Never assume \`418b372\` stays latest.
+
+### 21.2 Exact task-policy implementation
+
+Existing Day26 low-level result contract is unchanged:
+
+\`\`\`python
+@dataclass
+class StageResult:
+    success: bool
+    stage: str
+    failure_type: str
+    detail: str
+\`\`\`
+
+Day27 added the task decision enum and policy:
+
+\`\`\`python
+class TaskAction(Enum):
+    RETRY = "RETRY"
+    RECOVER = "RECOVER"
+    ABORT = "ABORT"
+
+def decide_task_action(
+    result: StageResult,
+    retry_count: int = 0,
+) -> TaskAction:
+    if (
+        result.failure_type == "PLAN_FAILED"
+        and retry_count == 0
+    ):
+        return TaskAction.RETRY
+    return TaskAction.ABORT
+\`\`\`
+
+\`RETRY\`, \`RECOVER\`, and \`ABORT\` here are **Python task-policy decisions**, not ROS2 Action interfaces. \`RECOVER\` is declared but **not implemented as an executor**. The current policy does not decide based on \`result.success\` because the caller only invokes it on failures.
+
+Only **PREGRASP** has been rewired to an execution loop:
+
+\`\`\`text
+retry_count = 0
+while:
+  run_arm_stage(PREGRASP)
+  ├─ success → break; continue with GRASP
+  └─ failure → decide_task_action(result, retry_count)
+       ├─ PLAN_FAILED, retry_count=0 → RETRY; increment; call run_arm_stage again
+       ├─ another failure → ABORT via os._exit(1)
+       └─ unsupported action → raise NotImplementedError
+\`\`\`
+
+Exactly one retry means **at most two total PREGRASP attempts**. Each call to \`run_arm_stage()\` calls \`arm.set_start_state_to_current_state()\` and \`arm.plan()\` again. This uses MoveIt's current **known** state; a real robot may still require freshness checks.
+
+\`EXECUTION_FAILED\` is **not automatically retried**: execution may have moved the arm partially. Do not blindly re-execute it.
+
+Other stages (GRASP / LIFT / PREPLACE / PLACE / RETREAT), gripper, and startup still use previous failure handling. Do not infer a general task-state machine from this limited implementation.
+
+### 21.3 Verification evidence and limitations
+
+Verified in WSL with ROS2 Jazzy and mock ros2_control controllers:
+
+1. \`python3 -m py_compile src/moveit_6dof_demos/moveit_6dof_demos/pick_demo.py\` passed.
+2. \`colcon build --packages-select moveit_6dof_demos\` passed.
+3. Policy / mock-loop tests passed:
+   - PLAN_FAILED on first attempt → RETRY, then simulated success → total calls 2, retries 1.
+   - Two successive simulated PLAN_FAILED outcomes → RETRY then ABORT, total calls 2.
+   - EXECUTION_FAILED with retry_count=0 → ABORT.
+4. Regular full Pick & Place after adding the PREGRASP loop completed:
+   \`Place SUCCEEDED\`, \`Retreat SUCCEEDED\`, \`完整 Pick & Place 执行成功 ✅\`, process finished cleanly.
+5. **Controlled one-shot fault injection exercised the actual PREGRASP loop** using temporary environment flag \`DAY27_TEST_PREGRASP_FAIL_ONCE=1\`. First attempt returned a synthetic \`StageResult(PLAN_FAILED)\` *without calling MoveIt planning*; the next attempt used the real \`run_arm_stage()\`. Observed log:
+
+   \`\`\`text
+   [DAY27 TEST] 注入一次模拟 PLAN_FAILED
+   PREGRASP 阶段失败：PLAN_FAILED | Day27 一次性故障注入测试
+   PREGRASP 开始第 1 次重试
+   开始规划 Pre-grasp Joint Goal...
+   ...
+   完整 Pick & Place 执行成功 ✅
+   process has finished cleanly
+   \`\`\`
+
+6. Temporary fault-injection code was **removed** after the test. \`git diff --exit-code -- pick_demo.py\` returned clean relative to committed \`418b372\`; later GitHub source inspection confirmed the production loop has **no fault-injection branch**.
+
+**What this proves:** the PREGRASP loop handles one synthetic planning failure and successfully re-enters genuine MoveIt planning/execution. **What it does not prove:** a natural real MoveIt planning failure recovering successfully, a real execution failure recovery, or the actual process-abort branch under live controllers. Do not overclaim coverage.
+
+### 21.4 Immediate next work (continue Day27, not Day28)
+
+1. Read latest Git state and \`pick_demo.py\`; if a clone is behind, inspect local changes and use a safe fast-forward. Preserve \`artifacts/\`.
+2. Explain and design **RECOVER vs RETRY vs ABORT** for \`EXECUTION_FAILED\`: inspect actual/known arm state, controller status, whether movement partially occurred, and Planning Scene consistency before deciding any safe recovery.
+3. Implement one minimal, explicitly bounded and testable recovery/state-inspection step **only after review**; avoid a large state machine or premature modifications to every stage.
+4. Maintain LIFT's invariant: temporary \`pick_object ↔ table\` collision allowance must be restored before failure handling, even when LIFT fails.
+5. Add deterministic tests and runtime verification for any new recovery code; log outcomes. Do not jump to Pose-driven manipulation before Failure Handling / Task State foundations are stable.
+
+**Teaching protocol stays strict:** one hypothesis → one verification → one change. Explain why, verify using logs, and make at most one small code edit at a time.
