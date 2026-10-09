@@ -1055,7 +1055,7 @@ Evaluation
 
 **用户确认的主目标**：2028 届双非硕士，稳定就业优先，有真实客户/成熟产业链的企业研发岗广泛海投，不押注只有融资叙事的人形机器人研发初创；准备面试不止技术，还包括企业认知/行测、算法机考、行为/性格测评与项目追问。
 
-**训练入口（新对话必读）**：[docs/job_prep/README.md](job_prep/README.md)。
+**训练入口（新对话必读）**：[docs/job_prep/README.md](job_prep/README.md)，[宏观求职备考路线](job_prep/ROADMAP_2026-2028.md)。
 - [训练状态与下一步](job_prep/LEARNING_STATE.md)：只记录已证实的进度、回答、待办；不编造测验成绩。
 - [来源质量规范](job_prep/SOURCES_AND_METHOD.md)：区分官方大纲、真实个人面经、二手整理和原创模拟题，尊重版权。
 - [首次练习](job_prep/daily/2026-10-09.md)：行测/逻辑、MoveIt2 项目面试和职业场景共四道原创题。
