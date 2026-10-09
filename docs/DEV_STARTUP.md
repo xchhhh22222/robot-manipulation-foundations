@@ -142,7 +142,29 @@ git merge --ff-only origin/main
 
 不要无条件 `git reset --hard`；不要删除或默认提交 `artifacts/`。远端文档由 ChatGPT/GitHub 连接器直接更新时，WSL 不会自动收到更新，仍需 `fetch`/快进。
 
-## 7. 新对话 / Codex 预热顺序
+## 7. 用户输入 Day 编号时的固定开场协议
+
+**用户明确要求（2026-10-09）：** 每次在对话中输入 `Day28`、`day29`、`Day30` 或其他 Day 编号，助手必须**先**发送以下 WSL 终端命令：
+
+```bash
+source ~/.bashrc
+rosdev
+```
+
+请用户运行并返回输出。正常输出类似：
+
+```text
+✅ ROS2 Jazzy 环境已加载
+📁 当前工作空间：/home/wanxincheng/robotics/robot-manipulation-foundations/ros2_ws
+
+📌 Git 状态：
+## main...origin/main
+?? ../artifacts/
+```
+
+以上 Git 输出**仅是示例**，以用户当次终端结果为准。若启动出错，先处理环境；成功后读取最新 Git/交接文档/关键源码，确认当前里程碑，再进入所请求的 Day 主线。学习仍然一次一个原子步骤。**不要因为要求先预热而自行跳过用户指定的 Day 编号。**
+
+## 8. 新对话 / Codex 预热顺序
 
 1. 读取 `docs/EMBODIED_AI_MASTER_PLAN.md`（长期路线）。
 2. 读取 `docs/CURRENT_HANDOFF.md`，特别是最新的日程/阶段追加章节（当前进度和已验证事实）。
