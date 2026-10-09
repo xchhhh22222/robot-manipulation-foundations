@@ -1013,3 +1013,29 @@ Verified in WSL with ROS2 Jazzy and mock ros2_control controllers:
 3. As discussed in [REVIEW_2026-10-09.md](REVIEW_2026-10-09.md), calibrate next weeks' curriculum across C++/Linux/ROS2 systems, camera/TF/visual grasp + evaluation, and AI inference deployment; retain future Robot Learning / VLA. Do **not** claim the route changes are final until the user chooses.
 4. Preserve Day27 PREGRASP bounded RETRY; RECOVER is still not implemented. Preserve LIFT contact/collision cleanup. Teach one atomic step at a time.
 5. On every Day-number request: first show `source ~/.bashrc` and `rosdev` (per `docs/DEV_STARTUP.md`), then check progress and enter the lesson.
+
+
+---
+
+## 23. 2026-10-09 — Job interview practice protocol and daily question bank
+
+This document tracks robot learning progress; **the job-prep state now also has its own versioned GitHub handoff**: [docs/job_prep/README.md](job_prep/README.md), [LEARNING_STATE.md](job_prep/LEARNING_STATE.md), [SOURCES_AND_METHOD.md](job_prep/SOURCES_AND_METHOD.md), and [first daily set](job_prep/daily/2026-10-09.md).
+
+User has confirmed:
+- 2028 master's graduate, currently targeting **broad applications to mature customer-backed robotics / industrial automation / machine vision software R&D employers** with the aim of stable employment for 2–3 years.
+- Needs **technical interviews plus company cognitive/aptitude tests, national civil-service-exam overlapping reasoning skills, coding tests, behavioral/personality and situational assessments**, and strong evidence-backed project discussion. Official exams and employer tests are *not identical*.
+- No fake “personality test correct answers,” no exam cheating. Practice honest responses and real workplace judgment; preserve personal privacy and copyrighted source material.
+- Wants ChatGPT to search source-based questions daily, learn one question at a time, summarize good solution methods, and preserve **verified public learning state** via GitHub, so new GPT conversations can resume immediately.
+- User delegated resume drafting to another chat; primary tutor still manages ROS2/MoveIt2 & technical/project learning roadmap, interview exercises, employer screening and GitHub training handoff.
+
+Today user reported a WSL controller check:
+```text
+gripper_controller      joint_trajectory_controller/JointTrajectoryController  active
+joint_state_broadcaster joint_state_broadcaster/JointStateBroadcaster          active
+arm_controller          joint_trajectory_controller/JointTrajectoryController  active
+```
+These are **real user logs for the WSL demo controller manager**, not proof of robot motion or `follow_joint_trajectory` action goal acceptance. Last requested atomic technical step remains `ros2 action list -t` (read-only), not yet answered. Day28 trajectory extraction has syntax-only evidence after the edit, still pending runtime verification. Preserve local uncommitted work.
+
+**Automation**: previous weekly interview practice has been updated to a **daily early-morning** job-prep curation task; repository auto-write is **conditional on GitHub connector availability and verified success** each run. It must never claim unverified pushes. An `OK` reminder is separate and unchanged.
+
+When the user returns after this planning discussion: explain these exact two lanes (main technical Day28 + short daily exam/aptitude track), let the user decide which to continue; when they explicitly say DayXX, obey DEV_STARTUP startup commands first. New GPT should consult docs/job_prep/LEARNING_STATE.md and newest dated file before repeating any exercise.
