@@ -10,7 +10,7 @@
 - 公考实际答题状态：**申论和公考专项尚未开始真实练习，成绩/速度均未知**；2028 年度报考资格须看届时官方公告。
 - 企业优先条件：有真实客户、成熟上下游产品业务、合理经营现金流，团队不是只有短期 demo/纯研究概念；重点机器人、工业控制软件、机器视觉、物流智能化的研发岗。
 - 用户实习：参与工业机械臂零件分拣项目**系统集成/现场调试/测试**；个人是否拥有商业代码修改授权未确定；不把全系统算法归于个人成果。
-- 主课位置：ROS2 Jazzy + MoveIt2 **Day28**，已在 WSL 获得规划 PASS，后来轨迹读取片段 `python3 -m py_compile` PASS。**尚未看到该新片段 colcon build 和运行验证；未看到 `ros2 action list -t` 结果**。
+- 主课位置：ROS2 Jazzy + MoveIt2 **Day28**，此前规划 PASS、轨迹读取代码片段 `python3 -m py_compile` PASS（仍未见新片段 colcon build 或运行验证）。**2026-10-09 用户已执行 `ros2 action list -t`，发现 `/arm_controller/follow_joint_trajectory`、`/gripper_controller/follow_joint_trajectory`（均为 `control_msgs/action/FollowJointTrajectory`）、`/execute_trajectory`（`moveit_msgs/action/ExecuteTrajectory`）、`/move_action`（`moveit_msgs/action/MoveGroup`）、`/sequence_move_group`（`moveit_msgs/action/MoveGroupSequence`）。随后 `ros2 action info /arm_controller/follow_joint_trajectory` 返回 `Action clients: 1`（`/moveit_simple_controller_manager`）、`Action servers: 1`（`/arm_controller`）**。已证明控制器轨迹Action端点存在，尚未证明发出/接受goal或轨迹执行成功。下一步只读命令：`ros2 interface show control_msgs/action/FollowJointTrajectory`，观察 Goal/Result/Feedback。
 - 已确认现场的 ROS2 mock controllers（WSL）：`arm_controller`、`gripper_controller`、`joint_state_broadcaster` 三者均 `active`（用户终端输出）。这是仿真/测试控制器激活，不是物理机器人抓取成功。
 - Git：截至上次检视，Day28 实验源代码在 WSL **未提交 GitHub**。远端主要保存 Day27 代码；先查 `git status -sb` 和 `git diff --stat`，再决定增量提交。**不得覆盖本地修改或意外提交 `artifacts/`。**
 - 面试训练已试两道：Day28 故障诊断 ① `arm.plan PASS` 但不动首先确认 `execute` ② 执行后控制器 inactive 先查配置/生命周期；用户均答 B（正确）。不要将重复题冒充新练习。
