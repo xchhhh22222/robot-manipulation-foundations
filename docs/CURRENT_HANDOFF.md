@@ -975,3 +975,41 @@ Verified in WSL with ROS2 Jazzy and mock ros2_control controllers:
 5. Add deterministic tests and runtime verification for any new recovery code; log outcomes. Do not jump to Pose-driven manipulation before Failure Handling / Task State foundations are stable.
 
 **Teaching protocol stays strict:** one hypothesis → one verification → one change. Explain why, verify using logs, and make at most one small code edit at a time.
+
+
+---
+
+## 22. 2026-10-09 — Day28 Pose Goal PASS + job-directed review (CURRENT)
+
+**This section supersedes Section 21.4, which historically said to continue Day27 and not Day28. The user explicitly chose to start Day28; do not force Day27 lessons to repeat.** The long-term plan remains; proposed skill reprioritization is documented in [REVIEW_2026-10-09.md](REVIEW_2026-10-09.md). As of the review, career-track changes are **proposed, not approved**.
+
+### 22.1 Confirmed local-only Day28 experiments
+
+- WSL2 ROS2 Jazzy local `pick_demo.py` was modified; changes were **not yet committed/pushed to GitHub main** when this note was written. **Remote main's `pick_demo.py` is still the Day27 code**. Protect user's local edits; do not reset/replace them.
+- PREGRASP visual Pose uses `object_pose.position.x/y` and `object_pose.position.z + 0.325`, preserving old coordinates for the original object location. This is a learning placeholder, **not general grasp height or a safe production TCP offset**.
+- An environment-gated probe `DAY28_POSE_PROBE=1`, placed after pose publication and before gripper OPEN, calls:
+  ```python
+  arm.set_start_state_to_current_state()
+  arm.set_goal_state(pose_stamped_msg=pregrasp_pose, pose_link="tool_link")
+  pose_plan = arm.plan()
+  ```
+- The user ran `DAY28_POSE_PROBE=1 ros2 launch moveit_6dof_demos pick_demo.launch.py`. Log showed KDL joint weights / OMPL invocation / planning solution validation / `DAY28 POSE PLAN: PASS` / process finished cleanly. **No trajectory execution happened in the probe**; this does not validate a full pose-driven Pick & Place.
+- A later instructional change added extraction of planned trajectory end joint positions for inspection, and user showed `python3 -m py_compile` PASS. The changed code has **not yet been runtime checked**, rebuilt after that incremental change, or submitted to GitHub as far as conversation evidence shows; verify locally.
+- `arm.plan()` with a pose goal can invoke IK within planning; do not claim separate user code explicitly called IK, or that trajectory's last joint position is a direct, unprocessed standalone IK result.
+- Last lessons clarified trajectory's `points[-1].positions` means **all joints at the last trajectory point**, not only the last joint, and `moveit.execute(pose_plan.trajectory)` uses the whole trajectory. Current probe **does not execute it**.
+- Planning group `arm` SRDF chain is `base_link -> tool_link`; KDL kinematics plugin configured. User confirmed local SRDF lines 12–14.
+
+### 22.2 Confirmed background and portfolio constraints
+
+- User is a **2028 graduating master's student**, currently undertaking an industrial robotic parts-sorting **system integration / onsite bring-up / testing** internship. Do not credit user with sole authorship of all commercial vision/algorithm/control modules.
+- Aim: robot software / manipulation / embodied AI R&D internships and mid-size robotics companies. Current role can supply grounded system-debug experience; personal public repository should use only own/permissioned code, synthetic/public data, no proprietary source/calibration/device/config.
+- User has WSL daily workstation and a **separate native Ubuntu RTX 4090 machine** for GPU-heavy experiments. Prior master-plan claims of “no available NVIDIA” are outdated (see corrected master plan).
+- User explicitly delegates resume drafting to another conversation. **This GPT should remain focused on education, technical direction, project quality, experiments, and career calibration.**
+
+### 22.3 Immediate next actions
+
+1. Ask WSL for repository root `git status -sb` and `git diff --stat`, then `git fetch origin` / status, to reconcile **local Day28 edits vs new remote documentation changes**. Never unconditionally reset, stage `artifacts/`, or claim the code is already on GitHub.
+2. Complete Day28 trajectory-inspection probe: verify `get_robot_trajectory_msg()` against actual MoveItPy runtime, build, read endpoint joint-angle output, compare to manually specified PREGRASP Joint Goal, and report meaningful limitations. Keep execution disabled in the probe.
+3. As discussed in [REVIEW_2026-10-09.md](REVIEW_2026-10-09.md), calibrate next weeks' curriculum across C++/Linux/ROS2 systems, camera/TF/visual grasp + evaluation, and AI inference deployment; retain future Robot Learning / VLA. Do **not** claim the route changes are final until the user chooses.
+4. Preserve Day27 PREGRASP bounded RETRY; RECOVER is still not implemented. Preserve LIFT contact/collision cleanup. Teach one atomic step at a time.
+5. On every Day-number request: first show `source ~/.bashrc` and `rosdev` (per `docs/DEV_STARTUP.md`), then check progress and enter the lesson.
