@@ -36,6 +36,7 @@
 - [完整宏观求职与笔试路线（2026–2028）](ROADMAP_2026-2028.md)
 - [国考、省考独立备考主线（含申论和报考资格）](CIVIL_SERVICE_TRACK.md)
 - [贵州优先、外省灵活 + 事业编/央国企/双非成功案例](GUIZHOU_FIRST_PATHS_AND_CASES.md)
+- [2023届机器人算法秋招与双非求职案例历史复盘](HISTORICAL_2023_ROBOTICS_JOB_REVIEW.md)
 - [已确认硕士专业 085404 计算机技术：职位匹配核验](MAJOR_085404_MATCHING.md)
 - [训练状态和继续步骤](LEARNING_STATE.md)
 - [来源标准与题库格式](SOURCES_AND_METHOD.md)
