@@ -38,6 +38,7 @@
 ## 目录
 
 - [按JD调整真实简历、笔试面试、公考考编和投递复盘执行规范](APPLICATION_AND_RESUME_EXECUTION.md)
+- [每次笔面试后、每周和每月复盘模板](REVIEW_TEMPLATE.md)
 
 - [完整宏观求职与笔试路线（2026–2028）](ROADMAP_2026-2028.md)
 - [国考、省考独立备考主线（含申论和报考资格）](CIVIL_SERVICE_TRACK.md)
