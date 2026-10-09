@@ -38,6 +38,7 @@
 ## 目录
 
 - [按JD调整真实简历、笔试面试、公考考编和投递复盘执行规范](APPLICATION_AND_RESUME_EXECUTION.md)
+- [目标大厂同产业链与周边中小企业实习过渡策略（尚待验证）](ADJACENT_COMPANY_INTERNSHIP_STRATEGY.md)
 - [每次笔面试后、每周和每月复盘模板](REVIEW_TEMPLATE.md)
 
 - [完整宏观求职与笔试路线（2026–2028）](ROADMAP_2026-2028.md)
