@@ -1047,3 +1047,9 @@ When the user returns after this planning discussion: explain these exact two la
 - 2028届秋招2027-03-31实习准备、2027-06-30可投递就绪、2027-07起核验提前批。详见 `docs/job_prep/AUTUMN_2027_MONTHLY_EXECUTION_PLAN.md`。
 - **任务结束不允许只在聊天口头交接。** 新GPT/Codex先读 `docs/job_prep/NEXT_CHAT_HANDOFF.md`，并按照其强制收尾清单更新本轮领域记录+ `LEARNING_STATE.md`+`SPACED_REVIEW_QUEUE.md`+`NEXT_CHAT_HANDOFF.md`，用最新SHA提交并回读验证；遇权限失败、代码/本地日志缺证据应如实告知，不能编造同步。
 - 这只是通用交接指令，没有新增本地WSL运行或Git技术提交；Day28控制器/Action/Pose Goal及未完成局部修改仍需在用户下次技术会话中核实，不得默认为已成功。
+
+
+## 24. 2026-10-10 本次新聊天 GitHub 远端审计与 Day28 只读起步（远端代码审计，不代表本机验证）
+- 已检查 GitHub `main`：审计前 HEAD `2d6ee74c0f72486609fda5698a2d3d9d5e70ec3b`，远端 `ros2_ws/src/moveit_6dof_demos/moveit_6dof_demos/pick_demo.py` blob `0aa94ecdd7286642b1a028ad375690ff7abc284f`，依旧是 Day27 代码，不包含原先 WSL 会话做的 `DAY28_POSE_PROBE` 或计划轨迹终点提取。以 §22 的真实历史记录为准；未提供本次 WSL Git 状态/新构建/运行日志。
+- 向用户布置了 **只读原子步骤**：`source ~/.bashrc` → `rosdev` → `cd ~/robotics/robot-manipulation-foundations` → `git status -sb` 和 `git diff --stat`；等待实际终端输出，核实工作树及本地未提交 Day28 代码。保留未跟踪 `artifacts/`，不要 `reset --hard`、盲目 `git add .` 或直接覆盖本地改动。
+- 下一步在结果返回后，对照远端审核本地差异并安全 `git fetch origin`；在代码保护确认后继续 Day28 `get_robot_trajectory_msg()` 的编译/运行、末端关节位置与手写 PREGRASP Joint Goal 比较。原规划 PASS ≠轨迹执行成功。无新运行数据，仍 PENDING_USER。

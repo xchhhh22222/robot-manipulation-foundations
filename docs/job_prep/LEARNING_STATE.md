@@ -394,3 +394,10 @@
 - 已调整现有每日岗位追踪、每周复盘及月度复盘自动任务排期；独立“每日OK”提醒和2026-12-04周五八周总结不属于固定学习排期，本轮保留不动。提醒是否送达需用户检查通知设置。
 - 新建立并已回读 `NEXT_CHAT_HANDOFF.md`，技术交接 `docs/CURRENT_HANDOFF.md`、主路标、日协议、求职、公考、导师规范与复习队列均新增**每次任务结束前先fetch最新SHA，安全提交实际进展，回读验证，失败如实报告**要求。
 - **本轮只完成文档/日程变更**：用户未新增Q037作答、Day28成功日志、真实JD申请或面试证据；状态仍NOT_ATTEMPTED / PENDING_USER / NOT_MEASURED。下次通常从2026-10-12工作日的Q037/到期复习开始并留出一项项目或求职行动，当前用户可优先提其他任务。
+
+
+## 2026-10-10 本次新聊天 GitHub 远端审计与 Day28 只读起步（状态复核，不是学习完成）
+- 从 GitHub main 读取最新接力卡、训练协议、当天 daily、复习队列和 `docs/CURRENT_HANDOFF.md`，又核对远端 `pick_demo.py`：`main` 在核验开始时为 `2d6ee74c0f72486609fda5698a2d3d9d5e70ec3b`；远端 Python blob 为 `0aa94ecdd7286642b1a028ad375690ff7abc284f`，仍未包含 WSL 记录中的 Day28 Pose Probe。
+- 已布置 **Day28 第一个原子步骤：WSL只读 `git status -sb` 与 `git diff --stat`**（在 `source ~/.bashrc` / `rosdev` 后）；用户输出未回，`PENDING_USER`。任何本地未提交的 Day28 轨迹提取代码暂不可视为 GitHub 已同步；轨迹终点打印/构建/运行/真实执行均未通过本轮验证。
+- 本轮没有新的行测用户作答或项目执行日志：Q036-R1 结果PASS但方法UNVERIFIED；Q037 NOT_ATTEMPTED；到期复习仍按 2026-10-12 / 2026-10-19 工作日执行，状态 PLANNED；岗位/投递结果 NOT_MEASURED。今天是周六，不追加强制习题。
+- **下一次唯一技术入口：** 用户回传上述 WSL Git 状态两项输出，核对本地保护策略后，再继续 Day28 轨迹检查，不能先修改源码或声称已构建。

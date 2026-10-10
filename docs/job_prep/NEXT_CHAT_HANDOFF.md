@@ -67,3 +67,10 @@
 - 主计划：`AUTUMN_2027_MONTHLY_EXECUTION_PLAN.md`（2026-10至2027-12逐月人类可读目标表）；日计划：`DAILY_STUDY_EXECUTION_PROTOCOL.md`；到期：`SPACED_REVIEW_QUEUE.md`；全局：`LEARNING_STATE.md`；技术：`docs/CURRENT_HANDOFF.md`。当前规则以本接力卡 + 上述最新文件为准，前面历史章节中的旧“周末复盘/每天只一道题”均已废止。
 - 下次用户开启新会话，读取以上最新文件后直接接续；如用户要求做技术任务，先核对本地实际情况与远端，不冒认Day28运行完成；如开始行测，Q037尚未作答、到期微复习可以自然融入20题；如果用户要求继续修订计划，先响应计划请求，不要强插练习。
 - **最后一项强制动作：** 新对话在交付答案之前先安全更新并校验本文件和相应实际状态文件，若未成功必须把未同步情况写进用户可见答复。我们只能保证在有GitHub访问权限且更新成功的任务中真实留档，不可承诺工具中断时后台补写或自动修复。
+
+
+## 8. 2026-10-10 本次新聊天 GitHub 远端审计与 Day28 只读起步（补充快照）
+- **核对范围**：GitHub 远端 `main` 及 `docs/job_prep` 全部核心执行/学习协议、2026-10-10 daily、`docs/CURRENT_HANDOFF.md` §22、`docs/DEV_STARTUP.md`、`docs/EMBODIED_AI_MASTER_PLAN.md` 和 `pick_demo.py`。本次核验前 HEAD `2d6ee74c0f72486609fda5698a2d3d9d5e70ec3b`；远端源码 blob `0aa94ecdd7286642b1a028ad375690ff7abc284f` 仍是 Day27 版本。用户的 Day28 WSL Pose Goal 已有历史规划PASS，但后续轨迹提取仅记录语法PASS，**无最新本机命令/运行证明**。
+- **本轮已执行**：从新对话成功恢复计划、核验远端代码差异、提供一个安全只读 Day28 WSL 命令组。尚未收到用户终端结果，**不能认定本地分支同步、Day28 BUILD/RUNTIME PASS、Q037答完或JD已核验**。
+- **下一次唯一技术入口（等待用户）**：在 WSL 中 `source ~/.bashrc`，`rosdev`，`cd ~/robotics/robot-manipulation-foundations`，`git status -sb`，`git diff --stat`，回传完整输出。先保护 Day28 本地修改/`artifacts/`，再讨论 `git fetch`、安全快进及轨迹终点只读 probe。若用户下一次选择行测则按 2026-10-12 首个工作日20题/4组×5题并混入2–4道到期复习，无需先做技术。
+- **排期保持**：今天周六无强制学习，Q036-R1 数值PASS/方法UNVERIFIED，Q037 NOT_ATTEMPTED，10-12/T+1及10-19/T+7仍 PLANNED；真实招聘/投递/本地构建等无新数据，保持 NOT_MEASURED/PENDING_USER。本节是追加审计，而非宣称实验完成。
