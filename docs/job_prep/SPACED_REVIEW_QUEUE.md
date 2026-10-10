@@ -89,3 +89,13 @@
 - REV-20261010-LOGIC：Q009-R1用户实答B并自主写P→Q、¬Q→¬P，**入门纠错PASS**。此前Q009 WRONG记录保留，不能抹去。此次PASS仅指当前复测，非T+1/T+7的结果。
 - 2026-10-11 T+1与2026-10-17 T+7仍为PLANNED；需原创不同情境验证规则识别和逆否推理，答题时间目前NOT_MEASURED。
 - 下一教学模块：JOB-20261010-010削弱论证（原创，NOT_ATTEMPTED），区分观察到的增长与解释增长的原因，单题待答。
+
+
+## 2026-10-10 因果削弱复习卡
+
+- review_id: REV-20261010-CAUSAL
+- topic: 因果削弱中的另有他因
+- evidence: Q010选A正确，未提交推理理由，耗时NOT_MEASURED
+- status: PLANNED（选项PASS，迁移理解待验证）
+- T+1: 2026-10-11；T+7: 2026-10-17
+- current_next: Q010-R1夜班与软件优化新情境，NOT_ATTEMPTED；请用户直接说明替代原因。
