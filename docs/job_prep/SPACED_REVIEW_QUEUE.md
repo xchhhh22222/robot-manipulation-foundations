@@ -62,3 +62,14 @@
 - review_due_T7: 2026-10-17
 - next_action: 使用不同材料新原创题，先自行概括主旨，再选择选项；未实答不可标PASS
 - next_topic: 细节判断 Q008，状态 NOT_ATTEMPTED
+
+
+## 逻辑必要条件新卡（2026-10-10）
+
+- review_id: REV-20261010-LOGIC
+- topic: 充分条件、必要条件与命题逆向判断
+- evidence: 原创Q002实答A正确、原创Q002-R1实答B正确；均未提供实际用时
+- status: PLANNED（基础两题选项PASS，限时NOT_MEASURED）
+- T+1: 2026-10-11；T+7: 2026-10-17
+- next_new_topic: JOB-20261010-009逆否推理（尚未答，NOT_ATTEMPTED）
+- verification: 到期安排新原创情境并核查推导说明，用户未答不可写复习PASS。
