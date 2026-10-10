@@ -1039,3 +1039,11 @@ These are **real user logs for the WSL demo controller manager**, not proof of r
 **Automation**: previous weekly interview practice has been updated to a **daily early-morning** job-prep curation task; repository auto-write is **conditional on GitHub connector availability and verified success** each run. It must never claim unverified pushes. An `OK` reminder is separate and unchanged.
 
 When the user returns after this planning discussion: explain these exact two lanes (main technical Day28 + short daily exam/aptitude track), let the user decide which to continue; when they explicitly say DayXX, obey DEV_STARTUP startup commands first. New GPT should consult docs/job_prep/LEARNING_STATE.md and newest dated file before repeating any exercise.
+
+
+## 2026-10-10 新版GitHub强制交接及工作日求职学习
+
+- 用户确认固定学习仅在周一至周五进行（行测每天60–120分钟约20题，并推进至少一项ROS2项目或求职动作），周末不安排例行学习/周复盘；周五19:00周复盘，每月第一个工作日月复盘，用户真实截止/考试例外。
+- 2028届秋招2027-03-31实习准备、2027-06-30可投递就绪、2027-07起核验提前批。详见 `docs/job_prep/AUTUMN_2027_MONTHLY_EXECUTION_PLAN.md`。
+- **任务结束不允许只在聊天口头交接。** 新GPT/Codex先读 `docs/job_prep/NEXT_CHAT_HANDOFF.md`，并按照其强制收尾清单更新本轮领域记录+ `LEARNING_STATE.md`+`SPACED_REVIEW_QUEUE.md`+`NEXT_CHAT_HANDOFF.md`，用最新SHA提交并回读验证；遇权限失败、代码/本地日志缺证据应如实告知，不能编造同步。
+- 这只是通用交接指令，没有新增本地WSL运行或Git技术提交；Day28控制器/Action/Pose Goal及未完成局部修改仍需在用户下次技术会话中核实，不得默认为已成功。
