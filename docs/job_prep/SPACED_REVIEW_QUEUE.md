@@ -366,3 +366,7 @@
 
 ## 2026-10-11 Java简历不写ROS2个人项目：双投递版本校正：学习队列无新增PASS
 - 用户质疑Java简历放ROS2不匹配；本轮按公开JD明确J/JA版本不写ROS2个人项目、R版保留作为选择性备案，这是简历方法校正，**非新算法/SQL/Java/ROS2作答或构建**。原Java题单和新AI知识点仍NOT_ATTEMPTED，Q037未答，10-12/10-19复习依原计划PLANNED。
+
+## 2026-10-11 嵌入式Linux主攻偏好：计划不等于真实掌握
+- 用户选择将求职技术准备侧重点由原Java方案转向嵌入式Linux应用/平台C/C++，已有一份实际招聘JD与面经调查[EMBEDDED_LINUX_CAREER_PIVOT_2026-10-11.md](EMBEDDED_LINUX_CAREER_PIVOT_2026-10-11.md)；尚未提交新的C/C++代码、Linux线程/Socket、交叉编译、MCU/驱动运行证据，**不建立PASS卡**。
+- Java算法/SQL历史题单保持未作答记录，但不再按Java为默认技术题目分配；未来用户完成C++算法/调试后再建立T+1/T+7。行测Q037 NOT_ATTEMPTED，Q036-R1数值PASS方法未验；10-12、10-19到期复习原计划PLANNED，周末不派练习。
