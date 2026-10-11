@@ -18,3 +18,9 @@ Java21、Spring Boot3.5稳定维护线、Maven、MyBatis、MySQL、JUnit5单体R
 建议未来用户开始编码时创建**独立Java练习/业务代码仓库**（名称由用户决定），不把未运行代码堆在原robot-manipulation-foundations ROS2项目。正式文件应有README、src/main、src/test、SQL schema、deploy/compose.yaml、.env.example、.gitignore、docs/adr（技术取舍）、docs/evidence（命令、测试、失败修复日志）、.github/workflows/ci.yml。真实凭证、内网客户文档、手机号不入库。每个小任务需要Git SHA、实际运行和测试结果、GitHub fetch回读，未通过写PENDING_USER而非PASS。
 
 未来换新框架只更新infra适配或实现模块，数据库/服务API/单测作为长期稳定资产。
+
+
+## 2026-10-11 实习转Java与AI应用简历新增事实契约：从个人后端项目到可信Agent项目
+- 工单/设备事件服务可以体现用户的运营商工业设备场景理解，但**只能使用本人设计的虚构设备事件、工单和知识文档**，不调用/复制当前实习单位内部生产资料。简历上项目须写“个人项目”，**不得声称在实习公司生产环境上线或曾维护其Java/Redis/Agent系统**。
+- AI模块验收不仅是LLM聊天功能：知识库切分/索引/RAG引用、无依据拒答、只读工单工具、鉴权/参数白名单/工具执行审计、10—20条原创评测、工具拒绝越权与模型超时回退。禁止模型未经人工审核直接关闭/改写工单；指标真实测量，不能虚构。
+- 完整从实习到J/JA双版本简历的证据边界和岗位JD见 [RESUME_AGENT_TRANSITION_2026-10-11.md](RESUME_AGENT_TRANSITION_2026-10-11.md)；实际Java代码仍未见本次运行证据，`PROJECT_PROPOSED`不变。
