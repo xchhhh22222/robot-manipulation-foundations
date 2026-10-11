@@ -442,3 +442,9 @@
 - 用户新增“现于贵阳电信体系机械臂/零件业务实习”；此前已归档系统集成、现场联调与测试。业务叫“分解”还是“分拣”、职务合同主体、本人实际代码工作/一个故障处理结果**未确认**；以`INTERNSHIP_ACTION_EVIDENCE=PENDING_USER`保存，勿称Java研发、独立开发商业机器人/AI算法。
 - 新增 [RESUME_AGENT_TRANSITION_2026-10-11.md](RESUME_AGENT_TRANSITION_2026-10-11.md)：2027届历史JD交叉核验普通Java（Agent非必须）、Agent加分、Java/AI专项三类；规划**真实电信实习＋个人ROS2已有历史证据＋未来实测Java工单服务＋AI工具/RAG评测**的双版本简历。Java基础仍主线，AI应用逐层补足而不是弃Java重学Agent。
 - **本轮无新用户实际代码或题目证据**：Java项目与Agent`NOT_STARTED`，个人Java环境`UNVERIFIED`；Q037`NOT_ATTEMPTED`、Day28`PENDING_USER`、10-12/10-19复习`PLANNED`不变。下一入口先核验一个本人真实实习技术动作及准确业务名称。
+
+
+## 2026-10-11 Java简历不写ROS2个人项目：双投递版本校正（简历筛选决策，非项目完成）
+- 用户明确：不想为了展示旧积累，在Java后端简历写低匹配的ROS2个人项目。**按用户反馈修正**：Java后端J及Java＋AI应用JA版本默认不写ROS2/MoveIt2，也不占专业技能栏；在机器人系统/C++/Linux定向R版保留该项目。用户现有电信实习仍可在Java版以简短真实工程联调测试经历出现，视职位与页数决定；不能当作Java开发实习。
+- 已根据2027届快手/禾赛Java与它石智航机器人通用软件历史JD核对两类项目匹配度，[新版本细则](RESUME_AGENT_TRANSITION_2026-10-11.md)。机器人路线仅作经工作强度、薪酬、成长验证的**选择性备用岗位**，不恢复纯具身算法/交付主线；优先Java＋AI与贵州公共稳定岗位。
+- 本轮无新Java代码运行、AI功能、简历实习个人事实或真实投递，Java简历未达成已完成状态；Q037 NOT_ATTEMPTED、Day28 WSL PENDING_USER、2026-10-12/10-19复习日状态不变。
