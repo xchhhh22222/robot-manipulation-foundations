@@ -469,3 +469,9 @@
 - 本轮用户将企业业务口径确认“机械臂分拣”，此前项目开发角色仍以现场集成/联调/测试为已知边界；不能推断本人编写Linux驱动、STM32固件、具体网络协议或独立商业算法。实际个人接口动作/故障案例PENDING_USER。
 - 拟定工作日5个口述题为2道C/C++、2道Linux/网络与1道项目追问，20—30分钟建议上限，另每周2—3道限时C++编程及Linux小实验嵌入原技术块。**不立即派五题、不建复习PASS卡**。国考/省考事业行测20题/工作日60—120分钟、申论周内循序启动，央国企专业技术测评不与行测混同。工作周外不强制。
 - `PROJECT_GATE=AWAITING_USER_REVIEW`、`SECOND_PROJECT=CONDITIONAL`、`START_DATE=NOT_DECIDED`、`ENVIRONMENT=NOT_CHECKED_THIS_TURN`、`STM32_BOARD=NOT_SHIPPED`；原Q037 NOT_ATTEMPTED、Day28 PENDING_USER、2026-10-12/10-19复习PLANNED。没有实操/机考新PASS。
+
+
+## 2026-10-12 工作日行测开场：第一组Q037–Q041
+- 用户提出“OK我们开始今天的行测”。按2026-10-10更新的 DAILY_STUDY_EXECUTION_PROTOCOL.md，**覆盖旧20–30分钟/2–3题的临时上限**：工作日行测60–120分钟、目标约20题、四组×五题、同一错点立即纠正最多一次、可到时停止；保留至少一项可验收项目或真实JD任务，但不可自行启动未经批准的嵌入式Linux新项目。
+- 今日新建 docs/job_prep/daily/2026-10-12.md，第一组Q037–Q041：资料分析比重百分点与平均数增长率各1题、言语1题、判断1题、数量1题。题已发布，**尚未收到用户答案**，因此Q037–Q041 NOT_ATTEMPTED，今日已做0/目标约20；实际用时NOT_MEASURED。
+- 原周末顺延的T+1今天2026-10-12到期：平均数增长率跨材料及%/百分点表达两点记DUE / NOT_ATTEMPTED，不能提前算PASS。T+7执行日2026-10-19仍PLANNED。
