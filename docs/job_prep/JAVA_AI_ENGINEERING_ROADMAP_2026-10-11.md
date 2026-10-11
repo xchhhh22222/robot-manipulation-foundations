@@ -50,3 +50,6 @@
 
 ## 5. 时间线及下一入口
 2026-12可构建单体后端（实际可用以进度为准），2027-03-31实习就绪，2027-06-30校招准备就绪，2027-07起2028届秋招。**下一次唯一原子检查**：在计划使用的Windows PowerShell或Ubuntu/WSL执行 java -version；javac -version；mvn -version；git --version 并回传真实输出。未收到之前标ENV_UNVERIFIED。
+
+## 2026-10-11 新用户意愿导致的历史版本标记
+- 用户已主动表示希望改主攻**嵌入式Linux C/C++软件开发**，不再默认Java＋AI后端求职。因此本文件保留为历史技术调查/备选路线，**不再是每日Java练习和环境安装的最新入口**；最新强优先级见 [EMBEDDED_LINUX_CAREER_PIVOT_2026-10-11.md](EMBEDDED_LINUX_CAREER_PIVOT_2026-10-11.md)。原Java工单/Redis/Agent仍无实测，新Linux项目也未开始，不做伪完成记录。具身和端侧AI保留为与Linux系统软件兼容的未来可能性而非全栈强学。
