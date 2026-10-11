@@ -105,3 +105,10 @@
 - 用户**还没有单独确认具体Java主栈/上述两企业岗位族**，所以标为 `RECOMMENDED_BASELINE`，不要冒称 `USER_APPROVED`；原先4周任意语言后端/Agent探索方案不再作为最新首选。2028届招聘资格、学校筛选、具体部门工时及薪资仍 `UNKNOWN`，不能保证普通优才必录或央企965。
 - **本轮无新真实题目作答、代码运行、投递或面试**：Q037 NOT_ATTEMPTED，Day28 WSL验证 PENDING_USER，2026-10-12、10-19复习保持先前排期。日计划每工作日行测1–2小时约20题、另有真实项目或求职行动，周末不强制，尚未变动。
 - **下一次唯一职业执行动作**：从贵州移动2026普通“优才+业务开发”与天翼云成都Java后端2026历史公告分别提炼资格与技能清单（注意2026/2027届不等于2028届），形成Java/SQL/Linux最小学习任务；有实答/运行证据后再记DONE。后续不要先派Agent/VLA大项目。
+
+## 13. 2026-10-11 Java后端AI应用面经与项目新规范（最新）
+- 用户希望以Java就业为主，不再主要押具身，融合社交平台真实技术路线；每周有Java面经/限时手撕算法/SQL而非只考行测，GitHub必须有可运行MySQL、Redis、事务、测试和故障诊断，后续加AI RAG/Tools形成差异化，同时保留导师具身研究和未来ROS2桥接选项。
+- 最新三个文件：[Java＋AI长期路线](JAVA_AI_ENGINEERING_ROADMAP_2026-10-11.md)、[面经与手撕题库](JAVA_AI_INTERVIEW_PRACTICE_2026-10-11.md)、[项目规格](JAVA_AI_PROJECT_SPEC_2026-10-11.md)。建议Java21 + Spring Boot3.5稳定线、MyBatis/MySQL、测试与Linux为核心，Redis等在真实需求下加入；Spring AI/LangChain4j二选一并进行评测；暂缓微服务、K8s、纯VLA研究。新Java独立仓库**尚未创建**。
+- 用户要求持续监测职位/技术变化，已创建每周五北京时间约16:00“Java与AI招聘雷达”（首次2026-10-16），周末无例行推送；需要核验通知设置，创建不保证用户手机收到。Spring出现新版本不等于换栈，须多份真实目标JD和工程收益证据。
+- 状态：Java环境NOT_VERIFIED、所有新算法与SQL题NOT_ATTEMPTED、Redis/项目/AI实测NOT_STARTED；旧Q037未答，Day28本机日志仍未回。原行测工作日60—120分钟、周末无固定任务和2026-10-12/10-19复习安排保留。
+- **下次唯一技术原子入口**：选用于Java的Windows或WSL/Ubuntu终端运行 java -version、javac -version、mvn -version、git --version，回传完整输出；先核验再安装，不修改ROS2工作区。

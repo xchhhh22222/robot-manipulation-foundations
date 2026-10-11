@@ -431,3 +431,8 @@
 - 2024全年、2025全年、2026前8月软件业务营收同比增10.0%、13.2%、8.8%，行业仍有业务但利润承压且收入不能推断岗位人数。2024/25新经济人岗供需比2.06/2.23，不能以Agent高薪宣传代表普通2028届毕业生的薪酬/录用。
 - **下一步**：用两份2026历史职位（贵州移动普通技术开发与天翼云成都Java后端）抽取共同技能→开始Java/SQL/Linux项目最小闭环；长期按12周计划执行，不因碎片化热帖频繁重新开方向。原工作日行测60–120分钟/约20题和周末休息规则保留。
 - 本轮只完成文献与职业路线建议，没有新真实Java学习、ROS2验证、投递、行测答题：Q037 NOT_ATTEMPTED；Day28 WSL状态PENDING_USER；T+1 2026-10-12及T+7 2026-10-19仍PLANNED。
+
+## 2026-10-11 Java后端AI应用面经与项目新规范（职业规划非实操完成）
+- JavaGuide2026、牛客2025—26真实面经与Spring官方资料已融合到[JAVA_AI_ENGINEERING_ROADMAP_2026-10-11.md](JAVA_AI_ENGINEERING_ROADMAP_2026-10-11.md)：Java21/Spring Boot3.5/MySQL/MyBatis/测试、Redis cache-aside项目实测、后续RAG/AI工具工程，原C++/ROS2项目仍服务导师毕业；不是用户已经掌握。
+- 增加独立Java限时手撕/SQL/面经项目答辩，首批9道算法+1道SQL全部NOT_ATTEMPTED，[题单](JAVA_AI_INTERVIEW_PRACTICE_2026-10-11.md)。项目[工单事件平台](JAVA_AI_PROJECT_SPEC_2026-10-11.md)仅设计，未创建任何新Java代码/仓库、未测试Redis/AI，状态PROJECT_PROPOSED。
+- 已创建每周五16:00左右北京时区Java与AI招聘雷达，2026-10-16开始；通知是否实际弹送需用户设置核验。下一步只做java/javac/mvn/git版本检查，任何未见输出不能标PASS。每日行测原安排与周末休息、导师科研保留。
