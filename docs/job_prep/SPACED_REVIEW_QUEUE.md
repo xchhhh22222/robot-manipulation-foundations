@@ -335,3 +335,8 @@
 - 今天为 2026-10-10（周六）。本轮仅恢复交接与远端 GitHub 状态、布置 WSL 只读核验，没有新答案、运行证据或计时；**不产生PASS/WRONG的新判定**，也不提前把周一到期项标记为 DUE。
 - Q036 原题 WRONG 与 Q036-R1 NUMERIC_PASS/METHOD_UNVERIFIED 继续并存；Q037 NOT_ATTEMPTED。周末顺延的 T+1 正式执行日 2026-10-12、T+7 2026-10-19，仍 PLANNED，优先纳入工作日20题中的2–4题。
 - Day28 轨迹/Action后续复习的学习完成日尚无法据此确认，继续 DATE_UNCONFIRMED/NOT_ATTEMPTED；已布置 WSL `git status -sb`、`git diff --stat`，等待用户输出。此轮 GitHub 远端核对不等于本地轨迹测试。
+
+
+## 2026-10-11 具身智能就业强度与嵌入式/系统软件路线审计：仅新增职业研究，无到期知识卡状态变化
+- 2026-10-11周日，用户主动要求行业工作评价和职业选择调查；已产出报告 `CAREER_RESEARCH_2026-10-11_EMBODIED_ROBOTICS_WLB.md`，没有新的独立知识测验、用户作答、ROS2构建/运行或模拟面试。**无新复习卡PASS/WRONG或学习日期**；原2026-10-12 T+1、10-19 T+7仍PLANNED。Q037 NOT_ATTEMPTED，Day28等待WSL Git只读输出。
+- 职业主线只标 PROPOSED_NOT_APPROVED，需用户确认后再维护日程/课程；不以资料搜索算用户完成真实求职行动或投递。

@@ -401,3 +401,10 @@
 - 已布置 **Day28 第一个原子步骤：WSL只读 `git status -sb` 与 `git diff --stat`**（在 `source ~/.bashrc` / `rosdev` 后）；用户输出未回，`PENDING_USER`。任何本地未提交的 Day28 轨迹提取代码暂不可视为 GitHub 已同步；轨迹终点打印/构建/运行/真实执行均未通过本轮验证。
 - 本轮没有新的行测用户作答或项目执行日志：Q036-R1 结果PASS但方法UNVERIFIED；Q037 NOT_ATTEMPTED；到期复习仍按 2026-10-12 / 2026-10-19 工作日执行，状态 PLANNED；岗位/投递结果 NOT_MEASURED。今天是周六，不追加强制习题。
 - **下一次唯一技术入口：** 用户回传上述 WSL Git 状态两项输出，核对本地保护策略后，再继续 Day28 轨迹检查，不能先修改源码或声称已构建。
+
+
+## 2026-10-11 具身智能就业强度与嵌入式/系统软件路线审计（新增可核查求职研究，非投递成果）
+- 公共牛客/脉脉与招聘JD证据已按链接归档：[CAREER_RESEARCH_2026-10-11_EMBODIED_ROBOTICS_WLB.md](CAREER_RESEARCH_2026-10-11_EMBODIED_ROBOTICS_WLB.md)。主要结论是行业讨论存在加班风险，但没有分岗位工时统计，匿名评论不能证明公司或行业一律996；Demo/现场交付、软硬件测试、C++/Linux/ROS2系统研发与纯VLA算法应分开比较。
+- 求职建议（**PROPOSED_NOT_APPROVED**）：以机器人系统软件(C++/Linux/ROS2/DDS/Action/控制器)为核心，补CAN/EtherCAT/实时通信与测试自动化，再理解AI推理/评测，保持工业C++、嵌软、公共稳定岗备选。2027届职位全部仅作技能样本，用户为2028届；目前无合格真实投递新证据（NOT_MEASURED）。
+- 2026-10-11是周日，本轮主动职业研究属于用户自选任务，不派发强制行测；Q037仍NOT_ATTEMPTED，Q036-R1数值PASS但方法UNVERIFIED，工作日T+1/T+7执行日10-12/10-19 PLANNED；Day28本机状态仍PENDING_USER。
+- 下一次职业研究：一份真实目标JD逐项核验研发/交付比例、C++/Linux/嵌软要求、所在地/届别、加班证据与用户能力差距；若用户确认主线，再调整月度学习验收，不凭建议把路线标已变更。
