@@ -66,3 +66,8 @@
 用户当前提出的是**认真探索离开纯具身就业主线**，尚未明确说：“正式取消机器人求职，全面改Java/Agent”。因此本轮只能更新研究和优先级**建议**，不得将转行视为DONE，也不得删原长期路标、训练纪录、日程和研究方向。下一轮有证据的首要一步：选定一个后端/AI应用公开JD与一个贵州稳定岗位JD，过滤真实硬门槛，确定4周试验的唯一语言和可验收实验；若用户接受再执行日程重排。
 
 **本次审计结果**：PUBLIC_RESEARCH_COMPLETE；ACTUAL_2028_APPLICATION=NOT_MEASURED；FINAL_TRACK=DECISION_PENDING；Q037=NOT_ATTEMPTED；DAY28=WSL_VERIFICATION_PENDING。
+
+
+## 七、2026-10-11后续推荐收敛（取代本篇末尾任意语言的4周探索作为最新主线）
+- 用户要求不再反复考虑Agent/具身/后端，而要参考2024—2026真实历史招聘集中冲刺。**最新推荐文件是 [FOCUSED_CAREER_TRACKS_2026-10-11.md](FOCUSED_CAREER_TRACKS_2026-10-11.md)**：贵州运营商/国企数字化研发 + 省外成熟ToB软件研发作为两类企业岗位池，贵州省考/国考/事业作为独立考试轨道；统一Java/Spring Boot/MySQL/Linux技能，Python辅助、具身作为导师科研。此前“先任意Java或FastAPI、再主攻Agent”的版本是历史候选，**不再是最新推荐**。
+- 标记`RECOMMENDED_BASELINE`而非`USER_APPROVED`；职业选择不是实操通过或录用，真实WLB和2028届届别每个岗位仍需核实。
