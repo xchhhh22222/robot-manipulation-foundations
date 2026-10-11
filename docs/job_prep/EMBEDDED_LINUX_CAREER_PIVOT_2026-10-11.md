@@ -91,3 +91,10 @@
 - **下次原子入口仍为Linux工具链版本检查**（gcc/g++/cmake/gdb/uname），先恢复已有STM32经历中的一个可说明细节（板型、过去写过哪种外设/工程），之后决定是否寄板。
 
 状态：`PRIOR_STM32_EXPOSURE_USER_REPORTED`；`BOARD_AVAILABLE_REMOTE`；`GEO_NATIONWIDE_CONFIRMED`；`EMBEDDED_LINUX_PROJECT_NOT_STARTED`；`INTERNSHIP_EMPLOYING_ENTITY_UNVERIFIED`；`OFFER_GUARANTEE_FALSE`。
+
+
+## 2026-10-11 本轮最新的开工前规划审核（与此前“立即检查编译环境”相比优先级更高）
+- 用户要求先完成项目可靠性研究、**机械臂分拣**实习的真实嵌入式相关技术表达、继续每天20道行测/逐步加申论、以及2024—2026嵌入式Linux C/C++面经日常五题制度，**明确要在方案审核之后才讨论开始时间和电脑配置**。
+- 新[开工前完整项目/简历/面经方案](EMBEDDED_LINUX_PRESTART_MASTER_PLAN_2026-10-11.md)：libmodbus＋Eclipse Paho C++／Mosquitto为成熟依赖、Buildroot做ARM目标验证，参考MQMGateway功能结构但不能不遵AGPL许可证照搬。候选主项目为原创工业Linux Modbus→MQTT边缘网关，候选辅项目STM32↔Linux串口；验收必须有异常与故障注入、线程同步、gdb/内存排查、真实日志、ARM目标验证，无法保证仅凭项目名通过面试。
+- 原文“下一次立即执行gcc/gdb检查”**在用户批准开工前暂停**；不寄开发板、不配环境、不创建代码仓库。用户现在确定实习业务名为**机械臂分拣**，旧“分解/分拣待确认”已过时；仍待本人SDK/接口类型、代码操作和故障复现证据，不能借嵌软目标伪称驱动/固件。
+- 每工作日五个**口述面经问题**为计划（2 C/C++、2 Linux/通信、1项目追问），并非每日五道算法，另从既有技术块安排C++手撕/小实验；原公考行测和申论工作量、周末休息、学业任务不变。启动日期须用户后续确认，勿把本轮示例题列已PASS。
