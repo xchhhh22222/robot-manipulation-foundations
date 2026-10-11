@@ -455,3 +455,10 @@
 - 实习工程的确切零件业务/独立操作待用户核对。系统集成、联调与测试能够如实写实习，但**并未证实用户亲自开发Linux驱动、UART/CAN固件、STM32或板级程序**。个人Linux应用项目尚无编译运行证据：`EMBEDDED_LINUX_ENV=UNVERIFIED, PROJECT_NOT_STARTED`；原ROS2 Day27进度保留，Day28仍待本地证据。
 - 新C/C++算法、Linux通信/线程/串口/跨编译课程为计划，未独立做题不能记PASS；原Q037 NOT_ATTEMPTED，10-12和10-19复习PLANNED。工作日行测60—120分钟约20题/申论及贵州事业编和导师科研任务继续，周末不派强制练习。
 - 下一最小任务：Ubuntu/WSL执行只读`gcc --version; g++ --version; cmake --version; gdb --version; uname -m`版本核验（建议只截首行），再逐步开始Linux C/C++通信小程序；用8—12周实际JD、源码、岗位资格和本人兴趣验证而不是瞬时行业热帖切换。
+
+
+## 2026-10-11 STM32过往、远程开发板及全国岗位意愿（用户报告，未完成代码验证）
+- 用户说明本科找工作时已接触/练过STM32方向；目前有一块STM32板子在另一住所，若学习/求职确有需要可寄来。**尚未提交型号、旧代码或UART/CAN/RTOS实操**：记录`STM32_PRIOR_EXPOSURE=USER_REPORTED`、`STM32_BOARD=REMOTE_AVAILABLE`而非SKILL_PASS或本地硬件就绪。
+- 用户明确**能接受全国城市**的合格技术岗位（Linux应用软件、通信/工业/医疗/智能设备、必要时机器人系统软件），不再把企业技术求职地域限制贵州或成都/重庆；但常态20:00下班、长期加班和没有可迁移代码成长仍是拒绝条件。
+- 三项动机经真实岗位核查：①中国电信集团为央企，但正式实习用工主体/职责与个人独立代码证据待核，品牌不是技术录用保证；②双非计算机技术硕士帮助报部分岗位，**无法保证至少拿一份嵌软offer**；③C/C++ Linux系统软件能迁移机器人平台/中间件/端侧部署，不能直接保证VLA算法岗位。2027届速腾聚创Linux、它石智航机器人软件、思必驰IoT、25届元戎牛客面经与国资委央企名录已归档[详细证据](EMBEDDED_LINUX_CAREER_PIVOT_2026-10-11.md)。
+- 先在现有Linux环境做C/C++虚拟设备数据/串口协议、线程与Socket项目，再按实际岗位需要考虑寄回STM32并做端到端联调。无新程序或运行日志：`EMBEDDED_LINUX_PROJECT=NOT_STARTED`、`MCU_REVALIDATION=NOT_ATTEMPTED`；原Q037、Day28、10-12/10-19复习状态保持。
