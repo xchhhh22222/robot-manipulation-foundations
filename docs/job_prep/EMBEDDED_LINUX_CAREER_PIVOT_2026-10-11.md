@@ -68,3 +68,26 @@
 **下一次唯一原子动作**：在准备作为Linux嵌软开发环境的Ubuntu/WSL终端仅执行 `gcc --version | head -n 1; g++ --version | head -n 1; cmake --version | head -n 1; gdb --version | head -n 1; uname -m` 回传结果。不要先动ROS2源码、先买板或强行把旧Java路线写成已掌握。已学C/C++与板级条件根据输出再判断。
 
 状态：PUBLIC_JD_RESEARCH_COMPLETE；PREFERENCE=EMBEDDED_LINUX_PRIMARY_USER_STATED；ACTUAL_EMBEDDED_PROGRAM_NOT_STARTED；INTERNSHIP_EMBEDDED_DEVELOPMENT_UNVERIFIED；Q037_NOT_ATTEMPTED；DAY28_LOCAL_PENDING；2026-10-12与10-19复习仍原计划。
+
+
+## 2026-10-11 新增事实与就业论证复核（最新）
+
+**用户本轮新增真实情况（尚未验证技术成果）**：本科找工作时学习/接触过偏STM32的嵌入式技术；拥有一块STM32开发板，目前存放在另一个家，较远，但如课程实际需要可寄来。**开发板型号、过往写过的固件、FreeRTOS或外设驱动成果/日志暂未核实**，因此不能把“有板”写成“熟练STM32”。就业城市用户**全国均可**，不是仅贵州或成都、重庆；但生活质量边界不变。既有电信体系机械臂实习属于与通信设备/嵌入式软件相关的工程经历，**真正实习合同主体与是否中国电信系统直属单位需核对**。
+
+### 三项论证：成立程度与反证
+1. **央企实习加分：大体成立、有条件**。中国电信集团在国务院国资委2026央企名录中 https://wap.sasac.gov.cn/n2588045/n27271785/n27271792/c14159097/content.html ，但须区分员工/实习证明用工主体、第三方项目公司、实习实际职责以及个人代码工作。电信体系工业机械臂系统联调测试对系统软件岗位的工程协作和问题定位有相关性；**没有实际证据不能虚构本人是Linux/STM32研发工程师**。
+2. **双非计算机技术硕士保证嵌入式“最差也有工作”：不成立**。专业/硕士可通过许多本科以上相关专业门槛，但面试/投递还取决于C/C++功底、Linux多线程/网络/进程通信、交叉编译或板级经验、真实项目、学校限制与实际HC。愿意全国工作扩大职位池，不保证offer、预期薪酬/双休。动态每月筛真实岗位有效性才可判断可能性，不编录用率。
+3. **未来迁移具身软件：成立但限定岗位**。2027届速腾聚创机器人Linux软件要求C/C++、多线程、进程通信、Socket/串口，ROS2为加分 https://www.shushuqiuzhi.com/position/424536 ；它石智航官方2027通用机器人软件涵盖Linux/ROS2/驱动/中间件 https://tarsrobot.jobs.feishu.cn/021343/position/7667936622214220068/detail 。该交集支持将来面试机器人平台/通信中间件/端侧模型集成，不意味着可直接做VLA算法研究或获得具身高薪。
+
+### 2024—2027公开证据加强
+- 牛客25届元戎嵌软面经中，学校/实习/多项目背景仍经历若干轮淘汰；多轮问C/C++、CAN、UDP、Uboot、系统调试和真实参与范围，代码题。**单人经历**不能统计录取率，但可反驳“硕士+实习保证offer”。https://www.nowcoder.com/discuss/661915293345644544
+- 2027届思必驰嵌入式软件13–17K×14，要求Linux/RTOS、C/C++、MQTT/HTTP、ARM与实际设备开发，体现端云+智能设备路线并非都高薪，也非所有岗位只做纯内核：https://mnowpick.nowcoder.com/jobs/detail/464351
+- 2027届英杰电气成都/德阳嵌软历史样本同时提Linux与STM32/GD32及CAN/原理图/示波器，公开称双休、夏季18:00下班冬季17:30，**公司JD所述工作制不等于实际部门无加班，需要核实近四周实到离岗**：https://hzau.91wllm.cn/campus/view/id/999162
+
+### 学习与投递策略修订
+- 就业地域从“贵州及成都重庆等”升级为**全国优先看合格岗位**，先核2028届、学校/085404、实际工作内容、城市和年薪，继续将常态20:00后下班、大小周/周末长加班与纯客户Demo/驻场交付放红线。无需因地理范围扩大就放松生活要求。
+- P0不变：C/C++ Linux应用/系统编程、Socket/串口/多线程/调试/交叉编译，通信设备/工业/医疗/智能终端平台软件均可投。P1的STM32已有接触但**技能掌握未验收**；先在Linux PC/虚拟PTY完成可复现协议收发、超时恢复与源码测试，再由JD判断是否确实需要把远处的开发板寄来，实现STM32 UART/CAN等联调或RTOS小项目；不立即购买新板子、寄板也非当前任务。
+- 个人**嵌入式Linux设备事件服务**项目以虚构数据为基础。若寄回STM32，可在本人许可硬件、无公司机密的情况下做一段STM32串口采集/发送→Linux收包/解析/重连的端到端实验。该项目适用于通信/工业设备软件，未来独立加ROS2模拟事件接口，可连接机器人平台软件，但不能拿来宣称已做商业硬件驱动或VLA。
+- **下次原子入口仍为Linux工具链版本检查**（gcc/g++/cmake/gdb/uname），先恢复已有STM32经历中的一个可说明细节（板型、过去写过哪种外设/工程），之后决定是否寄板。
+
+状态：`PRIOR_STM32_EXPOSURE_USER_REPORTED`；`BOARD_AVAILABLE_REMOTE`；`GEO_NATIONWIDE_CONFIRMED`；`EMBEDDED_LINUX_PROJECT_NOT_STARTED`；`INTERNSHIP_EMPLOYING_ENTITY_UNVERIFIED`；`OFFER_GUARANTEE_FALSE`。
