@@ -357,3 +357,8 @@
 
 ## 2026-10-11 Java后端AI应用面经与项目新规范：未新建已学卡
 - 首批Java算法9题、SQL1题及Java技术栈是新增学习规划，用户尚未实际代码练习，全部NOT_ATTEMPTED，T+1/T+7卡只在独立实践后创建。当前没有新Q037作答/ROS2代码验证；Q036原错和R1数值PASS但方法UNVERIFIED保持，2026-10-12/10-19到期未做仍PLANNED。
+
+
+## 2026-10-11 电信机械臂实习转换Java＋Agent简历与面试定位（岗位研究与简历规划不等于测试通过）
+- 用户咨询实习转Java、Java+Agent岗位及面试策略，已在`RESUME_AGENT_TRANSITION_2026-10-11.md`建立匿名事实与面经规划，但无独立Java练习、算法/SQL实答、运行/实习个人动作证据。因此**无新PASS/WRONG卡**；此前Java题单仍NOT_ATTEMPTED，Java+Agent项目NOT_STARTED。
+- Q036原错误和R1数值PASS但方法UNVERIFIED保留；Q037 NOT_ATTEMPTED；T+1 2026-10-12、T+7 2026-10-19依旧PLANNED；不因本轮研究改动。
