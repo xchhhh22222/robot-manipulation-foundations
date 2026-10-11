@@ -362,3 +362,7 @@
 ## 2026-10-11 电信机械臂实习转换Java＋Agent简历与面试定位（岗位研究与简历规划不等于测试通过）
 - 用户咨询实习转Java、Java+Agent岗位及面试策略，已在`RESUME_AGENT_TRANSITION_2026-10-11.md`建立匿名事实与面经规划，但无独立Java练习、算法/SQL实答、运行/实习个人动作证据。因此**无新PASS/WRONG卡**；此前Java题单仍NOT_ATTEMPTED，Java+Agent项目NOT_STARTED。
 - Q036原错误和R1数值PASS但方法UNVERIFIED保留；Q037 NOT_ATTEMPTED；T+1 2026-10-12、T+7 2026-10-19依旧PLANNED；不因本轮研究改动。
+
+
+## 2026-10-11 Java简历不写ROS2个人项目：双投递版本校正：学习队列无新增PASS
+- 用户质疑Java简历放ROS2不匹配；本轮按公开JD明确J/JA版本不写ROS2个人项目、R版保留作为选择性备案，这是简历方法校正，**非新算法/SQL/Java/ROS2作答或构建**。原Java题单和新AI知识点仍NOT_ATTEMPTED，Q037未答，10-12/10-19复习依原计划PLANNED。
