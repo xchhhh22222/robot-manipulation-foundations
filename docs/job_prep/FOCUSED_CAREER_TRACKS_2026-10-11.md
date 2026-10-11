@@ -66,3 +66,7 @@
 ## 八、2026-10-11 Java后端AI应用面经与项目新规范
 - 既定两类企业岗位（贵州运营商/数字化研发与省外成熟ToB软件）共用Java技术，增量补充[Java＋AI技术路线](JAVA_AI_ENGINEERING_ROADMAP_2026-10-11.md)、[限时面经题](JAVA_AI_INTERVIEW_PRACTICE_2026-10-11.md)、[GitHub工单项目规格](JAVA_AI_PROJECT_SPEC_2026-10-11.md)。Java/Spring Boot/MySQL主干不变，Redis真实缓存测试为中间件能力、AI应用是可评测延伸、ROS2未来独立接口为可选长期能力。
 - 已创建每周五16:00左右工作日技术与市场招聘雷达，但不因热帖重置长期路线。原公考及论文义务不动。**所有Java/Redis/AI实操尚未完成**；下次唯一入口核实Java/Maven/Git版本。
+
+## 2026-10-11 后续优先级修订：Java历史建议，嵌入式Linux成为首选
+- 用户主动提出主攻嵌入式软件，尤其Linux。原本文件中“Java/Spring Boot是唯一企业主栈、Redis工单项目必须做”的建议已由**[EMBEDDED_LINUX_CAREER_PIVOT_2026-10-11.md](EMBEDDED_LINUX_CAREER_PIVOT_2026-10-11.md)**后续版本替换：Linux+C/C++系统应用/设备通信/嵌入式平台软件优先，ARM和基础驱动/MCU按技术证据逐步补。Java/Agent不再默认学习课表，但已查资料保存备选。
+- 公考事业编/贵州技术国央企路径仍可筛，企业优先通信设备、工业设备、医疗设备和智能硬件**有代码研发**的单位；不能假定嵌软=无加班，需核验实际团队工时、城市、双休、是否长期驻厂、个人学校及085404资格。既有2027届JD样本仅供2028届下一招聘周期参考。
