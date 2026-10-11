@@ -462,3 +462,10 @@
 - 用户明确**能接受全国城市**的合格技术岗位（Linux应用软件、通信/工业/医疗/智能设备、必要时机器人系统软件），不再把企业技术求职地域限制贵州或成都/重庆；但常态20:00下班、长期加班和没有可迁移代码成长仍是拒绝条件。
 - 三项动机经真实岗位核查：①中国电信集团为央企，但正式实习用工主体/职责与个人独立代码证据待核，品牌不是技术录用保证；②双非计算机技术硕士帮助报部分岗位，**无法保证至少拿一份嵌软offer**；③C/C++ Linux系统软件能迁移机器人平台/中间件/端侧部署，不能直接保证VLA算法岗位。2027届速腾聚创Linux、它石智航机器人软件、思必驰IoT、25届元戎牛客面经与国资委央企名录已归档[详细证据](EMBEDDED_LINUX_CAREER_PIVOT_2026-10-11.md)。
 - 先在现有Linux环境做C/C++虚拟设备数据/串口协议、线程与Socket项目，再按实际岗位需要考虑寄回STM32并做端到端联调。无新程序或运行日志：`EMBEDDED_LINUX_PROJECT=NOT_STARTED`、`MCU_REVALIDATION=NOT_ATTEMPTED`；原Q037、Day28、10-12/10-19复习状态保持。
+
+
+## 2026-10-11 开工前嵌入式Linux完整方案（计划完成、学习未开始）
+- [EMBEDDED_LINUX_PRESTART_MASTER_PLAN_2026-10-11.md](EMBEDDED_LINUX_PRESTART_MASTER_PLAN_2026-10-11.md)已形成项目成熟依赖和许可比较、主项目Modbus TCP/RTU→MQTT个人工业网关/辅项目STM32串口联调条件、可复现实测故障验收清单、实习“机械臂分拣”嵌软岗位表述和2024—2026牛客面经5题＋C++手撕体系。**用户明确还未决定何时正式开工及何时配置电脑，故此刻项目只是候选**。
+- 本轮用户将企业业务口径确认“机械臂分拣”，此前项目开发角色仍以现场集成/联调/测试为已知边界；不能推断本人编写Linux驱动、STM32固件、具体网络协议或独立商业算法。实际个人接口动作/故障案例PENDING_USER。
+- 拟定工作日5个口述题为2道C/C++、2道Linux/网络与1道项目追问，20—30分钟建议上限，另每周2—3道限时C++编程及Linux小实验嵌入原技术块。**不立即派五题、不建复习PASS卡**。国考/省考事业行测20题/工作日60—120分钟、申论周内循序启动，央国企专业技术测评不与行测混同。工作周外不强制。
+- `PROJECT_GATE=AWAITING_USER_REVIEW`、`SECOND_PROJECT=CONDITIONAL`、`START_DATE=NOT_DECIDED`、`ENVIRONMENT=NOT_CHECKED_THIS_TURN`、`STM32_BOARD=NOT_SHIPPED`；原Q037 NOT_ATTEMPTED、Day28 PENDING_USER、2026-10-12/10-19复习PLANNED。没有实操/机考新PASS。
