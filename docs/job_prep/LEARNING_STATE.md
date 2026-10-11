@@ -436,3 +436,9 @@
 - JavaGuide2026、牛客2025—26真实面经与Spring官方资料已融合到[JAVA_AI_ENGINEERING_ROADMAP_2026-10-11.md](JAVA_AI_ENGINEERING_ROADMAP_2026-10-11.md)：Java21/Spring Boot3.5/MySQL/MyBatis/测试、Redis cache-aside项目实测、后续RAG/AI工具工程，原C++/ROS2项目仍服务导师毕业；不是用户已经掌握。
 - 增加独立Java限时手撕/SQL/面经项目答辩，首批9道算法+1道SQL全部NOT_ATTEMPTED，[题单](JAVA_AI_INTERVIEW_PRACTICE_2026-10-11.md)。项目[工单事件平台](JAVA_AI_PROJECT_SPEC_2026-10-11.md)仅设计，未创建任何新Java代码/仓库、未测试Redis/AI，状态PROJECT_PROPOSED。
 - 已创建每周五16:00左右北京时区Java与AI招聘雷达，2026-10-16开始；通知是否实际弹送需用户设置核验。下一步只做java/javac/mvn/git版本检查，任何未见输出不能标PASS。每日行测原安排与周末休息、导师科研保留。
+
+
+## 2026-10-11 电信机械臂实习转换Java＋Agent简历与面试定位（履历事实核实前不记实习开发能力）
+- 用户新增“现于贵阳电信体系机械臂/零件业务实习”；此前已归档系统集成、现场联调与测试。业务叫“分解”还是“分拣”、职务合同主体、本人实际代码工作/一个故障处理结果**未确认**；以`INTERNSHIP_ACTION_EVIDENCE=PENDING_USER`保存，勿称Java研发、独立开发商业机器人/AI算法。
+- 新增 [RESUME_AGENT_TRANSITION_2026-10-11.md](RESUME_AGENT_TRANSITION_2026-10-11.md)：2027届历史JD交叉核验普通Java（Agent非必须）、Agent加分、Java/AI专项三类；规划**真实电信实习＋个人ROS2已有历史证据＋未来实测Java工单服务＋AI工具/RAG评测**的双版本简历。Java基础仍主线，AI应用逐层补足而不是弃Java重学Agent。
+- **本轮无新用户实际代码或题目证据**：Java项目与Agent`NOT_STARTED`，个人Java环境`UNVERIFIED`；Q037`NOT_ATTEMPTED`、Day28`PENDING_USER`、10-12/10-19复习`PLANNED`不变。下一入口先核验一个本人真实实习技术动作及准确业务名称。
