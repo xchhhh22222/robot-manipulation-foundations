@@ -370,3 +370,8 @@
 ## 2026-10-11 嵌入式Linux主攻偏好：计划不等于真实掌握
 - 用户选择将求职技术准备侧重点由原Java方案转向嵌入式Linux应用/平台C/C++，已有一份实际招聘JD与面经调查[EMBEDDED_LINUX_CAREER_PIVOT_2026-10-11.md](EMBEDDED_LINUX_CAREER_PIVOT_2026-10-11.md)；尚未提交新的C/C++代码、Linux线程/Socket、交叉编译、MCU/驱动运行证据，**不建立PASS卡**。
 - Java算法/SQL历史题单保持未作答记录，但不再按Java为默认技术题目分配；未来用户完成C++算法/调试后再建立T+1/T+7。行测Q037 NOT_ATTEMPTED，Q036-R1数值PASS方法未验；10-12、10-19到期复习原计划PLANNED，周末不派练习。
+
+
+## 2026-10-11 用户回忆STM32背景不自动增加学习PASS
+- 本轮仅新增本科阶段接触STM32的个人报告、开发板在另一住所可寄、全国求职意愿及三项职业论证。未见旧板程序、固件、通信驱动实测输出或新C/C++算法作答；STM32/CAN/UART/RTOS知识复习卡待本人真正复现后创建，状态PENDING_USER，不改任何旧成绩。
+- Q036-R1原数值PASS但方法仍UNVERIFIED；Q037 NOT_ATTEMPTED；2026-10-12与2026-10-19工作日复习仍PLANNED。工作日学习总时长、公考课与导师毕业任务不改变。
