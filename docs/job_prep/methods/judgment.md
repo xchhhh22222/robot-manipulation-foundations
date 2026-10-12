@@ -5,6 +5,7 @@
 | ID / 独立卡 | 对应印刷页 | 实际状态 |
 |---|---|---|
 | [JP-LOGIC-01 翻译推理和逆否等价](cards/JP-LOGIC-01-contrapositive.md) | 114—121 | Q040 ANSWER_PASS，方法未独立说明 |
+| [JP-ANALOGY-01 类比推理关系识别](cards/JP-ANALOGY-01-relations.md) | 印刷页待核 | Q049—Q052 PUBLISHED_NOT_ATTEMPTED |
 
 图形推理（有图须查看原题图而不是只读PDF抽取文字）、类比、定义、组合排列、削弱、加强：仅INDEXED，遇到题后再各自建小卡，不提前冒称已掌握。
 
