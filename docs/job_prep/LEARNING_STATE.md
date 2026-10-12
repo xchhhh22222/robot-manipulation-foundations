@@ -657,3 +657,7 @@
 ## 2026-10-12 技术目标进一步聚焦嵌入式C/C++，当前Linux温度程序待上机
 - 用户最新明确求职技术主线为**嵌入式C/C++及Linux，ROS2/具身方向仅作为辅助穿插**；取代旧v2技术时数接近对半分：固定每周C/C++约9.5小时、ROS2约3小时、工具/GitHub等候与记录约2.5小时。行测每天≤2h、论文科研2h保持独立，周末无固定课。详见[INTEGRATED_WEEKDAY_SCHEDULE_2026-10-12.md](INTEGRATED_WEEKDAY_SCHEDULE_2026-10-12.md) v3，Linux29周项目产品仍不换题。
 - 今日老师已提供Ubuntu最小实操流程（用户自己建立目录与源码文件、自行将`raw/10`整数除法更正为浮点运算，然后`g++ -std=c++17 -Wall -Wextra temperature_demo.cpp -o temperature_demo`和`./temperature_demo`取得真实输出）。目前用户只给过g++ 13.3.0真实版本检查和`temperature=raw/10`错误原式；**改正、源码和程序运行均仍NOT_VERIFIED**。今日目标是实际输出31.8°C并解释整数与浮点的区别；后续根据日志如实批改。
+
+## 2026-10-12 M1首个温度程序运行证据与编辑器选择
+- 用户在Ubuntu终端`~/embedded-linux-learning`实际执行`./temperature_demo`，回贴输出`Temperature: 31.8 C`，故`M1_TEMPERATURE_RUN_OUTPUT=VERIFIED`。没有贴出完整源文件或g++编译日志，不能把全部编译过程/源码理解算独立验收PASS。
+- 用户明确认为nano编辑效率低，提出改用VS Code。后续默认使用VS Code编辑现有工程，不重建目录；当前下一原子操作在Ubuntu终端尝试`code .`打开当前文件夹，若提示command not found则根据真实环境诊断，避免贸然安装或修改远程主机。
