@@ -481,3 +481,8 @@
 - 用户不接受原“嵌入式Linux工业通信边缘网关”作为最终主项目，指出它只是通讯骨架，要求成熟GitHub全栈落地产品，有可改造的前端、后端和真实设备数据流程；希望合法二次开发、将产品视觉与核心功能内化成可解释的个人贡献。已研究FUXA（Node/Angular/MIT，需检查安全修复）、Neuron（C/Vue但Dashboard停止维护，LGPL）、ThingsBoard（4.4+ BUSL1.1）并建研究文档[FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md](FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md)。
 - 当前改为`FULLSTACK_PRODUCT_SELECTION=PENDING_USER`；旧网关`MODULE_ONLY`，可作为未来工业设备监控/运维平台中的C++边缘服务。深度改造必须有源码、测试、故障处理及开源许可署名证据；简单换皮不是“本人原创完整软件”。FUXA仅候选未部署、Linux新项目未建、无成功编译/AI/ARM/STM32实测：`PROJECT_NOT_STARTED`。
 - 用户明确先完整审核，再确定开工和环境配置，故不主动要求Linux命令或下载FUXA。新增5道Linux面经仍未获启动批准；既有行测今日第一组Q037—Q041已发但未收到答案，Q037—Q041 NOT_ATTEMPTED，10-12到期复习DUE/NOT_ATTEMPTED，10-19 PLANNED，Day28 PENDING_USER。保留工作日20道行测、申论计划、公考和央国企等路线。
+
+
+## 2026-10-12 FUXA → Linux C++后端设计审查：未上机
+- 用户最新要求是希望将FUXA原Node.js后端替换为**本人真正开发的Linux C++后端**，同时保留可操作工业设备管理前端。已使用GitHub上游代码核实Angular客户端、Express REST API、Socket.IO运行、设备驱动和历史数据复杂度；FUXA 전체后台等价移植远超“改语言”，推荐**先把端到端最小设备管理/采集/历史/告警/恢复链路用本人C++服务独立实现**，然后让Angular客户端按REST/WS适配，逐步迁移，避免抄代码/版权问题。详见 [完整产品源码核验](FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md)。
+- 本轮明确：`CPP_BACKEND_REWRITE=DESIGN_CANDIDATE`，`CLIENT_FORK=NOT_STARTED`，`CPP_SERVICE=NOT_STARTED`，`ARM_DEPLOY=NOT_STARTED`，`USER_APPROVAL=PENDING`。无任何实际代码、Linux环境日志、面经答题，不记新PASS。旧行测Q037–Q041和间隔复习仍按真实状态，导师科研及公考计划不受影响。
