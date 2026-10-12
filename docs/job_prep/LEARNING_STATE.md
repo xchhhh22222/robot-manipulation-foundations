@@ -640,3 +640,7 @@
 - 用户在Ubuntu终端实际执行 `g++ --version`，返回 `g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0`。本轮真实证据支持 `M1_GPP_CHECK=VERIFIED`；编译器已安装，无需重装。
 - 注意尚未编写、编译或运行C++源码，`M1_CPP_PROGRAM=NOT_TESTED`，不能把版本查询误算编程PASS。
 - 下一原子教学：让用户在Ubuntu建立 `temperature_demo.cpp`，亲手补全 `int raw=318` 转换为 `double temperature` 的表达式并输出，认识 `raw / 10` 整数除法与 `raw / 10.0` 浮点除法区别。提交自己写的代码再逐步编译运行。STM32/双系统先搁置。
+
+## 2026-10-12 M1首段C++温度换算：首次独立表达式有整数除法误区
+- 用户首次提交独立答案：`temperature=raw/10`，具备寄存器原值/10转换的数学思路，且能写出C++赋值表达式，但由于`raw`被声明为`int`、`10`是整数常量，发生**整数除法先截断后赋给double**：318/10得到31而非31.8。若此处作为完整语句还缺结尾分号，但优先纠正运算类型，非泛化为C++完全不会。
+- 教师解释：`raw / 10`的表达式结果是int 31，即使最后存入double也只得到31.0；改浮点除数`10.0`即可保留31.8。用户尚未实际编写/编译/运行文件，`M1_CPP_DIVISION=PARTIAL_NEEDS_CORRECTION`，`SOURCE_WRITTEN=NOT_VERIFIED`，`COMPILE_RUN=NOT_TESTED`。下一最小反馈只需要用户把赋值语句改正确，随后实际编译测试，不重复大量相似题。
