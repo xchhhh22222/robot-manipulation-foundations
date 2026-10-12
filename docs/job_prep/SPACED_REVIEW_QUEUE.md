@@ -394,3 +394,8 @@
 ## 2026-10-12 FUXA后端迁移成C++ Linux：仅源码核验
 - 用户要求评估Node.js→C++ Linux重构是否能形成独立工程贡献。本轮核对FUXA真实API、Socket.IO、设备驱动、DAQ存储与Angular前端；更新方案 [FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md](FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md)，**没有用户新编译、代码/系统部署、Linux面经作答**，因此Linux C++能力仍NOT_VERIFIED，新面经5题NOT_STARTED，不建PASS卡。
 - 其他对话当日行测Q037—Q041已经发布但截至目前未见用户答案，仍NOT_ATTEMPTED；今日到期和10-19复习安排不因项目可行性研究变化。
+
+
+## 2026-10-12 社交平台嵌入式秋招项目对标：无新学习通过
+- [2024—2026项目对照研究](EMBEDDED_AUTUMN_PROJECT_BENCHMARK_2026-10-12.md)核验工业电表/Qt物联网/FreeRTOS/边缘AI等个人案例与嵌入式Linux C++招聘JD，用户认可原全栈产品方案，但**尚未开始Linux C++/ARM/STM32项目或嵌软每日5题**；不产生PASS或复习卡。
+- 今天在其他对话已布置Q037—Q041但本轮没有可见答题证据；不得把项目研究改变行测题状态与T+1/T+7复习约束。
