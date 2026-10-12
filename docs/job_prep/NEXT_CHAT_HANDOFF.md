@@ -198,3 +198,11 @@
 - 下次必读 [四科方法知识库索引](methods/README.md) 和对应具体卡（[数量/资料](methods/quant_data.md)、[判断](methods/judgment.md)、[言语](methods/verbal.md)、[申论](methods/essay.md)）；新笔记仅是**自主摘要和页码导航**，没有公开上传完整原PDF。若新对话无法访问原PDF，应依索引教学，不要声称已经直接读取原书全部题目。
 - 具体教法：用户看到复杂除法不知道“如何先猜44%”，以后不使用无来源的倒推猜答案作第一步；先看题型、给出可执行算法、根据选项决定精度，再让用户独立复述或作答。方法状态 INDEXED/EXPLAINED/METHOD_VERIFIED/TRANSFER_VERIFIED 分开记录，未回答不写PASS。
 - 本轮无新答题：2026-10-12 Q037-R1仍NOT_ATTEMPTED，Q041-R1误把已完成7/15视为剩余，ATTEMPTED_WRONG且不再R2；原第一组5题3正确、耗时NOT_MEASURED。所有既有行测60—120分钟/约20题、工作日T+1/T+7、周末不派任务与职业开发START_NOT_APPROVED约束照旧。
+
+## 2026-10-12 当前优先接力：小MD知识卡 + 12月完整120分钟行测（覆盖较早粗粒度四科摘要）
+
+- 用户明确不希望每次读取完整PDF；**现在优先读[单方法卡总索引](methods/README.md)**、对应`methods/cards/<方法ID>.md`和最新daily/复习队列。原`methods/quant_data.md`等四个大文件已变成简短入口目录，首批9张方法+原创讲解题卡已上GitHub且回读；不把AI示范题计入用户做题。
+- 用户指定2026年**12月独立在120分钟做完整套国考行测**，不要求现在高分。请优先按[阶段路线及验收条件](XINGCE_120MIN_BY_DEC_2026.md)执行：10月方法+六模块覆盖，11月分组计时→半卷→首次整卷，12月120分钟流程+复盘。每周只在工作日60—120分钟行测时间盒内，完整模拟替代当天普通20题，不额外加班/占用周末。
+- 官方2026行测六部分包括政治理论与常识判断，2025四册教辅不完整覆盖，补充的[来源待核索引](methods/political_common.md)目前INDEXED/NOT_ATTEMPTED。申论180分钟是另一个目标，贵州事业编职测/综应、央国企测评勿混同。
+- 当前真实学习进度**仍Q037—Q041答5中3、用时NOT_MEASURED，Q037-R1尚未实答，Q041-R1最后把已做误当余量而错且不再R2**；建库和计划没有新增答卷证据。以后知识卡必须区别INDEXED/EXPLAINED/ANSWER_PASS/METHOD_VERIFIED/TRANSFER_VERIFIED，不让“老师教过”代表会做。
+- 继续遵守导师学业与实习真实边界；工业Linux C++产品架构USER_APPROVED_DESIGN、真正环境上机和每日五道面经START_NOT_APPROVED。
