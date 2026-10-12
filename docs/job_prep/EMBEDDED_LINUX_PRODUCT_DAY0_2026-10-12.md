@@ -81,3 +81,7 @@ M7 Git历史、独立实现边界、测试、README、3分钟与10分钟面试�
 - 学生原答：“状态以及318然后318/10得到温度”。对教师给出的31.8°C、缩放10倍情境，独立给出寄存器原始值318并正确提出除以10，故`SCALED_REGISTER_VALUE=ANSWER_PASS`、`PHYSICAL_CONVERSION=ANSWER_PASS`；没有清晰独立解释寄存器由设备内部程序维护，所以`DEVICE_FIRMWARE_VS_LINUX_ROLE=EXPLAINED_NOT_INDEPENDENTLY_VERIFIED`。
 - 学生提到“状态”，属于可额外由设备提供的逻辑状态量，不能推定与温度同一个寄存器，需由具体映射定义。
 - **M0概念阶段收尾，允许进入M1**。下一原子步不是安装FUXA或复制代码，而是从Ubuntu终端执行一个只读命令`g++ --version`，了解C++编译器及版本，并回贴原样输出；不同错误再具体教学。该命令尚未由用户运行，`M1_TOOLCHAIN=NOT_CHECKED`、`CPP_USER_CODE=NOT_STARTED`，所有实际测试继续不得记PASS。
+
+## 2026-10-12 新概念追问：Linux C++后端与STM32固件是否是同一个程序
+- 用户追问：“相当于这个后端其实可能是写在liux或steam32上面的软件程序”。已经初步明白“后端是软件程序”，但需区分操作系统与芯片、部署位置、职责：Linux是OS，当前项目C++后端目标为Ubuntu Linux PC（将来可部署ARM Linux板）；普通STM32微控制器通常运行MCU固件，承担传感器采样、寄存器映射/Modbus设备服务，不能把Linux C++网络服务原样部署到普通STM32 MCU。特殊STM32MP系列是可运行Linux的微处理器平台，应与常规STM32F/H MCU区分。工业Linux设备也可能设备端和后端同机部署。
+- 教师解释温度传感器→STM32固件采样/逻辑寄存器值318→Modbus→Ubuntu C++后端读数/10→Web的两软件职责链。用户尚未独立复述部署方案，标`LINUX_VS_STM32_RUNTIME=EXPLAINED_NOT_VERIFIED`，不记PASS。M1 Ubuntu只读`g++ --version`仍为下一上机步骤，未收到输出，不声称已经检查环境或编译代码。
