@@ -5,11 +5,12 @@
 | ID / 独立卡 | 对应印刷页 | 实际状态 |
 |---|---|---|
 | [QD-SPEED-01 截位直除](cards/QD-SPEED-01-truncation.md) | 150—151 | EXPLAINED，方法未独立验证 |
-| [QD-COMPARE-01 分数比较](cards/QD-COMPARE-01-fractions.md) | 152—153 | Q037纠错中 |
-| [QD-SHARE-01 两期比重与百分点](cards/QD-SHARE-01-percentage-points.md) | 171—178 | Q037 WRONG，R1尚待答 |
+| [QD-COMPARE-01 分数比较](cards/QD-COMPARE-01-fractions.md) | 152—153 | Q037原题错，R1答案已对 | 
+| [QD-BASE-01 基期与现期](cards/QD-BASE-01-base-current.md) | 150—156 | Q042已出题，NOT_ATTEMPTED |
+| [QD-SHARE-01 两期比重与百分点](cards/QD-SHARE-01-percentage-points.md) | 171—178 | Q037 WRONG，R1答案B正确、过程尚不完整 |
 | [QD-AVERAGE-01 平均数增长率](cards/QD-AVERAGE-01-yoy.md) | 179—182 | Q038数值正确，方法未验证 |
 | [QU-WORK-01 工程赋值](cards/QU-WORK-01-assign-lcm.md) | 198—200 | Q041-R1部分过程正确、结果错误 |
 
-尚未细拆：基期与现期、增长率/量、倍数、数量其他模块，统统仅INDEXED；今后遇到再增独立文件。
+尚未细拆：增长率/量、倍数、数量其他模块，统统仅INDEXED；今后遇到再增独立文件。
 
-[知识库总入口](README.md) · [2026年12月120分钟整卷目标](../XINGCE_120MIN_BY_DEC_2026.md)
+[知识库总入口](README.md) · [2026基础—2027强化计划](../CIVIL_SERVICE_FOUNDATION_TO_2027_AUG_2026-10-12.md)
