@@ -486,3 +486,10 @@
 ## 2026-10-12 FUXA → Linux C++后端设计审查：未上机
 - 用户最新要求是希望将FUXA原Node.js后端替换为**本人真正开发的Linux C++后端**，同时保留可操作工业设备管理前端。已使用GitHub上游代码核实Angular客户端、Express REST API、Socket.IO运行、设备驱动和历史数据复杂度；FUXA 전체后台等价移植远超“改语言”，推荐**先把端到端最小设备管理/采集/历史/告警/恢复链路用本人C++服务独立实现**，然后让Angular客户端按REST/WS适配，逐步迁移，避免抄代码/版权问题。详见 [完整产品源码核验](FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md)。
 - 本轮明确：`CPP_BACKEND_REWRITE=DESIGN_CANDIDATE`，`CLIENT_FORK=NOT_STARTED`，`CPP_SERVICE=NOT_STARTED`，`ARM_DEPLOY=NOT_STARTED`，`USER_APPROVAL=PENDING`。无任何实际代码、Linux环境日志、面经答题，不记新PASS。旧行测Q037–Q041和间隔复习仍按真实状态，导师科研及公考计划不受影响。
+
+
+## 2026-10-12 社交平台秋招嵌入式项目交叉检查（设计获用户认可）
+- 用户明确接受继续现有完整工业监控/运维Web前端＋**个人原创Linux C++设备与业务后端**的项目设计，并要求参考牛客/B站/CSDN的2024—2026秋招项目不断校核技术方向，结论**无重大偏差**；详见 [EMBEDDED_AUTUMN_PROJECT_BENCHMARK_2026-10-12.md](EMBEDDED_AUTUMN_PROJECT_BENCHMARK_2026-10-12.md) 中各视频/牛客/2027校招JD与安全营销来源。
+- 当前状态 `PROJECT_ARCHITECTURE=USER_APPROVED_DESIGN`，`PROJECT_CODE=NOT_STARTED`，`CPP_BACKEND=NOT_STARTED`，`ARM_TARGET_TEST=NOT_ATTEMPTED`，`STM32_BOARD=REMOTE_NOT_SHIPPED`，`ENV_CHANGE=NOT_AUTHORIZED`；仍等待用户确定实际上机开工日，不发Linux命令或新5题。
+- 招聘层面对Linux C++应用/通信设备平台软件方向适配，实际不足需把开发重心放到**多线程、Socket/Modbus、故障重连、日志和单元测试**，其次ARM交叉部署与可选MCU串口验证。FUXA原Angular/Node功能与本人C++实现在README、源码中须严格区别，Qt/内核/V4L2/FreeRTOS按未来具体JD选修，不盲目全学。
+- 本轮无新个人编译、上机、实际面经/行测答题结果：Q037—Q041已在其他对话出题仍NOT_ATTEMPTED（如之后其他对话有新结果以最新实际记录为准），Day28尚待日志、10-12/10-19复习计划不因为调研被算PASS。
