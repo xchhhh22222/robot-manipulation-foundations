@@ -346,3 +346,9 @@
 - ROS2并非新的不明任务：已有 ROS2 Jazzy+MoveIt2六自由度机械臂Pick&Place主课，目前Day28：Pose Goal probe此前有规划PASS；在WSL本地的`pick_demo.py`后续轨迹终点提取变更**尚未确认运行且可能未提交**，远端Main仍曾是Day27代码。按[CURRENT_HANDOFF.md](../CURRENT_HANDOFF.md)先核WSL`git status -sb`/`git diff --stat`保护本地编辑，再进行`get_robot_trajectory_msg()`终点读取与手写关节目标对照，不将`py_compile`PASS误称运行PASS。不在排课时另起无关ROS项目。
 - 2小时/日**科研**独立做小论文研究方向、阅读、baseline、实验数据及撰写；ROS2实训只有真正构成论文实验时才记入科研，并且不能同时计入3h技术。行测独立聊天接续最新题号、20题为目标但2小时封顶，按题型和理解效果弹性调整。
 - 首周10月12日Linux环境g++13.3.0已验证、首个温度程序整数除法误区仍待自行更正与运行；10月13日ROS2本地工作树只读审计；10月14日C++温度程序编译运行；10月15日ROS轨迹probe真实验证；10月16日双线复盘及集中GitHub同步。其他行测和论文每日具体动作详见综合排期，不提前写完成。ROS2科研方向与论文题目仍不能凭空宣布选定。
+
+
+## 2026-10-12 最新目标纠偏：嵌入式C/C++为主，ROS2辅助穿插；当天继续完成温度程序
+- 用户明确：“其实我们的求职目标是嵌入式方向但我们可能也需要用到ros或者偏向ros和具身所以我觉得我们可以以c为主ros为辅穿插，同时让我们继续先把今天的任务完成”。据此将先前v2近乎均分的Linux与ROS技术课重新固定为**嵌入式C/C++（Linux系统与工业设备后端）主线，每周9.5h；ROS2/MoveIt2旧项目辅助，每周3h；Git/GPT等待与同步2.5h**。工作日其余行测2h、独立具身小论文科研2h照旧，周末无强制课。详见[综合工作日排课v3](INTEGRATED_WEEKDAY_SCHEDULE_2026-10-12.md)，该v3高于本文件任何旧“周二周四ROS主课/两条技术均分”的说法。
+- 具体：周一C150min+同步30；周二C120+ROS30+同步30；周三C150+同步30；周四ROS120+C30+同步30；周五C120+ROS30+总验收30。**C语言基础指针、内存、位运算、POSIX和后续STM32固件穿插到C++工业后端工程学习**；不把原Linux C++工业监控产品推倒重写纯C，保持ROS既有Day28技术连续性。
+- **当日最新教学（2026-10-12）**：本轮用户已获得实操步骤：在家中Ubuntu建立隔离目录`~/embedded-linux-learning`，使用nano创建`temperature_demo.cpp`，包含`int raw=318`和`double temperature`，学生必须自行改正此前整数除法错误后，用`g++ -std=c++17 -Wall -Wextra temperature_demo.cpp -o temperature_demo`编译，再`./temperature_demo`运行，目标打印`Temperature: 31.8 C`。**尚未收到用户提交的改正代码、编译日志或运行输出**；不能提前标记今日完成。若用户发回实际结果，先验收再推进，不再绕回M0或设备寄送。
