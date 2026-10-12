@@ -125,3 +125,10 @@ M7 Git历史、独立实现边界、测试、README、3分钟与10分钟面试�
 - 建议主链路 **本地STM32（串口、SWD、调试器） ↔ 身边Ubuntu电脑（Linux C++设备采集服务、日志、SQLite、Web界面）**；真实硬件出问题时人在旁边可按复位、插拔数据线、看LED/屏幕，避免无人值守远程烧录风险。一个设备的本地C++ Modbus RTU串口接入可能需要在此前模拟Modbus/TCP后端中抽象协议适配层；不要误说USB连接STM32就自动是Modbus TCP。若坚持家中4090部署后端，远程网络访问板子还需单独设备网关、VPN/隧道和安全设计，串口USB不会自动在家中主机出现。
 - 用户手头电脑目前常用Windows，装Ubuntu存在**Windows+WSL2**（适合无硬件的早期Linux学习，但远程USB/调试器透传有额外复杂性）、**Windows+Ubuntu双启动**（面向实体USB/SWD串口最推荐，须先备份数据/检查磁盘分区、BitLocker恢复密钥）、只装Ubuntu（目前无必要），或者继续使用Windows STM32CubeIDE写固件、Linux后端运行家中Ubuntu的可选路径。不要在未知当前PC硬件、磁盘和Windows重要数据时直接教其擦盘安装。
 - 最优时间：**现在**家中4090的Ubuntu远程继续M1 g++与本人Linux C++编码、模拟设备闭环，春节之前可从自己身边电脑预先试用/安装Ubuntu以免短假期耗在系统设置；**春节**只需拿到实体板/配件，回到所在地再慢慢硬件联调，不把节假日作为必须上机期限。不依赖GPU；没有命令或实际硬件证据，阶段`BOARD_CONNECTED=NO`、`LOCAL_UBUNTU_INSTALLED=NOT_VERIFIED`、`M1_TOOLCHAIN=NOT_CHECKED`。
+
+
+## 2026-10-12 最近部署决定：可以邮寄STM32，身边电脑双系统，需一只Ubuntu安装U盘
+- 用户最新反馈：“这样吧，而且我完全可以让家人帮我寄过来，这样也很简单，但是双系统切换有点麻烦其他都无所谓还需要一个u盘来作为烧录盘就行”。指向用户倾向身边当前Windows电脑保留Windows+装Ubuntu双系统，家人从家中邮寄F407-V2+高速DAP与配件，家里4090不搬。双启动跨系统需要**重启**、不必每次进BIOS（通常GRUB菜单可选，具体由引导配置决定）；可将最常用系统设默认。若后来非常排斥重启，备选Windows+WSL2跑Linux C++，Windows原生STM32调试，或Ubuntu作为主系统，都不是必须现在改变选择。
+- **两个不同概念**：制作Ubuntu安装盘需要一般空闲USB闪存U盘，Ubuntu官方推荐至少8GB，建议16GB或更大，制作过程清空U盘；而STM32F407烧录固件通常使用套装高速DAP + SWD连接（或符合板卡/bootloader要求的其他方式），**并不使用该Ubuntu安装U盘去烧录MCU程序**。请同时邮寄开发板、高速DAP、可传数据的USB线、SWD排线、电源附件、板卡配套必要跳帽；收到后依据实物确认型号。
+- Ubuntu双系统安装前一定备份Windows资料并评估磁盘容量/未分配空间、UEFI/EFI引导、BitLocker/设备加密是否启用及恢复密钥，不要选择“擦除整个磁盘”；官方说明：https://ubuntu.com/desktop/docs/en/24.04/tutorial/install-ubuntu-desktop/ 、https://ubuntu.com/desktop/docs/en/24.04/reference/bitlocker-during-ubuntu-installation/ 。官方最小存储25GB是安装底线，个人项目建议尽可能预留80–120GB（非硬要求）。没有收到当前身边电脑磁盘信息或备份证据，**不得直接要求分区或制作安装盘到不明设备**。
+- 新计划：保持主线从已有家中Ubuntu通过远程进行M1 Linux C++基础、模拟设备；身边电脑双系统准备和寄板是下一阶段的部署选项；板到手再就近ST-Link/DAP-SWD烧录、CH340串口联调，家中RTX4090继续运行其他AI研究/远程任务。双系统/板卡状态均PLANNED_NOT_INSTALLED/BOARD_NOT_CONNECTED，尚未得到`g++ --version`或任何真实代码验证。
