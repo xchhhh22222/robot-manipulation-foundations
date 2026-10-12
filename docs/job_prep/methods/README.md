@@ -10,6 +10,7 @@
 | 资料分析 | [分数比较](cards/QD-COMPARE-01-fractions.md) | 152—153 |
 | 资料分析 | [基期与现期及基期量反推](cards/QD-BASE-01-base-current.md) | 150—156 |
 | 资料分析 | [增长量：原量单位与百分比的区别](cards/QD-GROWTH-01-amount.md) | 157—170 |
+| 资料分析 | [一般增长率：先找基期分母](cards/QD-GROWTH-02-growth-rate.md) | 157—170 |
 | 资料分析 | [比重与百分点](cards/QD-SHARE-01-percentage-points.md) | 171—178 |
 | 资料分析 | [平均数增长率](cards/QD-AVERAGE-01-yoy.md) | 179—182 |
 | 数量关系 | [工程问题：公倍数赋值](cards/QU-WORK-01-assign-lcm.md) | 198—200 |
@@ -62,3 +63,8 @@
 
 - **Q042**：用户选C、写300÷1.25，标准240亿元；**ANSWER_PASS/FORMULA_APPLICATION_PASS**，但未解释因子来源，限时/迁移未验证。常规题Q037—Q042已答**6道4对2错**；R1纠错另计。
 - 新卡[QD-GROWTH-01](cards/QD-GROWTH-01-amount.md)：增长量/增长率单位区别，新题Q043已发布但**NOT_ATTEMPTED**。不把教科书老师示范记学习PASS。
+
+## 2026-10-12 最新教学互动协议
+
+- 用户要求更高效率：**1张方法卡配教师完整示范1题+4—6道不同变式一次作答、成组批改和集中GitHub回写**，不逐题重复调用文件服务；教师示范不算用户答题。
+- 限于工作日60—120分钟：60min8—12题、90min12—18题、120min16—24题为预算建议（非硬指标）；每天通常1—2个新小方法卡，含复习题，实际看难度。当前常规题已完成Q037—Q043 **7题5对2错**；Q044—Q048 PUBLISHED/NOT_ATTEMPTED。
