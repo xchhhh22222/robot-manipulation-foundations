@@ -352,3 +352,11 @@
 - 用户明确：“其实我们的求职目标是嵌入式方向但我们可能也需要用到ros或者偏向ros和具身所以我觉得我们可以以c为主ros为辅穿插，同时让我们继续先把今天的任务完成”。据此将先前v2近乎均分的Linux与ROS技术课重新固定为**嵌入式C/C++（Linux系统与工业设备后端）主线，每周9.5h；ROS2/MoveIt2旧项目辅助，每周3h；Git/GPT等待与同步2.5h**。工作日其余行测2h、独立具身小论文科研2h照旧，周末无强制课。详见[综合工作日排课v3](INTEGRATED_WEEKDAY_SCHEDULE_2026-10-12.md)，该v3高于本文件任何旧“周二周四ROS主课/两条技术均分”的说法。
 - 具体：周一C150min+同步30；周二C120+ROS30+同步30；周三C150+同步30；周四ROS120+C30+同步30；周五C120+ROS30+总验收30。**C语言基础指针、内存、位运算、POSIX和后续STM32固件穿插到C++工业后端工程学习**；不把原Linux C++工业监控产品推倒重写纯C，保持ROS既有Day28技术连续性。
 - **当日最新教学（2026-10-12）**：本轮用户已获得实操步骤：在家中Ubuntu建立隔离目录`~/embedded-linux-learning`，使用nano创建`temperature_demo.cpp`，包含`int raw=318`和`double temperature`，学生必须自行改正此前整数除法错误后，用`g++ -std=c++17 -Wall -Wextra temperature_demo.cpp -o temperature_demo`编译，再`./temperature_demo`运行，目标打印`Temperature: 31.8 C`。**尚未收到用户提交的改正代码、编译日志或运行输出**；不能提前标记今日完成。若用户发回实际结果，先验收再推进，不再绕回M0或设备寄送。
+
+
+## 2026-10-12 M1最终验收及2026-10-13执行入口（此节取代前文较早PENDING温度程序状态）
+- **权威成果与明日直接执行入口**：[2026-10-12 C++/GDB实证记录](daily/2026-10-12_EMBEDDED_CPP.md)；[2026-10-13 周二低思考度详细执行教案](daily/2026-10-13_EXECUTION_PLAN.md)。新GPT以这两份文件和最新LEARNING_STATE为准，不再让用户重复今天的温度初始练习；这两份是2026-10-12的真实已写GitHub Markdown，不代表明天执行过。
+- 用户已在Ubuntu `~/embedded-linux-learning` 真实运行 `./temperature_demo`，输出 `Temperature: 31.8 C`，截图明确显示 `temperature=raw/10.0;`。VS Code `code .`打开成功、C/C++扩展已安装；F5 GDB命中第9行断点（截图），用户报告悬停看到变量；F10后截图黄色高亮已移至第11行，用户随后确认在Terminal看到输出。**这些用户证据可以记首次引导式编译/调试PASS，不能升级成独立C++成熟掌握或本地代码GitHub已提交。**
+- 口诀纠偏：用户把F10误认为跳出函数，教师解释F10 Step Over、F11 Step Into、Shift+F11 Step Out；尚未独立复测。**明天首项教学要写 `rawToCelsius(int raw)` C++函数，跑318、0、-55三个数据并用F11进入/Shift+F11退出**；不要插入Modbus/STM32新任务、不要立刻安装新IDE。
+- 明日预算：C/C++120分钟+ROS Day28仅只读状态核查30分钟+GitHub/GPT等候和收尾30分钟；行测120分钟以内（10月12日Q037-Q056常规20题17正确3错，另3道纠错，10-13对原Q041重点复习）；论文科研独立120分钟。周末无强制作业。**明日模型档位须由用户在界面自行选择Instant/低思考度，助手不可宣称已改模型设置或已排自动提醒。**
+- 原Day28 WSL本地未提交修改需保护。明日ROS只读`git status -sb`、`git diff --stat`、`git branch --show-current`，不得做覆盖性git操作或声称已跑完轨迹终点提取。
