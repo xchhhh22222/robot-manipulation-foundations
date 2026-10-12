@@ -475,3 +475,9 @@
 - 用户提出“OK我们开始今天的行测”。按2026-10-10更新的 DAILY_STUDY_EXECUTION_PROTOCOL.md，**覆盖旧20–30分钟/2–3题的临时上限**：工作日行测60–120分钟、目标约20题、四组×五题、同一错点立即纠正最多一次、可到时停止；保留至少一项可验收项目或真实JD任务，但不可自行启动未经批准的嵌入式Linux新项目。
 - 今日新建 docs/job_prep/daily/2026-10-12.md，第一组Q037–Q041：资料分析比重百分点与平均数增长率各1题、言语1题、判断1题、数量1题。题已发布，**尚未收到用户答案**，因此Q037–Q041 NOT_ATTEMPTED，今日已做0/目标约20；实际用时NOT_MEASURED。
 - 原周末顺延的T+1今天2026-10-12到期：平均数增长率跨材料及%/百分点表达两点记DUE / NOT_ATTEMPTED，不能提前算PASS。T+7执行日2026-10-19仍PLANNED。
+
+
+## 2026-10-12 最新需求：完整Web可交互工业平台，不是headless网关
+- 用户不接受原“嵌入式Linux工业通信边缘网关”作为最终主项目，指出它只是通讯骨架，要求成熟GitHub全栈落地产品，有可改造的前端、后端和真实设备数据流程；希望合法二次开发、将产品视觉与核心功能内化成可解释的个人贡献。已研究FUXA（Node/Angular/MIT，需检查安全修复）、Neuron（C/Vue但Dashboard停止维护，LGPL）、ThingsBoard（4.4+ BUSL1.1）并建研究文档[FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md](FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md)。
+- 当前改为`FULLSTACK_PRODUCT_SELECTION=PENDING_USER`；旧网关`MODULE_ONLY`，可作为未来工业设备监控/运维平台中的C++边缘服务。深度改造必须有源码、测试、故障处理及开源许可署名证据；简单换皮不是“本人原创完整软件”。FUXA仅候选未部署、Linux新项目未建、无成功编译/AI/ARM/STM32实测：`PROJECT_NOT_STARTED`。
+- 用户明确先完整审核，再确定开工和环境配置，故不主动要求Linux命令或下载FUXA。新增5道Linux面经仍未获启动批准；既有行测今日第一组Q037—Q041已发但未收到答案，Q037—Q041 NOT_ATTEMPTED，10-12到期复习DUE/NOT_ATTEMPTED，10-19 PLANNED，Day28 PENDING_USER。保留工作日20道行测、申论计划、公考和央国企等路线。
