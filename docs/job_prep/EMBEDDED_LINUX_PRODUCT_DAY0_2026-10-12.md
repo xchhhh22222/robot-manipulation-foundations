@@ -85,3 +85,8 @@ M7 Git历史、独立实现边界、测试、README、3分钟与10分钟面试�
 ## 2026-10-12 新概念追问：Linux C++后端与STM32固件是否是同一个程序
 - 用户追问：“相当于这个后端其实可能是写在liux或steam32上面的软件程序”。已经初步明白“后端是软件程序”，但需区分操作系统与芯片、部署位置、职责：Linux是OS，当前项目C++后端目标为Ubuntu Linux PC（将来可部署ARM Linux板）；普通STM32微控制器通常运行MCU固件，承担传感器采样、寄存器映射/Modbus设备服务，不能把Linux C++网络服务原样部署到普通STM32 MCU。特殊STM32MP系列是可运行Linux的微处理器平台，应与常规STM32F/H MCU区分。工业Linux设备也可能设备端和后端同机部署。
 - 教师解释温度传感器→STM32固件采样/逻辑寄存器值318→Modbus→Ubuntu C++后端读数/10→Web的两软件职责链。用户尚未独立复述部署方案，标`LINUX_VS_STM32_RUNTIME=EXPLAINED_NOT_VERIFIED`，不记PASS。M1 Ubuntu只读`g++ --version`仍为下一上机步骤，未收到输出，不声称已经检查环境或编译代码。
+
+## 2026-10-12 用户明确建立STM32设备端与Linux C++后端的架构区分
+- 用户直接复述：“相当于我这个steam32就是一个工业设备然后linuxc++就是一个后端是这样的架构吗”。判断**核心层次关系已初步理解**：学生能辨认STM32设备侧与Linux C++服务侧是不同角色，且主动确认自己的心智模型。教师肯定其架构方向，补充精度：STM32是MCU控制器/工业设备组成部分，教学时可用STM32开发板模拟设备，并不等于所有工业设备都直接叫STM32；Linux C++服务运行在Ubuntu主机（后续可能ARM Linux）；Web是第三层。普通STM32需合适物理接口和Modbus协议实现才能真正通讯，暂未实操。
+- 接下来的实际工程路线：开发板尚在异地，先在Ubuntu模拟设备，走模拟设备 -> C++采集和错误处理 -> Web显示，等条件具备再真实STM32联调；不要求立即购买硬件或更改当前Ubuntu环境。
+- 教师不要无限延续同一架构选择题。当前`M0_ROLE_SPLIT=CONCEPTUAL_ANSWER_PASS`，`STM32_MCU_VS_FULL_INDUSTRIAL_DEVICE=EXPLAINED_NOT_VERIFIED`。进入M1只读`g++ --version`，若用户提供输出再逐一指导亲手写C++程序。此刻`TOOLCHAIN_NOT_CHECKED`、`CPP_CODE_NOT_STARTED`、`ARM_NOT_TESTED`。
