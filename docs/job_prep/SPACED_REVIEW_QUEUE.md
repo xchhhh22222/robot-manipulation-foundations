@@ -390,3 +390,7 @@
 ## 2026-10-12 全栈工业嵌入式产品选型讨论：不记项目或面经PASS
 - 用户纠正旧工业Modbus→MQTT网关是通讯骨架，不是完整前后端落地产品；新全栈候选调研见 [FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md](FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md)。这属于项目需求与开源许可证研究，**用户没有做新Linux代码、面经、算法或设备调试，也未批准开始**，全部NOT_ATTEMPTED。
 - 今天行测第一组Q037—Q041在其他对话已发布，当前无任何实际作答，全部NOT_ATTEMPTED；10-12原T+1复习仍DUE，10-19 T+7仍PLANNED，不因新增项目规划改变旧成绩。
+
+## 2026-10-12 FUXA后端迁移成C++ Linux：仅源码核验
+- 用户要求评估Node.js→C++ Linux重构是否能形成独立工程贡献。本轮核对FUXA真实API、Socket.IO、设备驱动、DAQ存储与Angular前端；更新方案 [FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md](FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md)，**没有用户新编译、代码/系统部署、Linux面经作答**，因此Linux C++能力仍NOT_VERIFIED，新面经5题NOT_STARTED，不建PASS卡。
+- 其他对话当日行测Q037—Q041已经发布但截至目前未见用户答案，仍NOT_ATTEMPTED；今日到期和10-19复习安排不因项目可行性研究变化。
