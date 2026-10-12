@@ -661,3 +661,10 @@
 ## 2026-10-12 M1首个温度程序运行证据与编辑器选择
 - 用户在Ubuntu终端`~/embedded-linux-learning`实际执行`./temperature_demo`，回贴输出`Temperature: 31.8 C`，故`M1_TEMPERATURE_RUN_OUTPUT=VERIFIED`。没有贴出完整源文件或g++编译日志，不能把全部编译过程/源码理解算独立验收PASS。
 - 用户明确认为nano编辑效率低，提出改用VS Code。后续默认使用VS Code编辑现有工程，不重建目录；当前下一原子操作在Ubuntu终端尝试`code .`打开当前文件夹，若提示command not found则根据真实环境诊断，避免贸然安装或修改远程主机。
+
+
+## 2026-10-12 温度运行和GDB首次实操：证据结案
+- 详细有据可核的训练会话见[10月12日C++/GDB记录](daily/2026-10-12_EMBEDDED_CPP.md)，下一工作日按[10月13日详细时间盒教案](daily/2026-10-13_EXECUTION_PLAN.md)直接执行；之前文档中“温度程序还没运行”的说法已过期，本条覆盖旧PENDING。
+- 实际证据：学生Ubuntu命令`./temperature_demo`返回`Temperature: 31.8 C`；VS Code截图`temperature=raw/10.0;`；GDB截图明确`Breakpoint 2, main() ... temperature_demo.cpp:9`；F10后黄色执行行从9移到11；用户口述变量悬停看到且Terminal有输出。**RUN_PASS / GDB_BREAKPOINT_PASS / STEP_OVER_PASS / HOVER_USER_REPORTED**。
+- 认识保留：用户称“f11是下一步10是跳出函数”，教师解释F10=跨过、F11=进入、Shift+F11=跳出；概念尚待新函数中**独立运行复测**。未查看全部源码、未收到独立g++完整编译日志，不能写成全部自主掌握。未发现本地练习源码推送GitHub的证据。
+- 2026-10-13嵌入式C/C++主线2小时：本人写`double rawToCelsius(int raw)`，测试318/0/-55对应31.8/0/-5.5，F11/Shift+F11调试；ROS原WSL Day28只读审计30分钟；技术Git记录/等待30分钟。另行测上限120分钟、科研120分钟；全部计划`PENDING_USER`，**不把Markdown已创建当明日课已完成**。当天行测实际Q037—Q056共20题17对3错，3个R1不纳入常规正确率，耗时未测量；次日复习勿把用户最新状态回退为Q037未作答。
