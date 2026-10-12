@@ -39,3 +39,29 @@
 - 工作量诚实估算：如果技术块每周仅约3×60—90分钟，12周可能只能做好真实可演示的MVP（且取决于源码难度）；完整产品+ARM和可靠性可延续到2027春季，不承诺一键fork改名即可毕业/过面。
 - **开工闸门不变**：用户尚未批准具体最终项目、时间或环境配置。下一次先讨论FUXA/Neuron/原创全栈三种投入策略与哪一条最能证明Linux C/C++主技能；未经明确指示不得下载/改电脑、开新仓库或寄STM32板。
 - 今天的行测Q037—Q041已发布但尚未得到用户作答，状态NOT_ATTEMPTED，不受项目改提议影响。工作日20题与循序加入申论/嵌软面经计划维持。
+
+## 2026-10-12 源码级核验：用户明确希望Node.js后端换成Linux C++
+
+**用户最新疑问**：能否把FUXA主要Node.js后端替换为自己开发的C++服务，在Linux（后续可为ARM）上运行，从而成为更有个人代码贡献的完整项目？**结论：可行，但不是语言自动转换，必须实现兼容API、实时消息和原有业务功能。重新编写的独立C++部分属于用户原创实现；保留/修改的MIT原版Angular或Node功能仍属于衍生代码，不能称整个仓库从零独立原创。** 整体项目在用户审核前仍为`DESIGN_CANDIDATE/PROJECT_NOT_STARTED`。
+
+### 源码真实边界（直接核对frangoteam/FUXA公开仓库）
+- `client/src/app/` 是Angular应用，有editor、device、alarms、users、fuxa-view、_services及其他业务模块，若保留它，就需要继续用前端JavaScript/TypeScript的工具链构建，并非系统绝对“100% C++”。
+- `server/main.js` 创建Express和Socket.IO运行服务，`server/api/index.js` 涉及auth、users、projects、alarms、daq、reports、scheduler、scripts等API；`server/runtime/index.js`负责Socket.IO连接/业务事件；`server/runtime/devices/`包含Modbus、MQTT、S7、OPCUA、BACnet等设备驱动；`server/runtime/storage/`具有SQLite/Influx/QuestDB存储适配。资料：https://github.com/frangoteam/FUXA/tree/master/server 和 https://github.com/frangoteam/FUXA/tree/master/client 。
+- 因此并非“所有JS换成CPP即完成”，**Socket.IO与标准WebSocket不是直接兼容协议**。可修改Angular Web端`_services`逐步换成普通WebSocket+REST，或者专门实现必要的Socket.IO兼容层；推荐前者更可控，但UI前端源码也要调整。
+- FUXA源码MIT https://github.com/frangoteam/FUXA/blob/master/LICENSE ，衍生分发需保留著作权/许可文本；第三方依赖/素材/商标/Pro白标功能另核，不能以换Logo掩盖原代码作者。
+- C++后台可考虑成熟Drogon框架 https://github.com/drogonframework/drogon （HTTP路由、WebSocket、鉴权过滤器、SQLite、ARM支持），设备通信libmodbus、paho-mqtt-cpp依其各自许可证引入，日志spdlog、单测GoogleTest为候选而非已经装好。
+
+### 两个实施强度
+**S1（更现实的主候选）：逐步替换**：在合法保留FUXA前端/临时Node基线的情况下，先运行原成品形成操作验收；新增独立Linux C++服务处理虚拟Modbus设备采集/断连/多线程与状态、REST/WebSocket的新增业务接口；重构前端若干数据服务指向新C++ API；逐步迁移设备配置/历史/告警/权限，一条业务链不再依赖Node时给出集成测试。最终做简历时如仍有Node，诚实写“双后端过渡/本人C++设备服务”，不能写“完全替代Node”。
+**S2（高风险候选）：全部更换后端**：必须重建项目编辑器读写/报表/全部驱动/鉴权/脚本/调度/报警/DAQ历史与Node-RED等众多功能才可能保持FUXA全功能等价，超出当前秋招准备预算；可有意识**缩减成自有产品功能集**（设备列表/实时图表/报警/历史/权限），而不是追求FUXA所有功能兼容。精简后有完整产品闭环，不能称兼容原FUXA所有特性。
+
+### 可审阅的完整产品MVP合同
+1. Web端能登录及新增一台虚拟设备（含RBAC、请求验证）；C++后台能保存与加载配置。
+2. C++设备采集通过libmodbus TCP与虚拟设备读取状态；在数据库记录时间戳和事件、前端REST读历史及WebSocket实时状态。
+3. 设备断线有超时/重连（有界退避、不忙循环）、异常告警产生/确认及历史审计，可回放真实重启/故障测试。
+4. 源代码可在原生Ubuntu上构建/测试；申请“嵌入式Linux/ARM部署”必须另外取得QEMU/ARM真实构建/运行日志；仅普通x86 Linux启动不足以宣称ARM底层经验。
+5. 明确本人成果的C++模块代码、文档、测试、Git提交记录，保留所有原版权/许可要求，模拟数据均为个人虚构，无电信实习保密材料。
+
+**不能保证项目“自动算自己东西”**：面试主要考用户自己是否设计实现、懂原理、能复现并修复故障；例如提问C++线程如何退出、缓存/数据库一致性、Socket.IO为什么不兼容、设备断联状态机、跨架构编译和错误日志。**项目深度与工程证据比“后端是否写成C++”更重要**，但正确实施重构确实能显著提高嵌软JD匹配度。
+
+开工闸门保持：本轮只是C++替换可行性和范围审核，**暂不下载/装环境/开源Fork/建立新代码仓/购买或寄送开发板，也不开始新5题Linux面经**，等用户认可以“完整可演示产品的核心功能＋本人Linux C++后端”为目标，再确定迁移范围、起始日和电脑环境。原Q037–Q041其他对话已发题，暂无用户答题证据。
