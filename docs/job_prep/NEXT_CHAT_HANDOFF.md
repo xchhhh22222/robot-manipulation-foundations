@@ -302,3 +302,7 @@
 
 ## 2026-10-12 Linux项目 M0收尾
 用户确认STM32作为模拟设备端、Linux C++作为Ubuntu后端的架构分工，基本认识正确；STM32是MCU控制器而非整台工业设备必然由STM32构成。细节写于EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md。继续M1：请用户只读运行`g++ --version`并回传输出；此刻没有环境或C++代码实际证据，不再针对同一概念无限出题。
+
+## 2026-10-12 项目新增信息：STM32板子在家里，可考虑远程USB联调
+- 用户说STM32板也在家里，问能否直接插到家中的RTX4090 Ubuntu主机做学习；担心不能远程看到实体板。说明开发板与Ubuntu主机可能可以物理连接，但**是否已插线/型号/接口尚未核验**。若通过板载ST-Link/数据USB/串口调试器连到Ubuntu，可由外地Windows远程桌面在Ubuntu执行烧录、串口日志读取和GDB调试；无法直接远程看到LED/实体按键、重插线/断电需现场辅助或摄像头/受控电源。USB线供电不意味着板支持虚拟串口或可从该USB直接调试。
+- 后续可减少纯模拟并加入真实STM32联调，不需贸然购板。但本轮保持M1 Linux C++编译器只读`g++ --version`优先；确认有现场接线和板型后才一步步只读`lsusb`等检查，当前BOARD_CONNECTION=NOT_VERIFIED、REMOTE_DEBUG=NOT_TESTED。详情见EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md。
