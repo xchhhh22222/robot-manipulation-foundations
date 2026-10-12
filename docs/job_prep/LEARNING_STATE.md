@@ -611,3 +611,8 @@
 ## 2026-10-12 Day0 Modbus异常响应辨析
 - 学生独立选B并正确说明设备已经回应：协议异常与超时的分类ANSWER_PASS；但误认为请求的寄存器地址必然存在、问题是网络传错地址。教师解释非法数据地址异常码0x02通常表示设备不支持所请求的地址或范围，需先查设备映射/配置，并不自动等于断网。
 - 下一微测：明确收到非法地址响应，先重连网络还是先核对寄存器配置，为什么？当前寄存器映射与错误处理原理EXPLAINED_NOT_VERIFIED；仍无个人C++源代码/运行、ARM或STM32证据。详见[Day0](EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md)。
+
+
+## 2026-10-12 Linux C++ Day0：传感器、设备寄存器与后端的关系
+- 学生主动构造场景“工业设备里面有Linux后端，温度传感器接入写寄存器，寄存器只能存3位十进制数字所以一个寄存器只能读一个温度”。这是系统结构思考的进步，但不能直接认定架构已掌握。教师澄清：当前方案的Linux C++后端运行在独立Ubuntu计算机；工业设备内部可由STM32/其他控制器读取传感器、更新Modbus逻辑寄存器，再由Linux C++读取；常见Modbus输入/保持寄存器宽16 bit（0到65535 unsigned），如26.5°C放大10倍存265；数据类型、缩放、多个寄存器需依设备文档。完整解答见[Day0记录](EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md)。
+- `SENSOR_TO_MODBUS=EXPLAINED_NOT_VERIFIED`，`REGISTER_16BIT=EXPLAINED_NOT_VERIFIED`，`ENGINEERING=NOT_STARTED`。接下来先用一简短数据流/缩放检查再进入Ubuntu g++、CMake等只读环境与学生首段C++代码，不无限增加同一基础概念的测试。原本异常响应B判断已ANSWER_PASS，其它未验证内容保持原状态，其他对话公考进度不要覆写。
