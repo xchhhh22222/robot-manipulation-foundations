@@ -1,6 +1,6 @@
 # Linux C++工业监控项目：工作日固定排期与验收基准（2026-10-12）
 
-状态：`TECHNICAL_SCOPE_BASELINE_V1 / WEEKLY_HOURS_SUPERSEDED_BY_V3`。**最新时间以[工作日三线综合排期 v3](INTEGRATED_WEEKDAY_SCHEDULE_2026-10-12.md)为准：嵌入式C/C++与Linux为主（周一二三五），ROS2为辅（周四深度和周二五穿插），周五整合验收；技术/GPT协作3小时（含GitHub等待）、行测2小时、独立科研2小时。**本文件主要保留Linux C++的29周阶段和交付物，不是已完成工程。首周只有用户的 Ubuntu `g++ --version`（13.3.0）已获独立真实验证，其余代码、FUXA、Modbus/板卡一律未完成。基准于2026-10-12由用户明确提出“按日期规划、可剔除周六周日、不要想一出是一出”而制定。保留历次细节的Day0日记：[EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md](EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md)。
+状态：`TECHNICAL_SCOPE_BASELINE_V1 / WEEKLY_HOURS_SUPERSEDED_BY_V3`。**最新时间以[工作日三线综合排期 v3](INTEGRATED_WEEKDAY_SCHEDULE_2026-10-12.md)为准：嵌入式C/C++与Linux为主（周一二三五），ROS2为辅（周四深度和周二五穿插），周五整合验收；技术/GPT协作3小时（含GitHub等待）、行测2小时、独立科研2小时。**本文件主要保留Linux C++的29周阶段和交付物，不是已完成工程。**截至2026-10-12，g++ 13.3.0已验证，温度样例31.8 C真实运行和VS Code GDB断点/F10实操也已证实，见[当日实证记录](daily/2026-10-12_EMBEDDED_CPP.md)；此结论不扩展为FUXA、Modbus或STM32已完成。**基准于2026-10-12由用户明确提出“按日期规划、可剔除周六周日、不要想一出是一出”而制定。保留历次细节的Day0日记：[EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md](EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md)。
 
 ## 1. 基本规则与资源约束
 
@@ -63,7 +63,7 @@
 
 ## 5. 本周已知真实状态（2026-10-12）
 
-- 本日`g++ --version`实际输出`g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0`：编译器版本检查`VERIFIED`。
-- 用户独立先写`temperature=raw/10`，在int除法上会被截断，教师解释应让表达式有浮点操作数（如`10.0`）；**用户尚未独立回复改正语句、也没有首次C++源码/编译日志**。不得写此周代码验收已完成。
-- 第一个原子练习仍是让用户自己填写完整`double temperature = raw / 10.0;`同类逻辑（不能替其标独立答对），创建并编译运行温度程序；实际输出、解释通过才向M1其他知识推进。
+- 本日`g++ --version`实际输出`g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0`：编译器版本检查`VERIFIED`；**另外温度程序和调试已有后续真实证据，见下面更新**。
+- 用户初写`temperature=raw/10`会整数截断；后续源码截图已确认改为`temperature=raw/10.0`，真实Ubuntu运行`./temperature_demo`输出`Temperature: 31.8 C`。**引导式温度样例RUN_VERIFIED**；完整源码、独立编译流程、函数调试尚未全验证。
+- 首次GDB截图证实VS Code g++ debug在第9行命中断点，F10后黄色执行箭头移动到第11行；用户口头确认变量悬停和Terminal输出。F10/F11/Shift+F11理解曾混淆，**下一步函数实作复测，而不是重做最初温度程序**。明日详细步骤见[2026-10-13教案](daily/2026-10-13_EXECUTION_PLAN.md)。
 - 双系统、U盘、开发板寄送为可选独立硬件准备，当前不阻断软件主线。不要催用户在本周格式化磁盘。
