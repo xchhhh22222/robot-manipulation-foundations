@@ -546,3 +546,9 @@
 - 新生效计划：[CIVIL_SERVICE_FOUNDATION_TO_2027_AUG_2026-10-12.md](CIVIL_SERVICE_FOUNDATION_TO_2027_AUG_2026-10-12.md)；[29讲基础覆盖跟踪](methods/FOUNDATION_COVERAGE_CHECKLIST_2026.md)。原`XINGCE_120MIN_BY_DEC_2026.md`已变废止转链，不得再按12月120分钟评价。
 - 贵州优先：根据历史贵州2026省考与事业单位**分类考试**公告判定不同卷类、不同申论/综应要求，避免国考和事业A/B/C混课。2027年7—8月是**备考水平**而非确定考试时间，报名资格单查届时公告。
 - 本轮仅更新教学目标、覆盖表和索引，无新增用户答案/实际用时。第一组Q037—Q041仍5答3对，Q037-R1 NOT_ATTEMPTED，Q041-R1最终WRONG不再R2；嵌软项目/5道面经未批准启动。
+
+
+## 2026-10-12 本人明确批准嵌入式Linux C++产品项目开始（M0进行中）
+- 用户说“好的那么我们先开始Linux C++项目吧。”项目正式从DESIGN_APPROVED/START_NOT_APPROVED升级为 **PROJECT_START_AUTHORIZED / DAY0_ARCHITECTURE_IN_PROGRESS**，但尚无任何可验证独立C++代码、Linux版本输出、实际运行/上板/技术答题，所以工程NOT_STARTED、知识MASTERY=NOT_ASSESSED，切勿记PASS。
+- 首日任务与阶段计划在[EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md](EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md)。教师先讲从模拟Modbus设备→Linux C++服务→历史/告警→Web界面组成的真正完整产品，提出仅一项原子知识检查：设备掉线20秒，谁检测与重连？网页怎么获知？为何不能只在浏览器处理？等待用户自己的解释，再按掌握程度进入M1 Ubuntu只读编译器确认和个人代码练习。
+- 用户的STM32板仍在异地未寄，ARM运行未试、FUXA尚未克隆、实际本地环境未配置；每日五道嵌软面经没有因为项目启动自动添加任务。工作日行测、申论、央国企和导师具身科研计划各自保持原数据、原预算。用户可自发Voice面试，考核成绩只有实际口答后更新。
