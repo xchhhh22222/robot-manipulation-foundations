@@ -90,3 +90,9 @@ M7 Git历史、独立实现边界、测试、README、3分钟与10分钟面试�
 - 用户直接复述：“相当于我这个steam32就是一个工业设备然后linuxc++就是一个后端是这样的架构吗”。判断**核心层次关系已初步理解**：学生能辨认STM32设备侧与Linux C++服务侧是不同角色，且主动确认自己的心智模型。教师肯定其架构方向，补充精度：STM32是MCU控制器/工业设备组成部分，教学时可用STM32开发板模拟设备，并不等于所有工业设备都直接叫STM32；Linux C++服务运行在Ubuntu主机（后续可能ARM Linux）；Web是第三层。普通STM32需合适物理接口和Modbus协议实现才能真正通讯，暂未实操。
 - 接下来的实际工程路线：开发板尚在异地，先在Ubuntu模拟设备，走模拟设备 -> C++采集和错误处理 -> Web显示，等条件具备再真实STM32联调；不要求立即购买硬件或更改当前Ubuntu环境。
 - 教师不要无限延续同一架构选择题。当前`M0_ROLE_SPLIT=CONCEPTUAL_ANSWER_PASS`，`STM32_MCU_VS_FULL_INDUSTRIAL_DEVICE=EXPLAINED_NOT_VERIFIED`。进入M1只读`g++ --version`，若用户提供输出再逐一指导亲手写C++程序。此刻`TOOLCHAIN_NOT_CHECKED`、`CPP_CODE_NOT_STARTED`、`ARM_NOT_TESTED`。
+
+## 2026-10-12 远程STM32硬件联调可行性讨论
+- 用户补充：**STM32板子在家里**，并问能否直接插到家中RTX4090 Ubuntu主机远程学习，担心自己在外无法“看见板子”。这更新了之前“开发板异地”信息：现在开发板与家中主机物理位置可能一致，但**尚未确认板子已接入、具体型号/接口、是否有现场插线的人、Ubuntu USB枚举**。
+- 技术判断：若STM32通过具有数据能力的USB线、板载ST-Link（含可能的虚拟串口VCP）、外置ST-Link SWD或USB-TTL串口模块等接入Ubuntu，远程桌面能操作**Ubuntu主机侧**的烧录/串口日志/GDB调试程序；不等于用户侧Windows自动拥有板子的USB设备，也不等于所有STM32板只有USB供电就能串口和烧录。是否出现/dev/ttyACM*或ttyUSB*、能否烧录调试，要依板卡型号、连线和枚举核验。串口适配器需确认3.3V TTL电平/共地；RS485需转换收发器，不能误插。实物LED、按钮、线缆、电源、失联后插拔或硬复位仍可能需要现场人员或另配摄像头/受控电源。
+- 路线调整：**可以直接把真实STM32硬件作为后续联调目标，不必为了远程场景再购买一块新板**。先正常完成M1 Ubuntu C++编译器检查与后端基础、模拟设备的可复现闭环。等有人能够物理插线且确认板型时，再只读观察`lsusb`和`ls -l /dev/serial/by-id/`（目录可能不存在，且不一定有USB虚拟串口），一条一条解释日志，不先安装固件烧录工具、修改udev或远程重启。
+- 当前状态：`STM32_BOARD_LOCATION=HOME_REPORTED`，`BOARD_CONNECTION=NOT_VERIFIED`，`BOARD_MODEL=UNKNOWN`，`REMOTE_BOARD_DEBUG=PLANNED_NOT_TESTED`，`M1_GPP_VERSION=NOT_ATTEMPTED`；**不能写成远程联调已可用**。
