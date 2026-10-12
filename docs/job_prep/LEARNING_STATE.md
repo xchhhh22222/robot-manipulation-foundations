@@ -621,3 +621,7 @@
 ## 2026-10-12 Linux C++项目Day0缩放题通过，开始M1只读工具检查
 - 用户针对31.8°C与乘10存寄存器的变式独立答“状态以及318然后318/10得到温度”，数值编码与还原均正确：`REGISTER_SCALING=ANSWER_PASS`；“设备固件维护寄存器映射、Linux只读采集”尚未独立解释：`ROLE_DETAILS=EXPLAINED_NOT_VERIFIED`。原异常响应分类ANSWER_PASS延续。
 - M0概念够进入实践，避免同一题型无限循环；新M1首步只读查看Ubuntu的`g++ --version`，解释编译器与源码/可执行程序关系，等待用户输出再逐步学C++。截至本条没有收到工具输出或用户代码，`TOOLCHAIN=NOT_CHECKED`、`CPP_CODE=NOT_STARTED`，不记工程完成。
+
+## 2026-10-12 Linux Day0：STM32设备端与Linux后端分层确认
+- 用户自发复述“STM32就是一个工业设备，Linux C++就是后端？”：设备侧 vs 后端两层认识基本正确；教师补充STM32是设备内部控制器，学习中可模拟整台设备，Linux C++服务默认在Ubuntu主机上，Web另为展示层；先Ubuntu软件仿真，后可选STM32真实联调。
+- 架构职责初步ANSWER_PASS，不是本人独立编码或完整硬件部署。请进入M1仅一条只读命令`g++ --version`，收到真实输出再推进；工具检查、本人代码、ARM/STM32均未完成。详见[Day0](EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md)。
