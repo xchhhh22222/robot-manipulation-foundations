@@ -15,6 +15,7 @@
 | 资料分析 | [平均数增长率](cards/QD-AVERAGE-01-yoy.md) | 179—182 |
 | 数量关系 | [工程问题：公倍数赋值](cards/QU-WORK-01-assign-lcm.md) | 198—200 |
 | 判断推理 | [条件推理：逆否等价](cards/JP-LOGIC-01-contrapositive.md) | 判断114—121 |
+| 判断推理 | [类比推理：词项关系](cards/JP-ANALOGY-01-relations.md) | 判断讲义类比推理，印刷页待核 |
 | 言语理解 | [主旨与转折线索](cards/VB-MAIN-01-core-idea.md) | 言语4—13 |
 | 申论 | [材料要点提取](cards/EY-EXTRACT-01-points.md) | 申论218—220 |
 | 申论 | [单一题分条概括](cards/EY-SINGLE-01-grouping.md) | 申论221—224 |
