@@ -162,3 +162,10 @@
 - 新源证据和方案文档：[FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md](FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md)。FUXA（完整Web SCADA/Node/Angular/MIT，2026仍有安全公告和修订，需要安全版本，嵌软C++需自己开发）；Neuron（C工业连接服务+Vue旧版Web，LGPLv3，Dashboard已停止维护）；ThingsBoard 4.4起BUSL 1.1且Java主后端，不适合简单换皮。libmodbus 3.2.0只是**协议库**，版本新不能当完整产品证据。FUXA是当前值得先审查的完整候选，而不是已获准选择/部署。
 - 产品候选改为**工业设备智能监控与运维平台**：前端设备列表/实时趋势/权限/告警/历史，后端数据与管理API，用户个人真正写的Linux C++设备守护进程/多线程与断线恢复，虚构Modbus设备→MQTT→Web端到端闭环；ARM目标及旧STM32板为后续有条件扩展。原工业网关降级为**C++通讯子模块**。完整产品不承诺12周全做完，前期MVP+后期2027春延伸更现实。
 - **当前未开工、未批准安装/配置/下载/建仓、STM32未寄、新五道嵌软面经尚未被批准启动**。工作日行测20题原计划继续；尤其今天第一组Q037—Q041已发布却未见实答，仍NOT_ATTEMPTED。下一入口让用户审核真实**全栈候选**与可承受改造工作量，而不是发送gcc命令。
+
+
+## 2026-10-12 FUXA的Node.js后台转Linux C++可行性核验（当前最新）
+- 用户明确问：**能否将原FUXA Node.js后端改为C++并在Linux上运行，从而形成自己的完整项目？** 检查上游实际源码：Angular `client/src/app/`；Express HTTP API在`server/api`，Socket.IO实时事件在`server/runtime/index.js`，Modbus/MQTT等驱动在`server/runtime/devices`，SQLite等在`server/runtime/storage`。因此**可以自写C++后台，但不是直接语法翻译**，要重建API/鉴权/配置/告警/历史/设备采集和Socket.IO/普通WebSocket兼容与前端数据服务适配。
+- [最新源代码审查与项目验收契约](FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md)新增详细章节。**优先候选**：复用合法MIT开源的Angular前端部分并建立原始可运行基线，独立实现Drogon/Linux C++的设备配置、采集线程、Modbus TCP、故障恢复、REST/WS状态、SQLite和告警，逐步将前端数据服务改指C++ API；前端依然需要Angular工具链。**全量重写FUXA Node服务器所有能力投入很大且没有必要**，可以主动缩小成自有完整产品功能闭环，而非保证上游所有SCADA特性兼容。
+- **产权与求职真实性**：用户真正原创的是自己写的C++代码和新增功能，复制/修改的前端须按MIT保留许可及署名，商标和Pro白标权益另查；不能仅换皮就宣称全部源码原创。面试重点是真实可复现的代码、测试、调试、ARM部署，而非技术名字。
+- **状态**：只做设计/源码研究，尚无项目用户批准、未建新仓、未运行/安装Linux C++或FUXA、未寄STM32、未启动新增嵌软5题。行测Q037–Q041已在今日另一对话发布且暂未作答，不变。下次继续帮用户审查哪几项FUXA前端功能保留、哪些Node API在MVP中替换，**不要抢跑配置电脑**。
