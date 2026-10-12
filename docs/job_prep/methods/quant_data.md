@@ -6,7 +6,8 @@
 |---|---|---|
 | [QD-SPEED-01 截位直除](cards/QD-SPEED-01-truncation.md) | 150—151 | EXPLAINED，方法未独立验证 |
 | [QD-COMPARE-01 分数比较](cards/QD-COMPARE-01-fractions.md) | 152—153 | Q037原题错，R1答案已对 | 
-| [QD-BASE-01 基期与现期](cards/QD-BASE-01-base-current.md) | 150—156 | Q042已出题，NOT_ATTEMPTED |
+| [QD-BASE-01 基期与现期](cards/QD-BASE-01-base-current.md) | 150—156 | Q042选C、300÷1.25正确，公式应用通过 | 
+| [QD-GROWTH-01 增长量与百分数区别](cards/QD-GROWTH-01-amount.md) | 157—170 | Q043已发布，NOT_ATTEMPTED |
 | [QD-SHARE-01 两期比重与百分点](cards/QD-SHARE-01-percentage-points.md) | 171—178 | Q037 WRONG，R1答案B正确、过程尚不完整 |
 | [QD-AVERAGE-01 平均数增长率](cards/QD-AVERAGE-01-yoy.md) | 179—182 | Q038数值正确，方法未验证 |
 | [QU-WORK-01 工程赋值](cards/QU-WORK-01-assign-lcm.md) | 198—200 | Q041-R1部分过程正确、结果错误 |
