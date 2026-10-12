@@ -625,3 +625,7 @@
 ## 2026-10-12 Linux Day0：STM32设备端与Linux后端分层确认
 - 用户自发复述“STM32就是一个工业设备，Linux C++就是后端？”：设备侧 vs 后端两层认识基本正确；教师补充STM32是设备内部控制器，学习中可模拟整台设备，Linux C++服务默认在Ubuntu主机上，Web另为展示层；先Ubuntu软件仿真，后可选STM32真实联调。
 - 架构职责初步ANSWER_PASS，不是本人独立编码或完整硬件部署。请进入M1仅一条只读命令`g++ --version`，收到真实输出再推进；工具检查、本人代码、ARM/STM32均未完成。详见[Day0](EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md)。
+
+## 2026-10-12 远程开发板硬件条件更新（尚未连接验收）
+- 用户确认STM32开发板在家中，可能与4090 Ubuntu主机处于同一物理位置；提出用数据USB/板载ST-Link接Ubuntu并远程开发。远程访问Ubuntu侧串口日志/烧录调试通常可行，实体LED/按键/掉电重插需现场或摄像头；具体STM32型号和USB通道待确认。当前`STM32_AT_HOME=USER_REPORTED`、`BOARD_PLUGGED=UNKNOWN`、`REMOTE_DEBUG=NOT_TESTED`，不得伪造可用状态。
+- 实践进度仍先M1只读`g++ --version`，再用户自己编写C++后端基础；后续真实STM32联调能更好展示设备端与Linux端分工，不能把本次方案讨论记为开发PASS。详见EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md。
