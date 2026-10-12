@@ -616,3 +616,8 @@
 ## 2026-10-12 Linux C++ Day0：传感器、设备寄存器与后端的关系
 - 学生主动构造场景“工业设备里面有Linux后端，温度传感器接入写寄存器，寄存器只能存3位十进制数字所以一个寄存器只能读一个温度”。这是系统结构思考的进步，但不能直接认定架构已掌握。教师澄清：当前方案的Linux C++后端运行在独立Ubuntu计算机；工业设备内部可由STM32/其他控制器读取传感器、更新Modbus逻辑寄存器，再由Linux C++读取；常见Modbus输入/保持寄存器宽16 bit（0到65535 unsigned），如26.5°C放大10倍存265；数据类型、缩放、多个寄存器需依设备文档。完整解答见[Day0记录](EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md)。
 - `SENSOR_TO_MODBUS=EXPLAINED_NOT_VERIFIED`，`REGISTER_16BIT=EXPLAINED_NOT_VERIFIED`，`ENGINEERING=NOT_STARTED`。接下来先用一简短数据流/缩放检查再进入Ubuntu g++、CMake等只读环境与学生首段C++代码，不无限增加同一基础概念的测试。原本异常响应B判断已ANSWER_PASS，其它未验证内容保持原状态，其他对话公考进度不要覆写。
+
+
+## 2026-10-12 Linux C++项目Day0缩放题通过，开始M1只读工具检查
+- 用户针对31.8°C与乘10存寄存器的变式独立答“状态以及318然后318/10得到温度”，数值编码与还原均正确：`REGISTER_SCALING=ANSWER_PASS`；“设备固件维护寄存器映射、Linux只读采集”尚未独立解释：`ROLE_DETAILS=EXPLAINED_NOT_VERIFIED`。原异常响应分类ANSWER_PASS延续。
+- M0概念够进入实践，避免同一题型无限循环；新M1首步只读查看Ubuntu的`g++ --version`，解释编译器与源码/可执行程序关系，等待用户输出再逐步学C++。截至本条没有收到工具输出或用户代码，`TOOLCHAIN=NOT_CHECKED`、`CPP_CODE=NOT_STARTED`，不记工程完成。
