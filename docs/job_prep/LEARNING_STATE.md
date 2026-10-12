@@ -493,3 +493,10 @@
 - 当前状态 `PROJECT_ARCHITECTURE=USER_APPROVED_DESIGN`，`PROJECT_CODE=NOT_STARTED`，`CPP_BACKEND=NOT_STARTED`，`ARM_TARGET_TEST=NOT_ATTEMPTED`，`STM32_BOARD=REMOTE_NOT_SHIPPED`，`ENV_CHANGE=NOT_AUTHORIZED`；仍等待用户确定实际上机开工日，不发Linux命令或新5题。
 - 招聘层面对Linux C++应用/通信设备平台软件方向适配，实际不足需把开发重心放到**多线程、Socket/Modbus、故障重连、日志和单元测试**，其次ARM交叉部署与可选MCU串口验证。FUXA原Angular/Node功能与本人C++实现在README、源码中须严格区别，Qt/内核/V4L2/FreeRTOS按未来具体JD选修，不盲目全学。
 - 本轮无新个人编译、上机、实际面经/行测答题结果：Q037—Q041已在其他对话出题仍NOT_ATTEMPTED（如之后其他对话有新结果以最新实际记录为准），Day28尚待日志、10-12/10-19复习计划不因为调研被算PASS。
+
+## 2026-10-12 行测第一组Q037—Q041实际成绩（覆盖早前“尚未作答”的开场快照）
+- 用户作答：Q037「46 2025年估算小于47所以我觉得是下降了同时下降了1%」、Q038「12.5」、Q039 B、Q040 C、Q041 C。
+- 批改：Q037 WRONG（应2025=43.93%、2026=46%，**提高2.07个百分点**）；Q038 NUMERIC_PASS/METHOD_UNVERIFIED（12.5%正确但没有展示公式）；Q039 B PASS；Q040 C PASS；Q041 WRONG（C=8天错误，正确B=7天）。
+- 当前工作日进度**5/约20已作答，3/5正确**；耗时NOT_MEASURED；需要即时纠正Q037-R1与Q041-R1各一道，尚NOT_ATTEMPTED；同一错点不无限追加。
+- 到期复习：2026-10-12比重百分点ATTEMPTED_WRONG，平均数增长NUMERIC_PASS/METHOD_UNVERIFIED；2026-10-19 T+7保留PLANNED，不凭分数视为熟练。详见今日daily和SPACED_REVIEW_QUEUE.md。
+- 职业边界不变：工业机械臂**分拣**实习仅已确认系统集成/联调/测试；嵌入式Linux完整产品**架构设计已获认可**，但具体启动日期、环境改动、上机/开发板及每日5道嵌软面经均未获批准。求职JD核验PENDING_USER。
