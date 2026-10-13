@@ -687,3 +687,12 @@
 - 用户第四组Q072—Q076实际答A/C/A/B/A，五题均对，未交独立列式。Q071-R1回答30%正确，公式应为智能设备增长180万元÷公司总增长600万元，用户没有列出公式且口述「占比是两者之差」，因此NUMERIC_PASS / METHOD_UNVERIFIED / CONCEPT_REVIEW，禁止再追加R2。
 - 今日常规Q057—Q076 20题17对3错，85%，四组4/5、4/5、4/5、5/5。错题Q057工程余时、Q065百分点、Q071增长贡献率；Q057-R1最终仍错、Q065-R1两项数值对但未写单位、Q071-R1数值对但术语未核验，均单独列，不改原题正确率。实际用时NOT_MEASURED，故不判限时速度。
 - 2026-10-13行测STOP：不再开第五组，不补欠题，不发R2。10-14与10-19、10-20的复习仅是PLANNED，必须有新的真实答案才能变PASS。详细见[daily/2026-10-13_XINGCE.md](daily/2026-10-13_XINGCE.md)和[SPACED_REVIEW_QUEUE.md](SPACED_REVIEW_QUEUE.md)；嵌入式、科研等轨道状态不由本轮推断改变。
+
+## 2026-10-13 C++ M1 Day2 / GDB / ROS2 审计：最新技术实际状态
+- **权威当天实录**：[2026-10-13_EMBEDDED_CPP.md](daily/2026-10-13_EMBEDDED_CPP.md)。本条覆盖上文旧「10月13日待做」技术状态，但不改变行测已收官事实。
+- Ubuntu `/home/wxc/embedded-linux-learning`：昨天 `temperature_demo.cpp` 仍在；今天学生创建 `temperature_function.cpp`，先写 `return raw = raw / 10.0;`，经讲解认识赋给 `int raw` 导致截断，实际调试截图有正确式 `return raw / 10.0;`；学生自己写对调用 `double temperature = rawToCelsius(raw);`。学生提出形参改成 `double` 的替代方案，教师解释实际寄存器原值与换算后的温度应分别保留整数与浮点类型。
+- 真实 `g++ -std=c++17 -Wall -Wextra -Wpedantic -g -O0 temperature_function.cpp -o temperature_function` 编译日志与运行回贴：`318->31.8`、`0->0`、`-55->-5.5`，**THREE_CASE_RUN_VERIFIED**；只验收三个测试样本，不推断全部边界覆盖。
+- GDB截图证实 main 第13行断点、F11进入 `rawToCelsius()` 第6行及 `raw=318`、Shift+F11返回 `main()` 并出现 `$ReturnValue=31.800...`。之后用户确认F10使 `temperature` 恢复为正确值（仅用户自述）。函数复用和测试的意义，学生本人回答「方便调用，也可以做检测」，**CONCEPT_EXPLANATION_PASS**；Step Over/Into/Out 术语独立迁移尚可在10-19复测。
+- ROS2 WSL `wanxincheng@xiaocheng:~/robotics/robot-manipulation-foundations` 只读 `git status -sb`/`git diff --stat`/`git branch --show-current` 实测：`## main...origin/main`，`pick_demo.py` 为未提交修改（+51/-3），`?? artifacts/` 未跟踪。**WORKTREE_AUDIT_VERIFIED / DAY28_RUNTIME_NOT_RUN**；不删除、不清理、不覆盖、不假装这54行已审核或轨迹终点已运行。
+- 2026-10-13 行测已由独立会话记录 **Q057—Q076 20题17正确3错**（详见当日行测日志），用时NOT_MEASURED；具身论文当日未在本会话提供可核查文献/实验，**RESEARCH_NOT_REPORTED**。C++源码仍在Ubuntu本地，未上传GitHub。
+- **2026-10-14入口：** 周三C/C++ 150分钟+GitHub/等待30分钟；将固定原始值改为 `std::cin` 终端输入、学习输入失败检查 `if (!(std::cin >> raw))`，自写关键代码并实测有效/无效输入；不重刷昨天三样本或重新安装软件。周四2026-10-15再开展ROS Day28轨迹功能真实测试。10-19 GDB T+7在新函数情境复测。
