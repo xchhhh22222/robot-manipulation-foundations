@@ -402,3 +402,11 @@ Q065-R1学生答①6、②15，数值均对，单位没写，记录NUMERIC_PASS 
 - 原始首答与题目归属考公库：[Q087—Q091](https://github.com/xchhhh22222/public-exam-knowledge/blob/d1eb8eb5e11f31bbc24f150f82b7a44cc706aca8/records/sessions/2026-10-14_Q087-Q091.md)，commit `d1eb8eb5e11f31bbc24f150f82b7a44cc706aca8`，回读通过。Q087=B Q088=C Q089=D Q090=C Q091=B，5/5全部正确，独立计算过程未提供：`ANSWER_PASS/METHOD_UNVERIFIED`。
 - 今日Q077—Q091累计15次作答14对1错(93.33%)，其中Q079与2026-10-13 Q057是原题重复，今日仅14道不同题目。Q079仍错且已用旧R1，今天无补题。实际用时NOT_MEASURED、无法判断是否满120分钟；三组后可以收官，不必强制20题。Q092及以后未答。
 - 10-19工程/比重旧卡与10-20贡献率卡继续作为PLANNED，不因Q091选项正确直接结清。权威仍是此三份源文件；原题仅存在考公领域库，无其他路线新成果。
+
+
+## 2026-10-14 C++ M1 Day3真实收官与下一入口（覆盖旧「std::cin尚未做」）
+- 技术原始证据唯一保存于[2026-10-14技术库课堂日志](https://github.com/xchhhh22222/linux-career-knowledge/blob/7315d9faeeb3aa68c8e97dde9e23142f939bd039/records/sessions/2026-10-14_CPP_M1_DAY3.md)（commit `7315d9faeeb3aa68c8e97dde9e23142f939bd039`），已从GitHub回读；领域`control/HANDOFF.md`及`assets/CPP_ASSET_REGISTER.json`也已更新。
+- 学生真实代码与输出：`std::cin >> raw`独立写出；`if (!(std::cin >> raw))`在指导下完成；250→25、318→31.8、`ac`→`Invalid input`，新增输入小模块`RUN_PASS`。术语需分清“从流解析int失败”而非“string赋值给int/double”；控制流补充题经讲解后正确。新输入版0/-55、混合输入、EOF、退出码未验。
+- 用户本地最终`.cpp`原件未上传，原始文件只能在Ubuntu取得；不得从之前粘贴文本拼接冒充最终原件。实际学习分钟数未知，别把180分钟预算当实耗。
+- 后续最小步骤：技术课从获取原`temperature_function.cpp`最终源文件开始，继续一个新输入边界测试；10/15输入流概念轻量T+1、10/19 GDB T+7、10/21输入分支T+7目前全为PLANNED。10/14行测Q077—Q091已另轨道同步，无须重复批改或改变；ROS2 Day28未新运行。
+- V4.3四PR均已合并，但原学习状态权威仍为本仓库原三份文件；此次不执行权威迁移、不覆写未提交代码。
