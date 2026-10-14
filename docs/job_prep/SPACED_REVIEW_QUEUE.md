@@ -528,3 +528,10 @@
 - [考公领域唯一原件](https://github.com/xchhhh22222/public-exam-knowledge/blob/d1eb8eb5e11f31bbc24f150f82b7a44cc706aca8/records/sessions/2026-10-14_Q087-Q091.md)，commit `d1eb8eb5e11f31bbc24f150f82b7a44cc706aca8`。第三组5对5，用户未给独立列式；Q090求增长量、Q091求增长贡献率仅`ANSWER_PASS/METHOD_UNVERIFIED`，不是脱离选项的公式迁移PASS，不额外派即时R1。
 - 本日总计15次作答14对1错，Q079为昨日Q057重复题复测错误；保留10-19工程/比例复习合并，10-20贡献率新情境独立列式复习（两项均PLANNED/NOT_ATTEMPTED），不得因Q091选择正确提前结清原Q071贡献率复习卡。用时NOT_MEASURED。
 - Q092以后未作答，不计额外欠题或已掌握。周末不强制学习。
+
+
+## 2026-10-14 技术新卡：终端整数读取失败与条件判断
+- `REV-20261014-CPP-INPUT-VALIDATION`：来源[技术领域课堂原件](https://github.com/xchhhh22222/linux-career-knowledge/blob/7315d9faeeb3aa68c8e97dde9e23142f939bd039/records/sessions/2026-10-14_CPP_M1_DAY3.md)（commit `7315d9faeeb3aa68c8e97dde9e23142f939bd039`）。`learned_at=2026-10-14`；用户已正确运行正常整数250/318与非法ac分支；`INPUT_CODE_INDEPENDENT`、`VALIDATION_PATTERN_GUIDED`、`CONTROL_FLOW_REASONING_PASS_AFTER_EXPLANATION`。
+- 重点残留：学生仍使用“string赋值给int/double”描述解析失败，最初把if称为循环，后经教师纠正；不要据此误判代码功能错误，也不要标记独立无提示术语掌握。
+- T+1 `2026-10-15`：自然技术学习开始时，只用一句新情境区分`std::cin`整数提取失败、流状态与`return`退出；`PLANNED/NOT_ATTEMPTED`。
+- T+7 `2026-10-21`：新函数输入分支轻量迁移，无旧题原样重复；`PLANNED/NOT_ATTEMPTED`。与2026-10-19 GDB复习分离，不强制额外加时。原行测与机器人复习状态不改。
