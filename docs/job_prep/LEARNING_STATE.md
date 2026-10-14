@@ -717,3 +717,11 @@
 - 用户Q087=B、Q088=C、Q089=D、Q090=C、Q091=B，5/5全部正确；Q090增长量150万元、Q091增长贡献率25%仅有选择答案，均没有独立列式或解法阐述，所以每题`ANSWER_PASS/METHOD_UNVERIFIED`，不判方法独立熟练；无新错点、无R1。
 - 10月14日累计Q077—Q091三组共15次答题，14对1错，正确率93.33%；Q079与10-13 Q057完整原题重复，故仅14道不同题目；Q079旧题复测仍错，旧R1已用，不另加即时补救。上一日错题及补救历史保持不变。
 - 本日学习实耗仍NOT_MEASURED，无法判是否已达120分钟；允许在三组后自行收官，约20题不是硬性任务。Q092及以后尚未发布/NOT_ATTEMPTED；技术、科研、投递进展不因本记录改变。
+
+
+## 2026-10-14 技术课：C++ M1 Day3 终端输入与错误处理（过渡期唯一权威指针）
+- 唯一领域证据：[技术库当日原始课堂记录](https://github.com/xchhhh22222/linux-career-knowledge/blob/7315d9faeeb3aa68c8e97dde9e23142f939bd039/records/sessions/2026-10-14_CPP_M1_DAY3.md)，commit `7315d9faeeb3aa68c8e97dde9e23142f939bd039`，已回读；完整原始课堂事实归技术库，不在此双份维护。
+- Ubuntu用户真实运行：新输入版250→25 C、318→31.8 C、非数字`ac`→`Invalid input`；可见编译命令无报错，实际退出码与新的0/负值/EOF均未验证。
+- 学生独立写出`std::cin >> raw`，根据教学示例实现`if (!(std::cin >> raw))`+ `return 1`；理解题经解释后正确回答非法输入不会执行后续`Hello`，但尚把整数提取失败表述成string直接赋值int/double，术语需复习。判定`M1_DAY3_GUIDED_INPUT_VALIDATION_RUN_PASS`，不能记生产级可靠性或完全独立掌握。
+- 本地最终`temperature_function.cpp`原件、哈希及自动测试未上传；完整源码`UNSYNCED`。真实学习时长`NOT_MEASURED`。技术领域交接已更新，机器人Day28本地+51/-3与artifacts不受影响。
+- 技术复习建议：2026-10-15输入流错误概念T+1、2026-10-21新情境T+7均`PLANNED/NOT_ATTEMPTED`；2026-10-19 GDB迁移复习计划不变。行测Q077—Q091的最新既有证据不变，权威库切换`NOT_PERFORMED`。
