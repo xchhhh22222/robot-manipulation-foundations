@@ -522,3 +522,9 @@
 - 唯一证据：[考公领域 Q082—Q086](https://github.com/xchhhh22222/public-exam-knowledge/blob/0ef6dd42e08364fb6bcb3cb099a41643980b6c26/records/sessions/2026-10-14_Q082-Q086.md)，commit`0ef6dd42e08364fb6bcb3cb099a41643980b6c26`。5题全答对，用户未提供独立算式/推理，记 `ANSWER_PASS / METHOD_UNVERIFIED`；Q085基期量及Q086平均数增长率保留以后自然变式列式抽查，**不是新增错题即时补救**。
 - 本日截至第二组累计10次作答9对1错；其中Q079为昨天Q057完全重复题、复测仍错，不得宣告新情境迁移PASS；保留10-19工程复习（与Q041/Q057旧卡合并），10-20贡献率复习仍PLANNED。Q077单位初步正确、Q078贡献率仅答案正确的既有判定不变。
 - 今日无第二组新错点，不出即时R1；学习分钟数NOT_MEASURED、未来题Q087—Q091 NOT_ATTEMPTED。
+
+
+## 2026-10-14 第三组Q087—Q091最新实答（方法证据层级）
+- [考公领域唯一原件](https://github.com/xchhhh22222/public-exam-knowledge/blob/d1eb8eb5e11f31bbc24f150f82b7a44cc706aca8/records/sessions/2026-10-14_Q087-Q091.md)，commit `d1eb8eb5e11f31bbc24f150f82b7a44cc706aca8`。第三组5对5，用户未给独立列式；Q090求增长量、Q091求增长贡献率仅`ANSWER_PASS/METHOD_UNVERIFIED`，不是脱离选项的公式迁移PASS，不额外派即时R1。
+- 本日总计15次作答14对1错，Q079为昨日Q057重复题复测错误；保留10-19工程/比例复习合并，10-20贡献率新情境独立列式复习（两项均PLANNED/NOT_ATTEMPTED），不得因Q091选择正确提前结清原Q071贡献率复习卡。用时NOT_MEASURED。
+- Q092以后未作答，不计额外欠题或已掌握。周末不强制学习。
