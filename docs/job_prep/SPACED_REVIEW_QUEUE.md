@@ -508,3 +508,11 @@
 - 原定 **2026-10-13 T+1** 状态由此前 `PLANNED/NOT_ATTEMPTED` 更新为 **FUNCTION_DEBUG_BEHAVIOR_VERIFIED**：学生在新的 `rawToCelsius(int raw)` 实际程序里于main调用行断点、F11进函数截图（arrow在return、raw=318、stack两层）、Shift+F11返回main截图（`$ReturnValue≈31.8`、stack单层），随后F10完成赋值仅由用户文字说明。参见[当日技术实证](daily/2026-10-13_EMBEDDED_CPP.md)。
 - 细化掌握级别：**ENTER/EXIT 行为有截图证据**；最后F10后温度恢复为正确值 `USER_REPORTED`；三种快捷键的术语能否在全新代码中不看提示独立说出 `NOT_YET_RETESTED`。不可将调试器截屏等同于独立讲对全部定义。
 - **T+7 保留2026-10-19（周一）PLANNED**：在当天新函数中先让学生预测F10/F11/Shift+F11的停靠位置，最多一次轻量复测并合并正常C++任务，不额外加长教学。行测复习卡各自独立，今日行测20题状态不受这次技术卡影响。
+
+
+## 2026-10-14 Q077—Q081 T+1复习实答（关联考公领域唯一原件）
+- 原始新证据：[2026-10-14 Q077—Q081](https://github.com/xchhhh22222/public-exam-knowledge/blob/19b554e8f797b950eea061eb74cf768437b538dc/records/sessions/2026-10-14_Q077-Q081.md)，commit `19b554e8f797b950eea061eb74cf768437b538dc`。今日第一组提交5题4对1错，但Q079与Q057原题内容重复、只是选项顺序变化，标 `REPEATED_SOURCE_Q057`；不能作为独立变式掌握验证。
+- `REV-20261013-Q065-PP`：Q077选A=6个百分点且单位写对，状态 `ANSWER_PASS/UNIT_SHOWN/METHOD_UNVERIFIED`（初步隔日复习通过，仍待独立列式及后续稳定性）。
+- `REV-20261013-Q071-CONTRIBUTION`：Q078选A=30%正确，状态 `ANSWER_PASS/METHOD_UNVERIFIED`（未独立展示分子分母，不能宣布方法已掌握）；10月20日独立新情境复测仍PLANNED。
+- `REV-20261013-Q057-WORK-REMAINDER`：Q079选D=9天错误，正确B=7天；属Q057原题内容重复，今天T+1复测 `WRONG/METHOD_UNVERIFIED`；昨天即时R1已使用，今天不追加R1/R2。10月19日按原计划在新的工程情境中检验，并与旧Q041卡去重。
+- 上述T+1均仅按用户真实答案记录，今天学习用时未知；Q082—Q086未答，后续不得预标完成。
