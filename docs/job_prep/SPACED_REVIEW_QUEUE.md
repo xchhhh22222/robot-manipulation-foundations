@@ -516,3 +516,9 @@
 - `REV-20261013-Q071-CONTRIBUTION`：Q078选A=30%正确，状态 `ANSWER_PASS/METHOD_UNVERIFIED`（未独立展示分子分母，不能宣布方法已掌握）；10月20日独立新情境复测仍PLANNED。
 - `REV-20261013-Q057-WORK-REMAINDER`：Q079选D=9天错误，正确B=7天；属Q057原题内容重复，今天T+1复测 `WRONG/METHOD_UNVERIFIED`；昨天即时R1已使用，今天不追加R1/R2。10月19日按原计划在新的工程情境中检验，并与旧Q041卡去重。
 - 上述T+1均仅按用户真实答案记录，今天学习用时未知；Q082—Q086未答，后续不得预标完成。
+
+
+## 2026-10-14 第二组Q082—Q086｜方法掌握状态
+- 唯一证据：[考公领域 Q082—Q086](https://github.com/xchhhh22222/public-exam-knowledge/blob/0ef6dd42e08364fb6bcb3cb099a41643980b6c26/records/sessions/2026-10-14_Q082-Q086.md)，commit`0ef6dd42e08364fb6bcb3cb099a41643980b6c26`。5题全答对，用户未提供独立算式/推理，记 `ANSWER_PASS / METHOD_UNVERIFIED`；Q085基期量及Q086平均数增长率保留以后自然变式列式抽查，**不是新增错题即时补救**。
+- 本日截至第二组累计10次作答9对1错；其中Q079为昨天Q057完全重复题、复测仍错，不得宣告新情境迁移PASS；保留10-19工程复习（与Q041/Q057旧卡合并），10-20贡献率复习仍PLANNED。Q077单位初步正确、Q078贡献率仅答案正确的既有判定不变。
+- 今日无第二组新错点，不出即时R1；学习分钟数NOT_MEASURED、未来题Q087—Q091 NOT_ATTEMPTED。
