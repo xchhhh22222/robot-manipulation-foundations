@@ -696,3 +696,10 @@
 - ROS2 WSL `wanxincheng@xiaocheng:~/robotics/robot-manipulation-foundations` 只读 `git status -sb`/`git diff --stat`/`git branch --show-current` 实测：`## main...origin/main`，`pick_demo.py` 为未提交修改（+51/-3），`?? artifacts/` 未跟踪。**WORKTREE_AUDIT_VERIFIED / DAY28_RUNTIME_NOT_RUN**；不删除、不清理、不覆盖、不假装这54行已审核或轨迹终点已运行。
 - 2026-10-13 行测已由独立会话记录 **Q057—Q076 20题17正确3错**（详见当日行测日志），用时NOT_MEASURED；具身论文当日未在本会话提供可核查文献/实验，**RESEARCH_NOT_REPORTED**。C++源码仍在Ubuntu本地，未上传GitHub。
 - **2026-10-14入口：** 周三C/C++ 150分钟+GitHub/等待30分钟；将固定原始值改为 `std::cin` 终端输入、学习输入失败检查 `if (!(std::cin >> raw))`，自写关键代码并实测有效/无效输入；不重刷昨天三样本或重新安装软件。周四2026-10-15再开展ROS Day28轨迹功能真实测试。10-19 GDB T+7在新函数情境复测。
+
+
+## 2026-10-14 行测Q077—Q081实际答题（V4.3来源引用，不复制原题）
+- 原始题干、选项、首答、批改唯一原件：[考公领域2026-10-14 Q077-Q081](https://github.com/xchhhh22222/public-exam-knowledge/blob/19b554e8f797b950eea061eb74cf768437b538dc/records/sessions/2026-10-14_Q077-Q081.md)，commit `19b554e8f797b950eea061eb74cf768437b538dc`，已远端回读。
+- Q077 A（6个百分点，单位已写）正确，Q078 A（30%）正确，Q079 D（9天）错误，Q080 A正确，Q081 B正确。今日首组5次提交4对1错；其中Q079与昨日Q057是**同一题干/数据**仅选项重排，属于重复原题的T+1复测，不是第5道独立新题；真正新题4道。累计答题用时NOT_MEASURED，均未提供独立算式。
+- Q079正确B=7天（总量36、甲3/天、乙2/天、合作15份、剩21份÷3=7天）；本次 `WRONG / REPEATED_SOURCE_Q057 / METHOD_UNVERIFIED`，因独立运算未提交不能判其具体步骤错因，且昨日Q057-R1已用尽，不追加新R1/R2。Q077 `ANSWER_PASS/UNIT_SHOWN/METHOD_UNVERIFIED`；Q078/Q080/Q081 `ANSWER_PASS/METHOD_UNVERIFIED`。前一日原始错题和补救历史保持不变。
+- Q082—Q086仅作为后续新题候选，未实答不计完成。技术、科研、投递无新的实证。本轮为跨库学习状态过渡同步，不代表权威切换。
