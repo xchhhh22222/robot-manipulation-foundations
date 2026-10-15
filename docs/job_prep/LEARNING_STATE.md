@@ -741,3 +741,8 @@
 - `QD-TIME-01`：2026年8月同比参照2025年8月、环比参照2026年7月正确；独立季度计算`100/200=50%`和`60/240=25%`成立，原答省略两个百分号后自述只是输入简写；`METHOD_VERIFIED / UNIT_SHORTHAND_CONFIRMED`，课堂首轮结束、限时和新情境迁移未验。
 - `QD-GROWTH-05`：2020→2026共6增长间隔正确；年均增长量vs年均增长率识别2/2；人口2022年100万→2026年150万独立列式`50/4=12.5`正确，原答单位误写`12.5%`，正确`12.5万人/年`，学生自述习惯性加%；`FIRST_PASS_COMPLETE_REVIEW_DUE / CALCULATION_PASS / UNIT_SLIP_CONFIRMED`，迁移稳定性未验。前课`QD-CONTRIB-01`负号遗漏口头确认也存唯一原件，归并既有复习而不刷同错点。
 - 本轮课堂确认非正式审核题，门禁`REVIEW_ONLY`候选不能冒充正式练习；**新增正式Q=0、新R1=0**，最高正式Q091、Q092尚未发布；真实时长`NOT_MEASURED`。本册58个目标仍非已完成的事实，Daily Five未启动，技术/科研/投递不变；权威位置仍本仓库三文档。
+
+## 2026-10-15 行测课堂超时事实与方法调整（覆盖此前「实际用时NOT_MEASURED」的单一说法）
+- 用户自报**今天课堂会话超过120分钟**，其中包含助手长时间思考/等待与多次往返，故`SESSION_ELAPSED=USER_REPORTED_GT_120_MIN`、`ACTIVE_LEARNING=NOT_MEASURED`，不得填入未经区分的精确学习分钟数。原始反馈附于[考公当天课堂原件](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-15_QD_ATOMIC_SPEED_COMPARE_TIME_ANNUAL.md)。
+- 即日起教学采取**知识卡批量给出→一次综合诊断→学生自报会/不会→只对实错精准处理→一次性归档**；不拆成多轮轻微概念提问，不每答一步同步。用户声明「会了不用其他练习」则不强制补题，单纯自述不能升为`METHOD_VERIFIED`。
+- 此次剩余知识点是`QD-PERCENT-01`、`QD-SPEED-01`、`QD-COMPARE-01`；`QD-TIME-01`课堂方法已验，`QD-GROWTH-05`首轮完成但单位迁移待复习。新综合诊断未作答前不填写成绩，不占正式Q，Q092仍未发布。
