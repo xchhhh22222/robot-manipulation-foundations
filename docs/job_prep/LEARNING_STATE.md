@@ -725,3 +725,10 @@
 - 学生独立写出`std::cin >> raw`，根据教学示例实现`if (!(std::cin >> raw))`+ `return 1`；理解题经解释后正确回答非法输入不会执行后续`Hello`，但尚把整数提取失败表述成string直接赋值int/double，术语需复习。判定`M1_DAY3_GUIDED_INPUT_VALIDATION_RUN_PASS`，不能记生产级可靠性或完全独立掌握。
 - 本地最终`temperature_function.cpp`原件、哈希及自动测试未上传；完整源码`UNSYNCED`。真实学习时长`NOT_MEASURED`。技术领域交接已更新，机器人Day28本地+51/-3与artifacts不受影响。
 - 技术复习建议：2026-10-15输入流错误概念T+1、2026-10-21新情境T+7均`PLANNED/NOT_ATTEMPTED`；2026-10-19 GDB迁移复习计划不变。行测Q077—Q091的最新既有证据不变，权威库切换`NOT_PERFORMED`。
+
+
+## 2026-10-15 考公QD-PERCENT-01概念诊断（最新真实证据，不新增正式Q号）
+- 唯一领域原件：[今日百分点/相对增长率课堂诊断](https://github.com/xchhhh22222/public-exam-knowledge/blob/eac238fcf0268ea1d744c23ad1401c7391c310f7/records/sessions/2026-10-15_QD_PERCENT_CONCEPT_DIAGNOSTIC.md)，commit `eac238fcf0268ea1d744c23ad1401c7391c310f7`，已回读；不在此复制完整题面或学生答卷。
+- 原创候选`AP-QD11-QD-PERCENT-01-01`用户实际答出7个百分点、20%，两个数值及单位正确；术语解释不准确。其后最小概念确认选择C，正确为A（原35%是相对增长的参照分母），说明**概念边界仍不稳定**。
+- 阶段判定：`ANSWER_PASS / CONCEPT_BOUNDARY_UNCLEAR / METHOD_UNVERIFIED`。该方法有课堂诊断证据，但**没有METHOD_VERIFIED或TRANSFER_VERIFIED**；不推断QD第一册首轮完成。
+- 用户要求本次不再追问同一概念，教师已收官；**正式Q新增0、R1新增0、时间NOT_MEASURED**。截至当前可核正式号仍Q091，Q092未发布。下一次学习选第一册其它待教知识点。10月19日工程、10月20日贡献率旧复习安排仍在，其他路线不变。
