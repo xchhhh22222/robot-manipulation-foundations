@@ -435,3 +435,6 @@ Q065-R1学生答①6、②15，数值均对，单位没写，记录NUMERIC_PASS 
 - `QD-SHARE-04`：收入利润20%、成本利润25%，两项正确，能匹配类别，但未给本人两式；`NUMERIC_PASS / METHOD_SELECTION_PASS / FORMULA_NOT_SHOWN`。用户说正确就收官，当天不追加练习。
 - 今日已接触7项方法，但不同证据等级保持；已学PERCENT/SPEED/COMPARE学生自述会了、不想复测，此自述不覆盖旧错误。今次非正式Q、非R1，最高正式仍Q091，QD首轮及Daily Five均未收官/未启动。
 - 用户报告今天学习会话超120分钟，含思考/等待，`SESSION_ELAPSED=USER_REPORTED_GT_120_MIN`、`ACTIVE_LEARNING=NOT_MEASURED`。即日起知识卡批量展示、回答集中批改、正确直接停、实错问原因、每批集中同步。技术/科研/求职原计划不变。
+
+## 2026-10-15 QD-SHARE-03错因确认（最新）
+2026-10-15 QD-SHARE-03已确认错因并课堂首轮收官：学生原话「基期还原的乘除方向弄反了」，原答15/32错，正确30%，独立迁移未验；唯一追加证据：https://github.com/xchhhh22222/public-exam-knowledge/blob/fcead98b10d9b11884fabadc80a22241dc693941/records/sessions/2026-10-15_QD_SHARE03_CAUSE_CLOSE.md。无需再追问错因或重复原题，不出R1，后续新情境复习。SHARE-04两数正确但独立列式未核。今日7项方法接触、非7项独立通过，正式Q仍Q091；会话>120分钟含等待，有效学习时长未知。继续QD新课、批量教学。
