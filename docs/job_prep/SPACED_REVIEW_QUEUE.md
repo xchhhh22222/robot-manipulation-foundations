@@ -535,3 +535,9 @@
 - 重点残留：学生仍使用“string赋值给int/double”描述解析失败，最初把if称为循环，后经教师纠正；不要据此误判代码功能错误，也不要标记独立无提示术语掌握。
 - T+1 `2026-10-15`：自然技术学习开始时，只用一句新情境区分`std::cin`整数提取失败、流状态与`return`退出；`PLANNED/NOT_ATTEMPTED`。
 - T+7 `2026-10-21`：新函数输入分支轻量迁移，无旧题原样重复；`PLANNED/NOT_ATTEMPTED`。与2026-10-19 GDB复习分离，不强制额外加时。原行测与机器人复习状态不改。
+
+
+## 2026-10-15 新增公考概念边界复习计划（无新Q或R1）
+- `REV-20261015-QD-PERCENT-BASELINE`：证据[今日QD-PERCENT-01真实诊断](https://github.com/xchhhh22222/public-exam-knowledge/blob/eac238fcf0268ea1d744c23ad1401c7391c310f7/records/sessions/2026-10-15_QD_PERCENT_CONCEPT_DIAGNOSTIC.md)，提交`eac238fcf0268ea1d744c23ad1401c7391c310f7`。原创候选首题的数值/单位正确，但后续概念确认把相对增长的分母误选为7个百分点（正确是原35%），`ANSWER_PASS / CONCEPT_BOUNDARY_UNCLEAR / METHOD_UNVERIFIED`。
+- **计划**下次跨日独立迁移时核“7个百分点是差值，原35%是参照分母”，建议`2026-10-22`工作日按时间与现有队列调度，`PLANNED / NOT_ATTEMPTED`；若届时教材候选没有准入，则标`PRACTICE_PENDING`，不可绕过审核或复用35%→42%原题。
+- 本次小确认不是正式Q题或R1，不重复当天追问；用户不应因口头诊断被记为独立掌握。旧Q057/R1、Q065与Q071复习记录不改变，Daily Five尚未开启。
