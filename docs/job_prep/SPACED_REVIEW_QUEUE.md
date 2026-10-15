@@ -553,3 +553,6 @@
 ## 2026-10-15 QD-SHARE-03 复习待办
 课堂原件：https://github.com/xchhhh22222/public-exam-knowledge/blob/7c34b4339c2f96aa9aae81019f65b72f711a058e/records/sessions/2026-10-15_QD_SHARE03_SHARE04_BATCH.md
 基期比重首答15/32错误，正确30%。用户真实错因待确认，不直接归为笔误或知识不足。编号REV-20261015-QD-SHARE03-BASE，状态PLANNED/NOT_ATTEMPTED；在后续合规新情境复查，未审练习不得派正式Q。QD-SHARE-04收入利润20%、成本利润25%通过，不追加即时题；今次会话超120分钟且有效学习时间未知，停止加题。旧卡及跨日计划保持。
+
+## 2026-10-15 QD-SHARE-03错因确认（最新）
+原REV-20261015-QD-SHARE03-BASE错因由PENDING_USER更新：用户自述BASE_RECOVERY_DIRECTION_ERROR（基期还原乘除方向颠倒）；来源https://github.com/xchhhh22222/public-exam-knowledge/blob/fcead98b10d9b11884fabadc80a22241dc693941/records/sessions/2026-10-15_QD_SHARE03_CAUSE_CLOSE.md。状态ROOT_CAUSE_SELF_REPORTED / FIRST_PASS_COMPLETE_REVIEW_DUE / NEXT_TRANSFER_PLANNED。首答15/32错误不改，正确30%；今日本人要求停止同类练习，无R1；只有跨日合规新情境才重新验证。
