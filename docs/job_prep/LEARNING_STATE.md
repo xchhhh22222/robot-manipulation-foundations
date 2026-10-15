@@ -746,3 +746,10 @@
 - 用户自报**今天课堂会话超过120分钟**，其中包含助手长时间思考/等待与多次往返，故`SESSION_ELAPSED=USER_REPORTED_GT_120_MIN`、`ACTIVE_LEARNING=NOT_MEASURED`，不得填入未经区分的精确学习分钟数。原始反馈附于[考公当天课堂原件](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-15_QD_ATOMIC_SPEED_COMPARE_TIME_ANNUAL.md)。
 - 即日起教学采取**知识卡批量给出→一次综合诊断→学生自报会/不会→只对实错精准处理→一次性归档**；不拆成多轮轻微概念提问，不每答一步同步。用户声明「会了不用其他练习」则不强制补题，单纯自述不能升为`METHOD_VERIFIED`。
 - 此次剩余知识点是`QD-PERCENT-01`、`QD-SPEED-01`、`QD-COMPARE-01`；`QD-TIME-01`课堂方法已验，`QD-GROWTH-05`首轮完成但单位迁移待复习。新综合诊断未作答前不填写成绩，不占正式Q，Q092仍未发布。
+
+## 2026-10-15 QD新增SHARE03/SHARE04课堂集中批改（覆盖上一条「待测试」状态）
+- 唯一考公原件：[SHARE03/SHARE04真实课堂首答](https://github.com/xchhhh22222/public-exam-knowledge/blob/7c34b4339c2f96aa9aae81019f65b72f711a058e/records/sessions/2026-10-15_QD_SHARE03_SHARE04_BATCH.md)，commit `7c34b4339c2f96aa9aae81019f65b72f711a058e`，已回读。
+- `QD-SHARE-03`：基期比重学生原答`15/32`，并写`360*1.5/960*1.2`；按其分数即46.875%，正确应是(360÷1.5)/(960÷1.2)=240/800=**30%**。记`ANSWER_WRONG / METHOD_UNVERIFIED / BASE_RECOVERY_ERROR_OBSERVED / ROOT_CAUSE_PENDING_USER`，已先问用户错因（乘除方向、笔误、增长因子位置或其它），**不能在用户确认前擅自判断真实错因**，课堂首轮已真实尝试、待复盘。
+- `QD-SHARE-04`：收入利润率20%、成本利润率25%两数和百分比单位均正确，对应题型也正确；未写独立除法算式，记`NUMERIC_PASS / UNIT_PASS / METHOD_SELECTION_PASS / FORMULA_NOT_SHOWN / FIRST_PASS_COMPLETE_REVIEW_DUE`，按用户要求当日不追加题。
+- 今日原五点加新两点共7个**教学接触点**，绝不等于7个`METHOD_VERIFIED`；之前学生自报`QD-PERCENT-01/QD-SPEED-01/QD-COMPARE-01`已会且不要重复测试，标`SELF_REPORTED_KNOWN`但历史实错和证据等级保持。课堂新Q=0、新R1=0，最高仍Q091，Q092未发布。
+- 当天超时：`SESSION_ELAPSED=USER_REPORTED_GT_120_MIN`（包含助手等待），`ACTIVE_LEARNING=NOT_MEASURED`。批量讲义、集中作答、集中批改、错误先问本人原因，避免同一错点反复发题。QD首轮未完成，Daily Five未启动；技术、机器人和论文路线不变。
