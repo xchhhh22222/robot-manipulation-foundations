@@ -428,3 +428,10 @@ Q065-R1学生答①6、②15，数值均对，单位没写，记录NUMERIC_PASS 
 - 用户报告今日会话总时长**超过120分钟**，助手思考/等待占比较多。登记`USER_REPORTED_GT_120_MIN`与纯学习`NOT_MEASURED`，不是精确有效学习时长。
 - 下次优先**一次给出相关方法卡，一次提交综合测试，必要时按错因单点讲解，最后一次同步**。学生说会了就停止同点训练，但自述只是`SELF_REPORTED_KNOWN`，只有独立推理证据才升级方法掌握。
 - 目前准备批量诊断剩余三点：`QD-PERCENT-01`百分点/相对增幅的原水平分母、`QD-SPEED-01`截位/估算精度、`QD-COMPARE-01`分数交叉乘法；先前课堂成绩保留不覆盖。 `QD-TIME-01`已课堂方法收官、`QD-GROWTH-05`首轮已收官但单位迁移待验。任何尚未交卷的新诊断仍是`NOT_ATTEMPTED`、非正式Q。
+
+## 2026-10-15 最新批量课堂收官接续（此段优先于之前「SHARE-02待查」）
+- 考公领域唯一原始课堂证据：[QD-SHARE03及QD-SHARE04集中实答](https://github.com/xchhhh22222/public-exam-knowledge/blob/7c34b4339c2f96aa9aae81019f65b72f711a058e/records/sessions/2026-10-15_QD_SHARE03_SHARE04_BATCH.md)（提交`7c34b4339c2f96aa9aae81019f65b72f711a058e`，回读通过）。已核查历史单期比重、拉动增长旧题，不应当新课程重新讲。
+- `QD-SHARE-03`：学生`15/32`（即46.875%）错误，正确30%，其算式混用`360*1.5/960*1.2`；教师已问学生错误原因，`ROOT_CAUSE_PENDING_USER / METHOD_UNVERIFIED`，**下一次先收错因，不追加课堂同类练习**。
+- `QD-SHARE-04`：收入利润20%、成本利润25%，两项正确，能匹配类别，但未给本人两式；`NUMERIC_PASS / METHOD_SELECTION_PASS / FORMULA_NOT_SHOWN`。用户说正确就收官，当天不追加练习。
+- 今日已接触7项方法，但不同证据等级保持；已学PERCENT/SPEED/COMPARE学生自述会了、不想复测，此自述不覆盖旧错误。今次非正式Q、非R1，最高正式仍Q091，QD首轮及Daily Five均未收官/未启动。
+- 用户报告今天学习会话超120分钟，含思考/等待，`SESSION_ELAPSED=USER_REPORTED_GT_120_MIN`、`ACTIVE_LEARNING=NOT_MEASURED`。即日起知识卡批量展示、回答集中批改、正确直接停、实错问原因、每批集中同步。技术/科研/求职原计划不变。
