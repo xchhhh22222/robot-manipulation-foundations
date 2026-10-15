@@ -541,3 +541,11 @@
 - `REV-20261015-QD-PERCENT-BASELINE`：证据[今日QD-PERCENT-01真实诊断](https://github.com/xchhhh22222/public-exam-knowledge/blob/eac238fcf0268ea1d744c23ad1401c7391c310f7/records/sessions/2026-10-15_QD_PERCENT_CONCEPT_DIAGNOSTIC.md)，提交`eac238fcf0268ea1d744c23ad1401c7391c310f7`。原创候选首题的数值/单位正确，但后续概念确认把相对增长的分母误选为7个百分点（正确是原35%），`ANSWER_PASS / CONCEPT_BOUNDARY_UNCLEAR / METHOD_UNVERIFIED`。
 - **计划**下次跨日独立迁移时核“7个百分点是差值，原35%是参照分母”，建议`2026-10-22`工作日按时间与现有队列调度，`PLANNED / NOT_ATTEMPTED`；若届时教材候选没有准入，则标`PRACTICE_PENDING`，不可绕过审核或复用35%→42%原题。
 - 本次小确认不是正式Q题或R1，不重复当天追问；用户不应因口头诊断被记为独立掌握。旧Q057/R1、Q065与Q071复习记录不改变，Daily Five尚未开启。
+
+
+## 2026-10-15 QD课堂知识点复习追加（均为计划，不是实答）
+- 领域唯一来源：[本轮原子课堂实录](https://github.com/xchhhh22222/public-exam-knowledge/blob/ab2791e2cb214d4563c8ff926d9e795c59407985/records/sessions/2026-10-15_QD_ATOMIC_SPEED_COMPARE_TIME_ANNUAL.md)（`ab2791e2cb214d4563c8ff926d9e795c59407985`）；课堂自编确认**不占正式Q、不占R1**。
+- `REV-20261015-QD-SPEED-PRECISION`：2026-10-22左右工作日，合规新情境检验截位与四舍五入边界、分子分母截位对商及选项精度的影响。原课堂错选B，方法`UNVERIFIED`；状态`PLANNED / PRACTICE_GATE_REVIEW_ONLY`，候选未获准前不派正式题。
+- `REV-20261015-QD-COMPARE-ARITHMETIC`：建议2026-10-22与上述合并，独立算一次新分数交叉乘法并核小乘法；用户原比较结论正确但4×8笔误；`PLANNED / NOT_ATTEMPTED`，不是当场R1。
+- `REV-20261015-QD-GROWTH05-UNIT`：建议2026-10-22或下个适合工作日并入资料复习，重点不提示情况下写出年均增长量的`人数/年`等绝对数量单位；原数值与公式正确但原单位误写%，学生自述为习惯；`PLANNED / NOT_ATTEMPTED`，来源门禁不允许复用未审候选当正式题。
+- `QD-TIME-01`参照和独立季度列式已过，只需后续常规自然迁移，不新开补救卡。此前`REV-20261015-QD-PERCENT-BASELINE`、2026-10-19工程和2026-10-20贡献率计划原样保留；`QD-CONTRIB-01`符号漏写合并10/20贡献率卡，不重复排多次。每日60—120分钟为预算非实耗，队列不自动标完成。
