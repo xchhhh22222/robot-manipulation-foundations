@@ -763,3 +763,9 @@
 - 当日另有五个不占Q号的教学独立诊断：①两期比重差A正确但计算中间写`5/36`有误，`METHOD_PARTIAL`，正确上升1.2个百分点；②平均数增长率A正确，本人算`1/12`正确，但完整公式未独立写出，`METHOD_PARTIAL`；③增长贡献率与拉动百分点C/B，独立`60/200`、`60/2000`，`METHOD_VERIFIED_CURRENT_ITEM`；④必要条件选C错误、正确B，学生「未访问⇒未培训」为否定前件，`ANSWER_WRONG/METHOD_NOT_VERIFIED`；⑤工程C=7天，完整本人工作总量法列式正确，`METHOD_VERIFIED_CURRENT_ITEM`，但**与历史Q057/Q079同题干数据，标记`REPEATED_SOURCE_Q057_Q079`，不可算新情境迁移通过、不可抹去此前旧错误**。
 - 当日合计5道新编号选择题＋5道课堂诊断＝10次作答/诊断提交，9正确1错误；其中课堂诊断4/5，不将这些课堂点冒充另5道正式题或R1。**实际主动学习时间NOT_MEASURED**，任何60—120分钟只是预算；本人要求今日收官，无额外补救；无真实JD投递、技术编译、ROS2新日志或Linux每日五面经启动授权，技术路线状态不改。
 - 复习：10-19周一将必要条件与旧工程/基期比重/百分点卡合并，新工程题必须更换参数；10-20增长贡献率既有跨日复测，平均数公式可择机检验；10-23周五选择性比重差估算与必要条件T+7不同情境复测，均PLANNED/NOT_ATTEMPTED。周末无强制训练或欠题。
+
+## 2026-10-16 Linux/C++ P0 C01-01 温度原始输入校验（技术领域原件引用）
+
+- 唯一原始课堂事实：[C01-01用户代码与真实运行记录](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-16_CPP_C01-01_RAW_PARSER.md)。用户最终在聊天提交 `parseRawTemperature(const std::string&, int&)` 的实现：`from_chars` 使用临时 `parsed`，校验 `result.ec` 与 `result.ptr==end` 后才写回 `raw`；早期误用 `size()` 当指针、失败时写入 `raw` 两项错误均经讲解纠正，非完全独立无提示掌握。
+- 用户终端编译 `g++ -std=c++17 ... -c src/raw_parser.cpp` 返回提示符且无错误输出；三次测试输出：`25abc→ok=0,raw=100`、`250→ok=1,raw=250`、超大整数字符串 `→ok=0,raw=100`。`CODE_WRITTEN (CHAT_SNIPPET) / BUILD_PASS (USER_TERMINAL) / RUN_VERIFIED_3_CASES / EXPLAIN_VERIFIED=NO / TRANSFER_VERIFIED=NO`；`C01-01` 核心路径已测，**不等于完整 C01/工业监控平台交付**。
+- Linux技术库中头文件、合并版测试为助手依课堂整理，**用户本地真实文件及哈希未直接取得**；保留旧 `temperature_function.cpp` 原件未上传的历史结论。课堂技术学习分钟数 `NOT_MEASURED`；不改考公Q092—Q096、机器人实验和其他路线成绩。下一步核对本机和归档差异，进入 C01 后续获批模块；不追加重复测试。权威位置不变。
