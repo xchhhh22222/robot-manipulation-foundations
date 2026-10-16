@@ -556,3 +556,12 @@
 
 ## 2026-10-15 QD-SHARE-03错因确认（最新）
 原REV-20261015-QD-SHARE03-BASE错因由PENDING_USER更新：用户自述BASE_RECOVERY_DIRECTION_ERROR（基期还原乘除方向颠倒）；来源https://github.com/xchhhh22222/public-exam-knowledge/blob/fcead98b10d9b11884fabadc80a22241dc693941/records/sessions/2026-10-15_QD_SHARE03_CAUSE_CLOSE.md。状态ROOT_CAUSE_SELF_REPORTED / FIRST_PASS_COMPLETE_REVIEW_DUE / NEXT_TRANSFER_PLANNED。首答15/32错误不改，正确30%；今日本人要求停止同类练习，无R1；只有跨日合规新情境才重新验证。
+
+## 2026-10-16 行测五点教学复习队列增量（未提前验收）
+- 原件：[2026-10-16 Q092—Q096及五知识点](https://github.com/xchhhh22222/public-exam-knowledge/blob/a86cf8caa06343f1d21bf0472be7a0aecfa42548/records/sessions/2026-10-16_Q092-Q096_AND_FIVE_CONCEPTS.md)；正式Q092—Q096均ANSWER_PASS/METHOD_UNVERIFIED，课堂五点独立诊断是**4对1错**。
+- `REV-20261016-LOGIC-NECESSARY`：10-16学生C错误（未访问⇒未培训），正确未培训⇒不能访问；状态`ANSWER_WRONG/METHOD_NOT_VERIFIED`。T+1周末顺延到**2026-10-19周一**，和既有逻辑/公考练习去重；T+7按工作日**2026-10-23周五**可选不同条件句迁移复测；均`PLANNED/NOT_ATTEMPTED`，不单独强塞额外题。
+- `REV-20261016-SHARE-CHANGE`：10-16比重差方向正确、选A=1.2个百分点，但本人中间分数5/36不符题面；`ANSWER_PASS/METHOD_PARTIAL`；10-23可用不同材料做估算/分数迁移，`PLANNED/NOT_ATTEMPTED`，10-19可结合既有基期比重旧卡讲解，不重复惩罚同点。
+- `REV-20261016-AVERAGE-RATE`：答案A与本人1/12正确，但完整分母公式未写；`METHOD_PARTIAL`，**2026-10-20周二**可与贡献率旧卡限时合并独立列式，`PLANNED/NOT_ATTEMPTED`。
+- `REV-20261016-CONTRIB-PULL`：独立分母60/200及60/2000正确，`METHOD_VERIFIED_CURRENT_ITEM`；**2026-10-20周二**沿用原贡献率卡，去重不额外补；长期迁移未验证。
+- `REV-20261016-WORK-REMAINDER`：本人12/18天合作3天原题独立解出7天、方法完整；**题干、数据与Q057/Q079完全重复**，因此`ANSWER_PASS/METHOD_VERIFIED_CURRENT_ITEM/TRANSFER_NOT_VERIFIED`。旧Q057/Q079原错误保留，**2026-10-19周一**若测须换新参数/情境并归并工程旧复习卡，不算新R1/R2。
+- 既有2026-10-19/20及10-22旧队列继续有效，10-16无实际复习完成记录，勿将PLANNED升级PASS。无工作日外强制练习，不滚存欠题。
