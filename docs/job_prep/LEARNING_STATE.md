@@ -756,3 +756,10 @@
 
 ## 2026-10-15 QD-SHARE-03错因确认（最新）
 2026-10-15 QD-SHARE-03错因确认：学生明确「基期还原的乘除方向弄反了」。首答15/32=46.875%错误，正确30%。最终FIRST_PASS_COMPLETE_REVIEW_DUE / ANSWER_WRONG / BASE_RECOVERY_DIRECTION_ERROR / ROOT_CAUSE_SELF_REPORTED / METHOD_UNVERIFIED / TRANSFER_UNVERIFIED。只完成课堂首轮与错因确认，保留原错误，跨日迁移待验；不补同类题、Q号或R1。追加唯一原件：https://github.com/xchhhh22222/public-exam-knowledge/blob/fcead98b10d9b11884fabadc80a22241dc693941/records/sessions/2026-10-15_QD_SHARE03_CAUSE_CLOSE.md。同批SHARE04两个利润率数值正确但独立算式未验；会话>120分钟含等待、有效学习分钟未知。
+
+## 2026-10-16 行测：Q092—Q096及五知识点教学（领域原件权威引用）
+- 唯一原始课堂记录：[2026-10-16 Q092—Q096 + 五知识点](https://github.com/xchhhh22222/public-exam-knowledge/blob/a86cf8caa06343f1d21bf0472be7a0aecfa42548/records/sessions/2026-10-16_Q092-Q096_AND_FIVE_CONCEPTS.md)，领域提交 `a86cf8caa06343f1d21bf0472be7a0aecfa42548`，创建后已回读。此处只保留进度指针，原答案和教师诊断不在两个仓库双份维护。
+- 当日常规编号Q092—Q096：5题5对，只有选项，全部 `ANSWER_PASS/METHOD_UNVERIFIED`；题目均属课堂原创，不冒充国考真题。下一正式新题编号候选`Q097`（未出题/NOT_ATTEMPTED）。
+- 当日另有五个不占Q号的教学独立诊断：①两期比重差A正确但计算中间写`5/36`有误，`METHOD_PARTIAL`，正确上升1.2个百分点；②平均数增长率A正确，本人算`1/12`正确，但完整公式未独立写出，`METHOD_PARTIAL`；③增长贡献率与拉动百分点C/B，独立`60/200`、`60/2000`，`METHOD_VERIFIED_CURRENT_ITEM`；④必要条件选C错误、正确B，学生「未访问⇒未培训」为否定前件，`ANSWER_WRONG/METHOD_NOT_VERIFIED`；⑤工程C=7天，完整本人工作总量法列式正确，`METHOD_VERIFIED_CURRENT_ITEM`，但**与历史Q057/Q079同题干数据，标记`REPEATED_SOURCE_Q057_Q079`，不可算新情境迁移通过、不可抹去此前旧错误**。
+- 当日合计5道新编号选择题＋5道课堂诊断＝10次作答/诊断提交，9正确1错误；其中课堂诊断4/5，不将这些课堂点冒充另5道正式题或R1。**实际主动学习时间NOT_MEASURED**，任何60—120分钟只是预算；本人要求今日收官，无额外补救；无真实JD投递、技术编译、ROS2新日志或Linux每日五面经启动授权，技术路线状态不改。
+- 复习：10-19周一将必要条件与旧工程/基期比重/百分点卡合并，新工程题必须更换参数；10-20增长贡献率既有跨日复测，平均数公式可择机检验；10-23周五选择性比重差估算与必要条件T+7不同情境复测，均PLANNED/NOT_ATTEMPTED。周末无强制训练或欠题。
