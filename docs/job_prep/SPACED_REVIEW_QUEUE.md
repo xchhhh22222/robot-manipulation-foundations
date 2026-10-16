@@ -565,3 +565,10 @@
 - `REV-20261016-CONTRIB-PULL`：独立分母60/200及60/2000正确，`METHOD_VERIFIED_CURRENT_ITEM`；**2026-10-20周二**沿用原贡献率卡，去重不额外补；长期迁移未验证。
 - `REV-20261016-WORK-REMAINDER`：本人12/18天合作3天原题独立解出7天、方法完整；**题干、数据与Q057/Q079完全重复**，因此`ANSWER_PASS/METHOD_VERIFIED_CURRENT_ITEM/TRANSFER_NOT_VERIFIED`。旧Q057/Q079原错误保留，**2026-10-19周一**若测须换新参数/情境并归并工程旧复习卡，不算新R1/R2。
 - 既有2026-10-19/20及10-22旧队列继续有效，10-16无实际复习完成记录，勿将PLANNED升级PASS。无工作日外强制练习，不滚存欠题。
+
+## 2026-10-16 技术复习卡：严格解析与失败输出保持
+
+- `REV-20261016-CPP-C01-RAW-PARSER`。唯一来源：[技术领域课堂实证](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-16_CPP_C01-01_RAW_PARSER.md)。已通过三个用户逐次终端样本，包括合法 `250` 和两种非法输入，`RUN_VERIFIED_3_CASES`；`EXPLAIN_VERIFIED=NO`、`TRANSFER_VERIFIED=NO`。
+- T+1：**2026-10-19 周一**，在正常技术学习开始时简短复述 `const std::string&` 只读引用、临时 `parsed`、`result.ec`、`result.ptr`、合法后才 `raw=parsed` 的职责；`PLANNED / NOT_ATTEMPTED`，无需重复这三个已经通过的样本。
+- T+7：**2026-10-23 周五**，在新协议/输入场景下轻量迁移严格消费及失败保留语义；`PLANNED / NOT_ATTEMPTED`，与 10-19 已有 GDB 技术复习在时间盒内去重，不派强制周末任务。
+- 本卡不改变 `REV-20261014-CPP-INPUT-VALIDATION` 旧复习真实完成状态；今天教学分钟数未知，不能提前标 PASS。
