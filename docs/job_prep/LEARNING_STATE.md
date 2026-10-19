@@ -802,3 +802,12 @@
 
 ## 2026-10-19 当天最终收官（后半段增量）
 考公新原件：public-exam-knowledge/records/sessions/2026-10-19_QU_EQUATION_TRAVEL_GEOMETRY_AND_PERIMETER_R1.md。后半段14道有效首答12对2错，R1 1题答案正确但无算式，另有仅教师讲解未答。全天两段合计有效首答18道16对2错、无效题1道、教师讲解未答1道、R1答案正确1道。方程误记差值和推算不一致、拼接周长混用面积均保留首错；数量1/3仅部分教学。用户明确DAY_CLOSED、实耗未测；最高正式Q096、Q097未发布。旧到期复习未自动结清，技术及科研无变化。
+
+## 2026-10-19 P0 C01-02｜工业状态字解析真实当堂成果（技术领域原件引用）
+
+- [唯一技术课堂原件](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-19_CPP_C01-02_DEVICE_STATUS.md)；[C01-02 归档整理版源码与测试](https://github.com/xchhhh22222/linux-career-knowledge/tree/main/projects/P0/C01-02)。用户在 Ubuntu 用 `std::uint16_t`、在线 bit0 掩码1、温度告警 bit1 掩码2、设备故障 bit2 掩码4，实现三个解析函数及有效性判断。
+- 用户实际终端单文件编译无报错，联合测试五输入 `0/1/2/4/7` 按位拆解结果正确；未知位边界 `isValidDeviceStatus(7)=1`、`(8)=0`，`CODE_WRITTEN / BUILD_PASS / RUN_VERIFIED_NORMAL_5_AND_BOUNDARY_2`。第一次测试缺文件后补建，最后运行结果真实观察，不删除首错。
+- **独立程度区分**：学生独立写 `isOnline`；`hasTemperatureAlarm`、`hasDeviceFault` 具体函数体由教师给出；`isValidDeviceStatus` 首答混用 `&`、`!=` 且漏合法组合，讲解后改为 `status<=7`；位掩码 `4=100`、`status=5=101` 的解释通过；新 bit3 通信故障的掩码8和完整函数由用户聊天中独立答出，但**未编译也未纳入产品**。记录 `BIT_MASK_EXPLAIN_PASS / CHAT_TRANSFER_PASS`，不宣称从头独立无提示完成整个模块。
+- 10/19 到期复习：GDB 需老师提示才记住 Step Into/Out 概念，学生提示后答对 Shift+F11；C01-01 `raw=parsed` 成功后才提交的意义用 `12abc` 举例基本说明，经提示补全；两者按对应复习队列登记，不升级为独立全概念精通。
+- **状态与下一任务**：C01-02 课堂目标验收完成，`C01` / P0 整体仍 `IN_PROGRESS`，M1 截止 2026-11-06 不变；次工作日 2026-10-20 进入 C01-03 数组/指针/安全读取，利用旧 `isValidIndex`，不重复 C01-02 五输入。
+- 本机原 C01-01 三文件仅确认文件存在，没比对内容与哈希；GitHub 新 C01-02 代码依据聊天片段整理，**非用户 Ubuntu 字节级原件**。学习分钟数 `NOT_MEASURED`，其它技术支线、ROS2、面经、正式投递与已有考公收官均无新增成绩；原学习权威继续留本仓三文件，不作迁移。
