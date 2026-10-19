@@ -572,3 +572,9 @@
 - T+1：**2026-10-19 周一**，在正常技术学习开始时简短复述 `const std::string&` 只读引用、临时 `parsed`、`result.ec`、`result.ptr`、合法后才 `raw=parsed` 的职责；`PLANNED / NOT_ATTEMPTED`，无需重复这三个已经通过的样本。
 - T+7：**2026-10-23 周五**，在新协议/输入场景下轻量迁移严格消费及失败保留语义；`PLANNED / NOT_ATTEMPTED`，与 10-19 已有 GDB 技术复习在时间盒内去重，不派强制周末任务。
 - 本卡不改变 `REV-20261014-CPP-INPUT-VALIDATION` 旧复习真实完成状态；今天教学分钟数未知，不能提前标 PASS。
+
+## 2026-10-19 五项首次新课｜去重复习候选（不是复习已通过）
+- 唯一实际课堂： [资料4与数量1五个新方法、题目/首答](https://github.com/xchhhh22222/public-exam-knowledge/blob/35227ae5d7a7e2e1569ba67b37e71217a7de8dce/records/sessions/2026-10-19_QD_NEW5_INTERVAL_ANNUAL_MIXED_SUBSTITUTION_DIVISIBILITY.md)。`REV-20261019-QD-NEW5`：间隔增长率C、年均增长率B、混合增长率B均答案PASS但学生未展示算式；代入排除选C及14/26→16/24策略正确但270错写260；倍数特性原选项全部不能被4整除，`ITEM_INVALID/NOT_SCORED`，原题不纳入错题统计，修正版学生未答。
+- **T+1 2026-10-20（周二）**：仅在60—120分钟常规练习剩余预算里，从三种增长率和代入算术中择1—2个高价值点独立列式；倍数特性若再测必须重新设计含有效答案的新情境并检查选项。统一状态`PLANNED/NOT_ATTEMPTED`，**不当作今天旧错点T+1已完成**，不要求五项全刷。
+- **T+7 2026-10-26（周一）**：按掌握与到期容量选择新的材料做跨题迁移，`PLANNED/NOT_ATTEMPTED`；2026-10-24/25周末不派任务、不累计欠题。
+- 今日旧`REV-20261016-LOGIC-NECESSARY`、Q057/Q079工程、基期比重等卡维持既有到期状态；**今天五个新方法的教学不等于旧卡完成**。正式Q仍Q096，用户主动学习时间未记录，今日学习仍可继续。
