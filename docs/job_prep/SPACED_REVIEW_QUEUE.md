@@ -582,3 +582,10 @@
 
 ## 2026-10-19 行测补充复习计划（尚未执行）
 方程法首答错误：误将12看成10，且原列式存在运算不一致；拼接周长首答错误，唯一R1答案48正确但没有列式。新题独立迁移待验证。10月20日按时间预算合并旧卡择重点回顾，10月26日T+7可选择新情境。两天均PLANNED，不标PASS，不派R2。原卷见考公库2026-10-19_QU_EQUATION_TRAVEL_GEOMETRY_AND_PERIMETER_R1.md。
+
+## 2026-10-19 技术到期复习实际完成（覆盖上方同卡 PLANNED 旧快照）
+
+- `REV-20261012-GDB-STEP` / T+7：实际在技术课堂问从调用处进入函数使用哪个键，学生明确表示「不记得了」；老师解释 `F10` Step Over、`F11` Step Into、`Shift+F11` Step Out。学生在提示后回答函数退出 `f11+shift`。记录 `REVIEW_DONE_WITH_HINT / STEP_OUT_RECALL_PASS`，无新真实GDB截图，不记全套无提示掌握。
+- `REV-20261016-CPP-C01-RAW-PARSER` / T+1：问为何仅成功后写 `raw=parsed`，学生自述 `12abc` 类非法输入不能通过并会出问题，教师补足 `ptr=end` 与中间变量避免污染；记录 `PARTIAL_REASONING_PASS_AFTER_PROMPT`，不改原 C01-01 三样本 `RUN_VERIFIED_3_CASES`，不虚报完整解析/边界独立迁移。10/23 T+7 后续仍 `PLANNED`。
+- 新卡 `REV-20261019-CPP-C01-02-STATUS`：2026-10-20 T+1、2026-10-26 T+7，结合 C01-03 正常教学做一项**新状态字场景**的无提示位掩码/非法位判断；尚未尝试，`PLANNED`，不重复刷五个已通过的状态。唯一领域原始证据：[10/19 C01-02 课堂](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-19_CPP_C01-02_DEVICE_STATUS.md)。
+- 考公原本 10/19 当日收官及其它卡不受技术课影响；技术实耗 `NOT_MEASURED`。
