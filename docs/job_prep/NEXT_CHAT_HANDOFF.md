@@ -479,3 +479,10 @@ Q065-R1学生答①6、②15，数值均对，单位没写，记录NUMERIC_PASS 
 - 今日关键错点均保留首答：连续涨跌算术失误；不等量混合首答错后R1过程PASS；十字交叉方向与纯水场景首答错后R1 PASS；连续替换近似精度不足；两集合“只会A”首答错后R1 PASS。
 - **下一新课入口：三集合容斥原理**，尚未开始/NOT_ATTEMPTED。开始新课前可视当天状态从10/20复习卡中择1项做极短复述，不要先发整组测试。
 - 正式Q编号仍停在Q096，Q097仍未发布；今天课堂不占正式Q号。用户已明确今日学习结束，实际纯学习用时NOT_MEASURED。
+
+
+## 2026-10-20 技术最新接续｜C01-03 已收官，禁止按临时编号继续加课
+- 技术领域原件：[C01-03完整课堂](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-20_CPP_C01-03_SAFE_READ.md)。正式计划内状态：`CODE_WRITTEN/BUILD_PASS/RUN_VERIFIED/EXPLAIN_VERIFIED=YES`；边界 `0/1/2/-1/3` 已验证，其中 index=3 的最终状态来自用户明确确认。
+- 同日 C01-01 独立解释仍 `METHOD_UNVERIFIED`，不要把 from_chars 的历史运行PASS写成解释PASS。
+- 后半段做过动态长度、nullptr、const、引用/数组退化、sizeof、std::size/std::size_t 等真实实验，但它们是教师超出当日计划后的额外内容，**不作为正式 C01-04～C01-13 路线编号**。用户已经纠偏：技术教学先看每日任务，不要“想一出教一出”。
+- 下一技术会话必须先读 linux-career-knowledge 的 `control/NEXT.md` / `control/HANDOFF.md`、本学习状态和复习队列，再选择正式任务；不得直接开“C01-14”。本机最终 safe_read 三文件没有与 GitHub 做 byte-level compare，自动化/CI 未验，学习时长 NOT_MEASURED。
