@@ -820,3 +820,12 @@
 - 真实错误保留：连续涨跌乘法算错（方法列式正确）；不等量浓度混合首答8%后R1=22%过程PASS；十字交叉方向初次判断反；纯水+50%配20%首答3:5后R1=3:1场景PASS；连续替换17.78%答17%属近似精度不足；两集合“只会A”首答5后R1答25正确。
 - 今日正式Q编号不增加，课堂题均为教学诊断/迁移，不冒充Q097以后正式题；实际纯学习用时NOT_MEASURED。
 - 用户已明确2026-10-20收官。下一张新知识卡可从**三集合容斥**开始，当前NOT_ATTEMPTED。
+
+
+## 2026-10-20 P0 C01-03 数组、指针与安全读取｜技术领域最新同步
+- 唯一完整技术课堂原件：[2026-10-20 C01-03](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-20_CPP_C01-03_SAFE_READ.md)；项目摘要：[projects/P0/C01-03](https://github.com/xchhhh22222/linux-career-knowledge/tree/main/projects/P0/C01-03)。
+- 正式当天计划 C01-03 已通过：学生从已有 `isValidIndex` 推进 `readValue`，真实经历“先解引用再判断”和“非法分支反而解引用”两类错误，最终做到合法才读、非法不访问且不污染输出；Ubuntu/VS Code 编译通过，`0→10`、`1→20`、`2→30`、`-1→false/result=100`，`3→false/result=100` 最终由用户明确确认验证。记 `CODE_WRITTEN/BUILD_PASS/RUN_VERIFIED/EXPLAIN_VERIFIED=YES`。
+- 真实调试证据：聊天代码已改对但 VS Code 文件未保存，第一次 `index=0` 仍输出 `ok=0 result=100`；通过 `cat src/safe_read.cpp` 找到磁盘旧代码，保存后恢复 `ok=1 result=10`。这不是“第一次就对”，必须保留。
+- 同日 C01-01 独立讲解验收未通过：`ec/ptr/parsed` 三个角色理解不稳定，`FIRST_PASS_COMPLETE=NO/METHOD_UNVERIFIED=YES`；10/16 三个运行样本的历史通过不变，解释层级不升级。
+- 后半段聊天真实做过动态长度、nullptr、const 指针、引用/数组退化/指针算术、sizeof、std::size、std::size_t 等扩展实验，有真实链接错误、const 写入编译错误以及多次运行通过；**这些不是 10/20 既定任务，不固化为正式 C01-04～C01-13，也不据此自动续 C01-14。** 用户已明确要求后续先看每日任务再教学。
+- 本机当前最终 `safe_read.hpp/.cpp/test.cpp` 未被连接器直接读取、未比对 SHA，GitHub 只保存课堂事实和整理摘要；自动化测试/CI 未建立，技术实际学习分钟数 `NOT_MEASURED`。C01/P0 整体仍 `IN_PROGRESS`。
