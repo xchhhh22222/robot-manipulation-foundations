@@ -866,3 +866,11 @@
 - 记录区分“会判别用A/C”与“最终独立求值正确”；**5张讲完≠5张都掌握**。学生说分类题因审题错误，此为自述，不覆盖两次真实首错。
 - 当日未追加补题/R1/R2，用户明确今天先上传即收官，实际学习分钟数`NOT_MEASURED`。正式Q仍最高Q096，Q097未发布。
 - 待跨日新情境复测卡4张：三集合、分类加法、排列、组合。建议T+7=2026-10-28；实际当日依到期顺序最多选2—3张，不积累欠题。分步乘法本轮2/2，仅记录当前题通过，不提前夸大跨情境熟练。
+
+## 2026-10-21 技术 C01-04｜寄存器字段提取（新增，不改考公当日收官）
+
+- 唯一技术课堂原件：[C01-04 10/21 真实过程](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-21_CPP_C01-04_REGISTER_DECODER.md)；代码为[聊天整理版](https://github.com/xchhhh22222/linux-career-knowledge/tree/main/projects/P0/C01-04)。
+- `uint8_t` 寄存器 bit5～bit3 用 `mask=0b00111000` 和 `(reg & mask)>>3` 提取；Ubuntu 用户终端 g++17 编译通过，**分次运行** `00101101→5`、`00011000→3`：`CODE_WRITTEN/BUILD_PASS/RUN_VERIFIED_2_CASES`。第一次链接 undefined reference 是 .cpp 磁盘为空，`cat` 定位后写入保存才成功。
+- 学生对位编号起初混乱，把字段值 `101` 和掩码三位全 1 混淆；经纠正后能解释“&1 保留、&0 清零”，后来新位置 bit6～bit4 自主答 `>>4`。核心实现由导师提供、学生本机使用，**不记完整无提示独立开发**；`EXPLAIN_VERIFIED=PARTIAL`。
+- `FIELD_RANGE_VALIDATION=NOT_IMPLEMENTED/NOT_VERIFIED`：提出有效值 0～5、无效 6～7，但没有源码和测试；用户希望不额外测试，保留缺口，C01-04 **仅核心提取小任务课堂收官**。C01/P0 总体 IN_PROGRESS，M1 11/06 目标不变。
+- 2026-10-22 计划 C01-05 栈/堆/生命周期/内存错误，先核计划再开始；C01-01 讲解未通过、C01-03 已通过都不改变。GitHub 不是用户 Ubuntu 文件直传，实际学习时长 NOT_MEASURED，ROS2/L01/就业投递与公考已存成绩无新增影响。
