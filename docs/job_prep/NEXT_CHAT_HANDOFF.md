@@ -510,3 +510,10 @@ Q065-R1学生答①6、②15，数值均对，单位没写，记录NUMERIC_PASS 
 原始题干与初答、教师批改见 public-exam-knowledge/records/sessions/2026-10-21_QU_FIVE_CARDS_AND_10_DIAGNOSTICS.md，领域提交4cde164e1cb8c5d6b2d52c5a507bd06b95462edf。
 三集合、分类加法、排列、组合四卡候选2026-10-28 T+7重新测；每日仍最多抽2至3张到期卡，一卡一题，未抽到的不追补。分步乘法当前两题答案正确，完整列式未全部提供。
 用户已要求今天收官并上传，不再派练习。今后每卡新课两题一次展示、一起批改，仍遵循90分钟上限和先旧卡后新课。正式Q仍Q096，Q097未发布；学习分钟数未知。
+
+## 2026-10-21 技术 C01-04 最新接手（不覆盖同日考公正式记录）
+
+- 唯一技术课堂：[2026-10-21 C01-04 记录](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-21_CPP_C01-04_REGISTER_DECODER.md)；[GitHub 归档代码](https://github.com/xchhhh22222/linux-career-knowledge/tree/main/projects/P0/C01-04)。`(reg & 0b00111000)>>3` 提取 bit5～bit3，用户终端分别运行 `00101101→5`、`00011000→3`，编译通过。
+- 位编号/掩码目标三位均为 1/右移方向最初有误，导师讲解后学生能解释，独立口答 bit6～bit4 应 `>>4`；代码依教师模板实现，不是从头独立开发。一次 `undefined reference` 因 .cpp 磁盘空文件，保存实现后修复。
+- **字段范围校验未做**：`isValidField` 0～5 有效/6～7 无效只提出要求，无用户实现或运行；记 `NOT_IMPLEMENTED/NOT_VERIFIED`。C01-04 核心提取小任务收官，C01/P0 整体 IN_PROGRESS。
+- 下个技术课 10/22 依正式计划进入 **C01-05 栈/堆/生命周期与内存错误**，先核最新计划；不复测 5/3，C01-01 10/20 讲解失败、C01-03 通过记录保留。归档版不等于 Ubuntu 原件字节，学习分钟数未测。
