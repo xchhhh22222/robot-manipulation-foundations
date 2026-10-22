@@ -647,3 +647,11 @@
 - `REV-20261021-CPP-C01-04-BITFIELD`：来源 [10/21 唯一技术课堂原件](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-21_CPP_C01-04_REGISTER_DECODER.md)。bit5～bit3 用掩码加右移取字段，用户实际两输入 `00101101→5`、`00011000→3` 均已运行；新位段 bit6～bit4 口答右移 4 正确，但完整独立解释仅部分验证。
 - T+1 **2026-10-22**：仅在正式 C01-05 正常教学可用时间内可做一次新字段位置的轻量独立迁移，`PLANNED/NOT_ATTEMPTED`；T+7 **2026-10-28**：按容量选择一次新状态字和不同字段位置的迁移，`PLANNED/NOT_ATTEMPTED`。不重复刷已成功的 5/3 两样本，不强制周末补课。
 - 本课提出的 0～5 合法/6～7 非法未实现或测试，记 `FIELD_RANGE_VALIDATION_NOT_VERIFIED`，不得因复习新卡自动结清。
+
+
+## 2026-10-22 公考到期3卡复测｜实际执行
+- 唯一原题/首答/批改：[10/22三题](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-22_REVIEW_PERCENT_ESTIMATION_FRACTION.md)，公考库commit`88de169b15f0a50bda9ad226c75e4f56119d9d98`。
+- `REV-20261015-QD-PERCENT-BASELINE`：从40%到46%，学生独立答6个百分点、相对增长15%、参照分母40%。`PASS / CLOSED_THIS_REVIEW`。覆盖该卡原`PLANNED/NOT_ATTEMPTED`状态。
+- `REV-20261015-QD-SPEED-PRECISION`：377/48从7.6、7.8、8.0、8.2选最接近。学生原答“7.6，377/48>377/50=7.54可得7.6”，不等式为真但结论错。实际≈7.8542，最接近7.8；未就粗截误差给出完整判断。`WRONG / REVIEW_NOT_PASSED`，**下次2026-10-29（T+7）**新情境只测1题，不即时加练。
+- `REV-20261015-QD-COMPARE-ARITHMETIC`：7/12与9/16，学生独立写112>108，计算及方向正确。`PASS / CLOSED_THIS_REVIEW`。覆盖该卡原`PLANNED/NOT_ATTEMPTED`状态。
+- 今日复测容量3/3已用；2张PASS、1张顺延。其他未抽到期卡不计欠题。旧历史错误不覆盖。
