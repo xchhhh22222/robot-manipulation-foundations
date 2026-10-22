@@ -655,3 +655,10 @@
 - `REV-20261015-QD-SPEED-PRECISION`：377/48从7.6、7.8、8.0、8.2选最接近。学生原答“7.6，377/48>377/50=7.54可得7.6”，不等式为真但结论错。实际≈7.8542，最接近7.8；未就粗截误差给出完整判断。`WRONG / REVIEW_NOT_PASSED`，**下次2026-10-29（T+7）**新情境只测1题，不即时加练。
 - `REV-20261015-QD-COMPARE-ARITHMETIC`：7/12与9/16，学生独立写112>108，计算及方向正确。`PASS / CLOSED_THIS_REVIEW`。覆盖该卡原`PLANNED/NOT_ATTEMPTED`状态。
 - 今日复测容量3/3已用；2张PASS、1张顺延。其他未抽到期卡不计欠题。旧历史错误不覆盖。
+
+
+## 2026-10-22 概率课堂新增待复测卡
+原卷：public-exam-knowledge/records/sessions/2026-10-22_QU_PROBABILITY_FIVE_CARDS_AND_10_CHECKS.md；巩固成绩8/10。
+- REV-20261022-QU-OUTCOME-VS-PROB：硬币两次已列全体结果、答概率1/2，但未明确选出“恰好一次正面”的结果集合。2026-10-29 T+7新情境，PLANNED/NOT_ATTEMPTED。
+- REV-20261022-QU-COMPLEMENT：三次硬币至少一次正面原答2/3，正确7/8。2026-10-29 T+7新情境，PLANNED/NOT_ATTEMPTED。
+- 10月29日同时有旧截位精度卡到期，按整队列顺序合计只取2—3张；未轮到不欠题，不即时补练。古典概率、独立事件两卡虽答案2/2，未展示完整学生列式，不标完整方法验证。
