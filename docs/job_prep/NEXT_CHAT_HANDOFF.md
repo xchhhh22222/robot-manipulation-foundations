@@ -550,3 +550,9 @@ Q065-R1学生答①6、②15，数值均对，单位没写，记录NUMERIC_PASS 
 - 10/23 W02 `decode_temperature` 已实际g++17通过三案例，课堂[原件](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-23_CPP_M1_TEMPERATURE_DECODER.md)；代码/测试已按聊天[归档至GitHub](https://github.com/xchhhh22222/linux-career-knowledge/tree/main/projects/P0/W02-temperature-decoder)，不是与本地Ubuntu最终源码做过字节或hash同一性验证。
 - 下周 C++ 正式W03目标为学生独立设计`DeviceSample`、记录时间和有效状态、多样本数组及非法读数；周二、四ROS Day28审计/非执行探针在既定预算内。公考当日2—3到期复测优先；10/28、29、30卡次详见原队列；科研暂按双臂SAM3.0/3.1同图配对实验**先核权限、方法和实际运行条件**，不擅自下载33张新图/合并PR，也不宣称SAM3.1优越。
 - 周末10/24—25默认休息。2027-03之前不启动剑指Offer/力扣支线；任何技术与科研下周计划不得视为当日真实完成。
+
+## 2026-10-23 16:00 嵌入式招聘与开源项目周雷达（只读研究与文档同步）
+- 本周新增核查：Caterpillar 无锡 2026-10-19 发布 Linux/MCU OTA **5年以上经验社招**，不适合2028届投递；麒麟软件 2026-09-04 的 2027届 C/C++/Linux 与内核岗用于岗位族对照，不冒充2028届；尚未找到同时核实届别、085404、学校、代码职责、工时、驻厂的2028届可投职位。
+- FUXA 官方 2026-10-19 发布 v1.3.5：MQTT/Modbus 超时可配置、修复写入失败反馈、DAQ 会话隔离及安全加固；本轮官方 LICENSE 仍 MIT。仅更新候选基线，未下载/部署/运行，不代表安全已验证。
+- **结论维持** Linux C++ 工业设备平台主线，P0/P1/P2、原长期计划与验收不变；不增加Qt、V4L2、xv6等支线。详细证据见 [2026-10-23雷达记录](EMBEDDED_AUTUMN_PROJECT_BENCHMARK_2026-10-12.md) 与 [FUXA候选产品记录](FULLSTACK_EMBEDDED_LINUX_PRODUCTS_2026-10-12.md)。本次是招聘研究，**没有新用户源码/答题/实验日志，不修改PASS**；已归档的 10/23 W02 真实课堂记录仍独立有效。
+- 周末10/24—25不派任务。下一次雷达继续核2028届真实可投资格、工时与驻厂；不因为本次研究自行安装依赖或创建仓库。
