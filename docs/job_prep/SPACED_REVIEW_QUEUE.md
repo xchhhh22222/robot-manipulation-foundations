@@ -662,3 +662,11 @@
 - REV-20261022-QU-OUTCOME-VS-PROB：硬币两次已列全体结果、答概率1/2，但未明确选出“恰好一次正面”的结果集合。2026-10-29 T+7新情境，PLANNED/NOT_ATTEMPTED。
 - REV-20261022-QU-COMPLEMENT：三次硬币至少一次正面原答2/3，正确7/8。2026-10-29 T+7新情境，PLANNED/NOT_ATTEMPTED。
 - 10月29日同时有旧截位精度卡到期，按整队列顺序合计只取2—3张；未轮到不欠题，不即时补练。古典概率、独立事件两卡虽答案2/2，未展示完整学生列式，不标完整方法验证。
+
+
+## 2026-10-23 公考复测实际结果（覆盖此前同卡待测状态）
+原卷：public-exam-knowledge/records/sessions/2026-10-23_REVIEW_AVERAGE_ANNUAL_SHARE.md；commit 41445d66201c3b0aad1452fd3e711109cddb46a5。
+- 平均数增长率：用户独立列出1200/110约10.9、1000/100=10、相对增长约9%；PASS/CLOSED_THIS_REVIEW，不顺延。
+- 年均增长量及单位：用户首答仅“12”。数值正确，但没有算式和“万件/年”单位；NUMERIC_PASS/UNIT_MISSING/METHOD_UNVERIFIED，未完整通过。2026-10-30 T+7新情境短测（PLANNED/NOT_ATTEMPTED）。
+- 比重变化：用户首答“20%”，正确线上比重25%到30%，提高5个百分点；WRONG/METHOD_UNVERIFIED。2026-10-30 T+7新情境短测（PLANNED/NOT_ATTEMPTED）。
+- 今日旧卡复测容量3/3已用，1通过2顺延，无即时补题；先前卡状态不重写，不补欠题。最高正式Q仍Q096，学时NOT_MEASURED。
