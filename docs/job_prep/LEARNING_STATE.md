@@ -886,3 +886,9 @@
 
 ## 2026-10-23 公考复测1/3阶段收官
 原始3题见 public-exam-knowledge/records/sessions/2026-10-23_REVIEW_AVERAGE_ANNUAL_SHARE.md，commit 41445d66201c3b0aad1452fd3e711109cddb46a5。平均数增长率答约9%、展示新旧平均数及基准分母，PASS；年均增长量仅答12，数值正确但无万件/年及列式，完整作答未通过；比重变化答20%错误，应为5个百分点。后两卡安排2026-10-30 T+7新情境，不当场补练；复测1/3，进入新课，新课尚未收独立作答。正式Q096不变；学时NOT_MEASURED。
+
+## 2026-10-23 技术 M1/W02｜temperature_decoder 三案例通过
+- 原件：xchhhh22222/linux-career-knowledge/records/sessions/2026-10-23_CPP_M1_TEMPERATURE_DECODER.md。
+- 用户 Ubuntu g++17 真实输出：`31.8`、`26.5`、`scale=0 -> false 且 result 保持26.5`，记 `BUILD_PASS/RUN_VERIFIED_3_CASES`。
+- `scale==0` 防护为用户独立实现；`static_cast<double>` 与整数除法由教师讲解后完成。最后解释仍需纠正“result是double”与“参与除法的操作数类型”区别，故完整无提示解释未验证。
+- W02 函数与输入验证核心案例已收官；不新增 C01-06。下次按正式 W03 数据结构计划或到期技术复测进入。公考当日记录不改，学时 NOT_MEASURED。
