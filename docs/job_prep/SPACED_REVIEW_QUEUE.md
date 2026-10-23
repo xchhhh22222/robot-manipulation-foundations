@@ -670,3 +670,10 @@
 - 年均增长量及单位：用户首答仅“12”。数值正确，但没有算式和“万件/年”单位；NUMERIC_PASS/UNIT_MISSING/METHOD_UNVERIFIED，未完整通过。2026-10-30 T+7新情境短测（PLANNED/NOT_ATTEMPTED）。
 - 比重变化：用户首答“20%”，正确线上比重25%到30%，提高5个百分点；WRONG/METHOD_UNVERIFIED。2026-10-30 T+7新情境短测（PLANNED/NOT_ATTEMPTED）。
 - 今日旧卡复测容量3/3已用，1通过2顺延，无即时补题；先前卡状态不重写，不补欠题。最高正式Q仍Q096，学时NOT_MEASURED。
+
+## 2026-10-23 技术 M1/W02｜temperature_decoder 复测安排
+- 来源：linux-career-knowledge/records/sessions/2026-10-23_CPP_M1_TEMPERATURE_DECODER.md。
+- 本课真实运行已通过 `318/10 -> 31.8`、`265/10 -> 26.5`、`318/0 -> false且result保持26.5`。原样样本不重复刷。
+- 复测重点1：新情境解释为什么 `double result = raw / scale` 在 `raw`、`scale` 都为 int 时仍会先做整数除法。
+- 复测重点2：失败路径为何应先校验再写输出变量。
+- 周末不派任务；下一工作日 2026-10-26 轻量复述候选，2026-10-30 T+7 新情境候选，均为 `PLANNED/NOT_ATTEMPTED`，不算欠题。
