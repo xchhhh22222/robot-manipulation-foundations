@@ -544,3 +544,9 @@ Q065-R1学生答①6、②15，数值均对，单位没写，记录NUMERIC_PASS 
 - `scale==0` 保护由用户独立写出；浮点除法写法经教师讲解完成。用户最后对整数除法的解释仍需纠正，完整无提示解释未验。
 - 本次属于 W02/M1 函数与输入验证收官，不另造 C01-06。下一技术课先核 W03（10/26～10/30 数据结构）及技术复测队列，再只开一个原子目标；不要重复今天三组样本。
 - 本地文件 byte/hash 未核，学时 NOT_MEASURED；公考 10/23 状态保持其独立原件。
+
+## 2026-10-23 周末前更新：下周10/26—30三线总计划已形成（计划、未执行）
+- 主计划：[职业总控W03工作周](https://github.com/xchhhh22222/career-command-center/blob/main/plans/WEEK_2026-10-26_TO_10-30.md)；技术细案：[Linux/C++ W03具体日程](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/docs/job_prep/daily/2026-10-26_W03_WEEK_PLAN.md)。本段只提供入口，所有下周项目标 `PLANNED/NOT_STARTED`。
+- 10/23 W02 `decode_temperature` 已实际g++17通过三案例，课堂[原件](https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-23_CPP_M1_TEMPERATURE_DECODER.md)；代码/测试已按聊天[归档至GitHub](https://github.com/xchhhh22222/linux-career-knowledge/tree/main/projects/P0/W02-temperature-decoder)，不是与本地Ubuntu最终源码做过字节或hash同一性验证。
+- 下周 C++ 正式W03目标为学生独立设计`DeviceSample`、记录时间和有效状态、多样本数组及非法读数；周二、四ROS Day28审计/非执行探针在既定预算内。公考当日2—3到期复测优先；10/28、29、30卡次详见原队列；科研暂按双臂SAM3.0/3.1同图配对实验**先核权限、方法和实际运行条件**，不擅自下载33张新图/合并PR，也不宣称SAM3.1优越。
+- 周末10/24—25默认休息。2027-03之前不启动剑指Offer/力扣支线；任何技术与科研下周计划不得视为当日真实完成。
