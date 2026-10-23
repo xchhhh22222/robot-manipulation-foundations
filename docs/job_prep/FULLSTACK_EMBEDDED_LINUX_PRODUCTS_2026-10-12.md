@@ -6,7 +6,7 @@
 
 | 产品 | 当前有的真实产品功能 | 后端/前端及许可 | 求职适配与问题 |
 |---|---|---|---|
-| **FUXA** https://github.com/frangoteam/FUXA | 浏览器里的工业SCADA/HMI编辑器、实时可视化、Modbus TCP/RTU、MQTT、报警、历史数据采集、设备标签、支持Docker与Linux/ARM；有完整运行路径和文档 https://frangoteam.github.io/FUXA/ | **Node.js后台＋Angular前端；MIT**（原LICENSE必须依规定随衍生分发保留）。截至2026-10报告最新发行 v1.3.4 (2026-08)：https://github.com/frangoteam/FUXA/releases | **产品底座/界面二开首选候选**，但原生非C++，不能仅做换肤就称嵌入式Linux研发；须开发实质C/C++采集守护进程、协议状态机、日志/故障恢复，并证明自己对前后端业务功能的修改。项目已有2026年多项安全公告 https://github.com/frangoteam/FUXA/security ，应使用当时已修补并固定依赖版本，默认仅本地/测试网运行，禁止未经审计公网暴露。 |
+| **FUXA** https://github.com/frangoteam/FUXA | 浏览器里的工业SCADA/HMI编辑器、实时可视化、Modbus TCP/RTU、MQTT、报警、历史数据采集、设备标签、支持Docker与Linux/ARM；有完整运行路径和文档 https://frangoteam.github.io/FUXA/ | **Node.js后台＋Angular前端；MIT**（原LICENSE必须依规定随衍生分发保留）。截至2026-10-23 核验最新发行 v1.3.5 (2026-10-19)：https://github.com/frangoteam/FUXA/releases | **产品底座/界面二开首选候选**，但原生非C++，不能仅做换肤就称嵌入式Linux研发；须开发实质C/C++采集守护进程、协议状态机、日志/故障恢复，并证明自己对前后端业务功能的修改。项目已有2026年多项安全公告 https://github.com/frangoteam/FUXA/security ，应使用当时已修补并固定依赖版本，默认仅本地/测试网运行，禁止未经审计公网暴露。 |
 | **EMQX Neuron** https://github.com/emqx/neuron + https://github.com/emqx/neuron-dashboard | C语言工业连接服务器、Modbus与MQTT驱动、HTTP接口、浏览器管理界面 | **C核心＋Vue旧Dashboard；核心/开放组件LGPLv3**，并有商业插件限制 https://docs.emqx.com/en/neuron/latest/introduction/license/license-policy.html | 与C/Linux更贴近，但官方明示Dashboard开源2.6.3 **停止开发维护**，不宜未经代码安全审查就作为最终UI底座；可做嵌软架构学习/备选代码参考。 |
 | **ThingsBoard** https://github.com/thingsboard/thingsboard | 功能齐全的物联网设备管理、可视化、规则与远程管理 | Java后端＋Angular前端；**4.4及以上BUSL 1.1**（4.4以前版本另为Apache2） https://github.com/thingsboard/thingsboard/blob/master/README.md | 功能成熟，但核心以Java/大平台为主，与嵌软C/C++主线弱；BUSL对品牌/生产场景许可的限制增加直接整体二开门槛。当前**不推荐**“整体换皮当自己的”路线。 |
 
@@ -78,3 +78,9 @@
 - 用户明确“好的那么我们先开始Linux C++项目吧”。**新状态：START_AUTHORIZED、Day0架构理解进行中**，不再使用此文件旧段落“本轮不能开工/不能配置”的历史禁令阻碍当下自愿开始的教学；具体步骤与工程/知识双证据见 [EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md](EMBEDDED_LINUX_PRODUCT_DAY0_2026-10-12.md)。
 - 保留原选型：完整工业Web平台、合法借鉴FUXA Angular UI、本人成果以Linux C++设备后端、REST/WebSocket、存储/告警和故障复现为核心；先模拟设备做垂直闭环，后ARM目标/可选STM32。当前尚未下载FUXA、创建工程仓、安装系统依赖或运行C++程序。每个模块先理解原理、自主编码/设计后再跑测试，不能仅复制项目得PASS。
 - 今日首个知识考核为设备20秒断线后的分层职责解释；没有用户回应前M0_NOT_ASSESSED。真实个人编码/日志出现才将工程状态升级。
+
+
+## 2026-10-23 FUXA 候选基线复核（文档更新，不是开工）
+- 官方 v1.3.5（2026-10-19）：https://github.com/frangoteam/FUXA/releases/tag/v1.3.5 。新增可配置 MQTT/Modbus 超时，修复 Modbus 写入失败反馈与 DAQ 查询会话作用域，强化认证/Node-RED 权限；具体兼容性和风险仍须未来在隔离环境实测。
+- 上游 LICENSE 仍为 MIT：https://github.com/frangoteam/FUXA/blob/master/LICENSE ；保留作者版权/许可，第三方素材、商标和 Pro 特性另行审查。版本更新不等于安全承诺、本人代码或测试完成。
+- 本轮只更新候选基线记录；不下载、不安装、不 fork、不创建新工程，也不改变 Linux C++ 主线及 P0/P1/P2 组件。详见 [2026-10-23 周雷达](EMBEDDED_AUTUMN_PROJECT_BENCHMARK_2026-10-12.md)。
