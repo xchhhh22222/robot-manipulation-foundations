@@ -677,3 +677,13 @@
 - 复测重点1：新情境解释为什么 `double result = raw / scale` 在 `raw`、`scale` 都为 int 时仍会先做整数除法。
 - 复测重点2：失败路径为何应先校验再写输出变量。
 - 周末不派任务；下一工作日 2026-10-26 轻量复述候选，2026-10-30 T+7 新情境候选，均为 `PLANNED/NOT_ATTEMPTED`，不算欠题。
+
+
+## 2026-10-26 行测复测及方阵新卡（真实课堂归档）
+- 唯一原卷：[三卡到期复测](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-26_REVIEW_INTERVAL_ANNUAL_MIXED.md)；[方阵五卡](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-26_QU_SQUARE_ARRAY_FIVE_CARDS.md)。复测1/3本轮收官，新卡5张检测数值正确，均非限时测试。
+- `REV-20261019-QD-INTERVAL-RATE`：间隔增长率：用户首答3.5%正确；课堂已判`PASS/CLOSED_THIS_REVIEW`，但完整独立公式未提交，`METHOD_NOT_VERIFIED`。本轮不重测。
+- `REV-20261019-QD-ANNUAL-RATE`：年均增长率用户答27.6，正确20%；`WRONG / REVIEW_NOT_PASSED`。2026-11-02（T+7）新情境1题，`PLANNED/NOT_ATTEMPTED`。
+- `REV-20261019-QD-MIXED-RATE`：总增长率答案8%正确，但用户原式“0.15乘120+280乘0.，6然后和除400=8%”与B业务增长5%的题设不一致；`NUMERIC_ANSWER_PASS/EXPRESSION_INCONSISTENT/METHOD_NOT_PASS`。2026-11-02（T+7）新情境1题，`PLANNED/NOT_ATTEMPTED`。不把原式中的含糊系数擅自改为0.05。
+- 新卡`REV-20261026-QU-OUTER`最外层人数、`REV-20261026-QU-ADD`加一层、`REV-20261026-QU-REMOVE`去一层、`REV-20261026-QU-INVERSE`反求边长：当堂答案分别44、64、68、16及256，数值答案均正确；用户没提交完整独立列式，课堂`ANSWER_PASS/METHOD_NOT_VERIFIED`。下次复测候选2026-11-02 T+7，按全队列容量只抽前2—3张，不要求同日全测。
+- 新卡`REV-20261026-QU-HOLLOW`空心方阵：用户疑问平方与开方，概念讲解后自主确认保留两层每边减4，最后在教师给出14²-10²后答96；`ARITHMETIC_PASS/GUIDED_METHOD`，不是独立全程列式。下次复测候选2026-11-02 T+7，新情境测试独立列式（容量优先且未轮到不算欠题）。
+- 全部用户实测时间`NOT_MEASURED`。当日旧卡总容量已完成，五张新课已结束；不当天追加纠错，不追滚存欠题；正式Q096不变。
