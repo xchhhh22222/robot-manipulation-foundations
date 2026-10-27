@@ -61,3 +61,15 @@ ROS2、C++等原复习卡、日期、状态仍在[完整队列](archive/2026-10-
 ## 6. 单次回写字段
 
 方法/原review_id；原到期日；实际测试日；题目来源及新旧判定；用户逐字原答；提示等级；独立方法是否成立；结果；本轮PASS或未通过；下次候选（仅实际复测失败后T+7）；原卷链接。未知填NOT_MEASURED/UNVERIFIED，不补造。
+
+
+## 7. 2026-10-27 C++技术复习实际结果
+
+本节只回写技术课今天真实执行的两张旧卡，不修改公考复习规则、原卡日期、历史首答或归档快照。技术课堂原件见 `xchhhh22222/linux-career-knowledge/records/sessions/2026-10-27_CPP_DEVICE_SAMPLE_VALIDITY_LINK.md`。
+
+| review_id | 原计划 | 2026-10-27实际新情境 | 本轮结果 | 后续 |
+|---|---|---|---|---|
+| `REV-20261019-CPP-C01-02-STATUS` | T+7候选原为2026-10-26，未按原日执行 | `status=0b00000110`；用户首答 `false true true`，在线/告警/故障三项全对；解释已抓住“看被定义的状态位”，教师仅纠正“字符”为bit/标志位并补充不能用整个status==1判断 | `PASS / METHOD_VERIFIED_AFTER_TERMINOLOGY_CORRECTION` | 本轮关闭，不补做10/26欠题；以后项目自然情境抽查 |
+| `REV-20261020-CPP-C01-03-SAFE-READ` | T+7=2026-10-27 | `int a[3]={10,20,30}; result=99; readValue(a,3,result,3)`；用户首答 `false 99`，理由为index=3超过长度3的合法范围；教师仅纠正“数组字长”为“数组长度/元素个数” | `PASS / METHOD_VERIFIED_AFTER_TERMINOLOGY_CORRECTION` | 本轮关闭，不即时补题 |
+
+两张卡都保留原学习错误与历史状态，本次PASS只表示本轮新情境复测通过。当天技术复习没有把from_chars等10/26未独立通过项强行连续重考；后续仍按技术原卡和实际容量安排。
