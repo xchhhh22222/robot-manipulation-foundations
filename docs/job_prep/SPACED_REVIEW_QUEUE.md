@@ -1,6 +1,6 @@
 # 复习队列｜V2.1 当前调度入口
 
-更新2026-10-27；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
+更新2026-10-28；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
 
 ## 1. 当前调度规则
 
@@ -29,9 +29,9 @@
 | 早期历史窗口，原日见归档 | REV-20261015-QD-SHARE03-BASE及其他历史候选 | 贡献率归并卡已于10/27本轮PASS；基期比重乘除方向旧错仍未因贡献率通过而结清 | 教师核对归并，不把几十个旧段落变成欠题；基期比重仍按真实证据择机验证 |
 | 10/26 | 10/19方程法、拼接周长补充复习 | 方程首错；周长R1答案对但未交方法 | 保留原到期；占正常2—3卡容量择未独立验证者 |
 | 日期待核，原建议为下个工作日 | 10/20浓度混合、十字交叉、只会A等 | 原R1或课堂结果有记录，不代表跨日全过 | 只有核出实际到期及未完成证据才入当天正式复测；不编造10/27已约定 |
-| 10/28 | REV-20261021-QU-3SET | 三集合1/2，“都不”遗漏总量减并集 | 新情境1题，NOT_ATTEMPTED |
-| 10/28 | REV-20261021-QU-CLASSADD | 分类加法0/2，用户自述审题问题 | 新情境1题，NOT_ATTEMPTED |
-| 10/28 | REV-20261021-QU-ARRANGE | 排列0/2 | 新情境1题，NOT_ATTEMPTED |
+| 10/28 | REV-20261021-QU-3SET | 10/28新情境首答38；容斥框架已使用，但直接求“都不会”时三者交集10的符号写反，标准18 | `WRONG / REVIEW_NOT_PASSED`；实际测试日T+7=**11/04**新情境1题 |
+| 10/28 | REV-20261021-QU-CLASSADD | 10/28新情境能独立说明线上5场与线下3场互斥任选其一，5+3=8 | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
+| 10/28 | REV-20261021-QU-ARRANGE | 10/28新情境识别组长/记录员为不同职位，有顺序，A(6,2)=30 | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
 | 10/28 | REV-20261021-QU-COMBINE | 组合1/2 | 超出当天容量保留候选，不补欠题 |
 | 10/29 | REV-20261015-QD-SPEED-PRECISION | 10/22最接近选项误选7.6，标准7.8 | 新情境估算/误差1题，NOT_ATTEMPTED |
 | 10/29 | REV-20261022-QU-OUTCOME-VS-PROB | 未把所求事件结果集合单独列出 | 新情境1题，NOT_ATTEMPTED |
@@ -43,6 +43,7 @@
 | 11/02 | 方阵方法簇：REV-20261026-QU-OUTER / ADD / REMOVE / INVERSE / HOLLOW | 五个结果正确；前四未展示完整列式，空心题教师已给14²−10² | 归并成一次代表性迁移机会，记录实际测到的子技能；**不能一题自动结清五个子技能** |
 | 11/03 | REV-20261027-JP-POSITION | 单独旋转当前题通过，组合变化未通过 | 一张清晰新图复测，NOT_ATTEMPTED |
 | 11/03 | REV-20261027-EY-EXTRACT-MEASURES | 首次申论短答3/4措施，漏项 | 一份不同短材料复测，NOT_ATTEMPTED |
+| 11/04 | REV-20261028-VB-MAIN | 10/28中心理解多题能依据转折/结论词抓观点；无选项公共文化概括抓住核心对比但未完整写出最终对策 | 一段无选项新材料，独立写完整主旨；NOT_ATTEMPTED |
 
 已有日期中未轮到者保持候选，不因“周五大复习”改动为已经通过。方阵归并只改调度单元，不抹去五个历史ID、成绩或原11/02候选日。
 
@@ -73,3 +74,13 @@ ROS2、C++等原复习卡、日期、状态仍在[完整队列](archive/2026-10-
 | `REV-20261020-CPP-C01-03-SAFE-READ` | T+7=2026-10-27 | `int a[3]={10,20,30}; result=99; readValue(a,3,result,3)`；用户首答 `false 99`，理由为index=3超过长度3的合法范围；教师仅纠正“数组字长”为“数组长度/元素个数” | `PASS / METHOD_VERIFIED_AFTER_TERMINOLOGY_CORRECTION` | 本轮关闭，不即时补题 |
 
 两张卡都保留原学习错误与历史状态，本次PASS只表示本轮新情境复测通过。当天技术复习没有把from_chars等10/26未独立通过项强行连续重考；后续仍按技术原卡和实际容量安排。
+
+## 2026-10-28 公考复测实际结果
+- 原始课堂：`public-exam-knowledge/records/sessions/2026-10-28_REVIEW_VERBAL_ESSAY.md`，commit `8020c6153ea6f000fb311f2054ffbdc6df6ce7f2`。
+- `REV-20261021-QU-3SET`：新情境首答38；正确18。用户使用了容斥结构，但在“都不会”的直接式中把三者交集10写成`+10`，应为`-10`。本轮未通过，不当场补题；**2026-11-04** T+7。
+- `REV-20261021-QU-CLASSADD`：用户明确“线上5场和线下3场之一，相加=8”，`PASS / METHOD_VERIFIED_CURRENT_ITEM`，本轮关闭。
+- `REV-20261021-QU-ARRANGE`：用户识别不同职位有顺序，`A_6^2=30`，`PASS / METHOD_VERIFIED_CURRENT_ITEM`，本轮关闭。
+- `REV-20261021-QU-COMBINE`：10/28未轮到，保留原候选状态，不算欠题、不自动顺延。
+- 新增归并卡 `REV-20261028-VB-MAIN`：中心理解当前多题能抓转折/结论与主题约束；无选项完整概括仍部分通过，**2026-11-04** T+7用新材料验证完整主旨表达。不要为每个课堂例题各建卡。
+- 申论10/28为`REV-20261027-EY-EXTRACT-MEASURES`的连续教学：同功能合并正确、不同功能分类曾需提示；仍保留原**11/03**候选，不另建第二张申论卡。
+- 当天实际学习时长`NOT_MEASURED`；今天未执行政治/常识短块，周三课表也无此要求。
