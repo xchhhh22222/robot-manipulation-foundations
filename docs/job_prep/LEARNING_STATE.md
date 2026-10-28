@@ -1,4 +1,4 @@
-# 学习状态当前索引｜2026-10-27 V2.1
+# 学习状态当前索引｜2026-10-28 V2.1
 
 以前全部学习/技术/职业事实和原判定逐字保存在[变更前状态全文](archive/2026-10-26-before-v2.1/LEARNING_STATE.md)。本页只维护当前公考接续状态；非公考事实没有清零或改判。
 
@@ -6,7 +6,17 @@
 
 [CIVIL_SERVICE_MASTER_PLAN.md](CIVIL_SERVICE_MASTER_PLAN.md)为唯一课程规范；[逐日课表](CIVIL_SERVICE_TIMETABLE_2026-10_TO_2027-01.md)覆盖10/27—01/29；工作日北京时间09:00—11:00，每日行测＋申论，周五综合复习，周末不补课、不积欠题。第一目标为2027年1月面对未做过的完整试卷，能识别主要题型、选择方法并独立作答，暂不要求正式限时全对。
 
-## 最近真实课堂：2026-10-27已收官
+## 最近真实课堂：2026-10-28已收官
+
+唯一原始答卷：[10/28复测、言语与申论](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-28_REVIEW_VERBAL_ESSAY.md)；当日日报：[2026-10-28_XINGCE.md](daily/2026-10-28_XINGCE.md)。实际学习时长`NOT_MEASURED`，正式历史题号仍截至Q096。
+
+- **到期复测2/3本轮PASS。** 三集合容斥首答38，直接求“都不会”时三者交集10符号写反，正确18；本轮未过，11/04 T+7。分类加法能说明互斥类别相加得8，PASS；排列能识别两个职位有顺序，`A_6^2=30`，PASS。组合当天未轮到，不算欠题。
+- **言语中心理解。** 博物馆、绿道、养老、老旧街区四个选择/概括题答案均正确，其中三题提交了转折/结论理由；无选项公共文化迁移抓住核心对比，但未完整落到最终对策。当前记`ANSWER_PASS / REASON_PASS`证据较多、`TRANSFER_PARTIAL`；新增归并卡`REV-20261028-VB-MAIN`，11/04候选。
+- **申论合并与分类。** 用户能主动合并“帮助挂号＋一对一辅导”等同功能措施；能把培训单独分类，也能合并等候区/座椅/饮水；但曾把“统计需求并反馈调整”错误并入志愿者上门类，经提示后区分。记`MERGE_SAME_FUNCTION_PASS / CLASSIFICATION_PARTIAL / EXPRESSION_NEEDS_FORMALIZATION`。继续沿用`REV-20261027-EY-EXTRACT-MEASURES`，11/03不同材料复测，不另建第二张申论卡。
+- 今日无政治/常识短块（周三课表无该块），无已发布未答题，`published_unanswered_question=NONE`。
+
+## 前一工作日课堂：2026-10-27
+
 
 唯一原始答卷：[复测、判断图形、申论与政治理论](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)；当日日报：[2026-10-27_XINGCE.md](daily/2026-10-27_XINGCE.md)。实际学习时长`NOT_MEASURED`，正式历史题号仍截至Q096。
 
@@ -23,7 +33,7 @@
 
 ## 下一动作
 
-2026-10-28周三：先从到期队列的三集合、分类加法、排列、组合中按原到期顺序和容量取2—3项；行测主课为言语中心理解（主题词、转折、因果），申论为合并重复信息与分类。不存在10/27课堂遗留题，不重上移动/旋转已完成内容。复习入口见[SPACED_REVIEW_QUEUE.md](SPACED_REVIEW_QUEUE.md)，覆盖层级见[29讲表](methods/FOUNDATION_COVERAGE_CHECKLIST_2026.md)。
+2026-10-29周四：先从真正到期且未完成的旧卡中按容量取2—3项；行测主课为数量关系方程与代入，回接10/19方程/代入薄弱点；申论继续分条表达并避免添加材料外事实；周四另有政治/常识短块，均在09:00—11:00预算内。10/28组合未轮到不追补；三集合11/04再测。复习入口见[SPACED_REVIEW_QUEUE.md](SPACED_REVIEW_QUEUE.md)，覆盖层级见[29讲表](methods/FOUNDATION_COVERAGE_CHECKLIST_2026.md)。
 
 ## 非公考资料继续有效
 
