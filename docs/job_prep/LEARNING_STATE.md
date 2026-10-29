@@ -1,4 +1,4 @@
-# 学习状态当前索引｜2026-10-28 V2.1
+# 学习状态当前索引｜2026-10-29 V2.1
 
 以前全部学习/技术/职业事实和原判定逐字保存在[变更前状态全文](archive/2026-10-26-before-v2.1/LEARNING_STATE.md)。本页只维护当前公考接续状态；非公考事实没有清零或改判。
 
@@ -6,7 +6,18 @@
 
 [CIVIL_SERVICE_MASTER_PLAN.md](CIVIL_SERVICE_MASTER_PLAN.md)为唯一课程规范；[逐日课表](CIVIL_SERVICE_TIMETABLE_2026-10_TO_2027-01.md)覆盖10/27—01/29；工作日北京时间09:00—11:00，每日行测＋申论，周五综合复习，周末不补课、不积欠题。第一目标为2027年1月面对未做过的完整试卷，能识别主要题型、选择方法并独立作答，暂不要求正式限时全对。
 
-## 最近真实课堂：2026-10-28已收官
+## 最近真实课堂：2026-10-29已收官
+
+唯一原始答卷：[10/29复测、数量、申论与常识](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-29_REVIEW_QUANT_EQUATION_ESSAY_COMMON.md)；当日日报：[2026-10-29_XINGCE.md](daily/2026-10-29_XINGCE.md)。实际学习时长`NOT_MEASURED`，正式历史题号仍截至Q096。
+
+- **到期复测2/3本轮PASS。** 方程新情境：设成人`x`、学生`36-x`并化简至`20x=400,x=20`，方法成立，本轮关闭；组合新情境7人选3人，用户明确用C不用A，结果35，本轮关闭；估算精度`643/82`误选7.6，正确最接近7.8，本轮未过，11/05 T+7。两张概率候选当天未轮到，不算欠题。
+- **数量方程与代入主课。** 设备题独立列出`3200x+2400(28-x)=75200`并求得10；代入法经首次教学后，两次新情境均能把选项带回条件验证；方法选择题能区分“无选项关系题→方程”“选项易验证→代入”。新增归并单元`REV-20261029-QU-EQSUB`，11/05候选。
+- **申论分条表达。** 四条结构完整，未添加材料外事实；但漏“闲置空地改造健身场地”，且把“指导老人正确使用器材”写成“帮助老人认识器械”。记`STRUCTURE_PASS / CONTENT_PARTIAL / NO_UNSUPPORTED_FACT_ADDED`，继续沿用申论方法簇。
+- **常识短块。** 最终选B正确，但用户明确不知道高压锅气压/沸点原理，记`ANSWER_PASS / REASON_PARTIAL_CURRENT_ITEM`，不扩大为常识模块掌握。
+- 今日无已发布未答题，`published_unanswered_question=NONE`。
+
+## 前一工作日课堂：2026-10-28
+
 
 唯一原始答卷：[10/28复测、言语与申论](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-28_REVIEW_VERBAL_ESSAY.md)；当日日报：[2026-10-28_XINGCE.md](daily/2026-10-28_XINGCE.md)。实际学习时长`NOT_MEASURED`，正式历史题号仍截至Q096。
 
@@ -33,7 +44,7 @@
 
 ## 下一动作
 
-2026-10-29周四：先从真正到期且未完成的旧卡中按容量取2—3项；行测主课为数量关系方程与代入，回接10/19方程/代入薄弱点；申论继续分条表达并避免添加材料外事实；周四另有政治/常识短块，均在09:00—11:00预算内。10/28组合未轮到不追补；三集合11/04再测。复习入口见[SPACED_REVIEW_QUEUE.md](SPACED_REVIEW_QUEUE.md)，覆盖层级见[29讲表](methods/FOUNDATION_COVERAGE_CHECKLIST_2026.md)。
+2026-10-30周五：执行首次V2.1综合复习，不另叠加一套普通日任务。混合检验本周实际学过的方阵、位置图形、言语主旨、方程/代入，并按容量把年均增长量单位、比重变化等正式到期卡融入同组；申论完成一份短概括并保留原答。10/29未轮到的概率候选继续保留，不追补；估算精度11/05再测。复习入口见[SPACED_REVIEW_QUEUE.md](SPACED_REVIEW_QUEUE.md)，覆盖层级见[29讲表](methods/FOUNDATION_COVERAGE_CHECKLIST_2026.md)。
 
 ## 非公考资料继续有效
 
