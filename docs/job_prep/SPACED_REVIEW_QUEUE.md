@@ -145,3 +145,57 @@ NEXT_CANDIDATE = 2026-11-04
 - 上述周五混合题只记录当前题和跨日证据，不自动注销尚未到期的 `REV-20261027-JP-POSITION`、`REV-20261028-VB-MAIN`、`REV-20261029-QU-EQSUB` 正式迁移候选。
 - 申论短概括三项措施齐全，课堂判PASS；第二点把“帮助办理”写成“教学处理”，仍记 `WORDING_NEEDS_SOURCE_FIDELITY`。11/03原申论卡继续保留。
 - 周末不派课、不积欠题；当天实际学习时长 `NOT_MEASURED`，无已发布未答题。
+
+
+## 10. 2026-10-29—30 C++技术复习实测与下一候选（只作增量）
+
+此处仅同步技术复习状态；不修改公考队列、已有历史首答与复习规则。课堂详细原件见：
+- https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-29_CPP_SAMPLE_LOG_OFSTREAM_RAII.md
+- https://github.com/xchhhh22222/linux-career-knowledge/blob/main/records/sessions/2026-10-30_CPP_SAMPLE_LOG_MODULE_OWNERSHIP.md
+
+### 2026-10-29：REV-20261028-CPP-MULTI-SAMPLE-VECTOR / T+1
+
+新情境：三次样本420/10、700/0、150/10；问先前push_back快照raw/temperature、第二条valid及无效显示。用户原答：
+
+> 第一个raw是42因为scale不等于0范围确定了所以正常温度为42 第二个应为scale是0所以结果为false跳出函数samples1的温度还是42
+
+学生理解scale=0→false、旧temperature残留，但混淆了raw=420与temperature=42，且未独立明确“显示INVALID”。教师纠正；结果 **PARTIAL / RAW_VS_TEMPERATURE_CORRECTION**，不视为无提示全PASS、不当场重复同类题。
+
+- 实际复测日：2026-10-29；原T+1候选如期执行。
+- 原T+7候选：**2026-11-04**保持；一个新情境同时检验完整样本快照/无效展示和raw与temperature的区别。
+- 技术复习时长：NOT_MEASURED。
+
+### 2026-10-30：10/23 temperature_decoder / T+7
+
+第一新情境：int raw=375、scale=10，double result=99；执行result=raw/scale。学生首答：
+
+> 37.0  没有转换成double类型
+
+结果37.0独立正确；原因经教师补充为先整数除法再转double。第二新情境：temperature=25.5，decode_temperature(480,0,temperature)。学生首答：
+
+> false   25.5他给出来新的赋值
+
+false和25.5均独立正确；“新的赋值”解释错误，教师纠正scale==0先return false，未进入result赋值。
+
+- 实际复测日：**2026-10-30**；结果 **ANSWER_PASS / EXPLANATION_CORRECTED_WITH_PROMPT / NOT_FULL_INDEPENDENT_REASONING**。
+- 教师当堂宣布本轮收官，不即时重测同一点；未来项目自然核验因果解释，不伪称独立解释已PASS。
+- 技术复习时长：NOT_MEASURED。
+
+### 新卡：REV-20261030-CPP-LOG-MODULE-OWNERSHIP
+
+来源：10/30日志函数模块拆分（接口、const引用借用samples、函数局部ofstream、bool结果由main处理）。真实正常路径cat可读，打开失败返回false并在main得到exit_code=1；最终恢复/tmp路径后重编译exit_code=0仍待用户回传。不能用工程运行替代独立概念复测。
+
+自主理解首答：
+
+> samples是保存数据 log是管理文件 saved是管理接下来程序
+
+教师指出前两项方向正确；saved只保存true/false，不拥有文件、也不决定后续程序；main的if分支才决定是否退出。课堂标 **UNDERSTOOD_AFTER_SAVED_ROLE_CORRECTION**，不是跨日独立PASS。
+
+复测目标：
+1. 样本容器由哪个作用域/对象持有？const引用是否改变它的所有权？
+2. 文件对象在保存函数内部离开作用域时怎样关闭？main是否需要close？
+3. 保存函数只报告成功/失败，main负责什么业务决策？
+
+- T+1 **2026-11-02（周一）**：一个不同情境，先独立回答，不复述10/30旧题。
+- T+7 **2026-11-06（周五）**：如果容量允许，用跨情境迁移核验职责与生命周期；只在真实作答后判定。
+- 周末不派课、不积欠题；开始/结束时间和实耗均 NOT_MEASURED。
