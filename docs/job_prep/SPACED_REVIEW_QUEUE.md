@@ -1,6 +1,6 @@
 # 复习队列｜V2.1 当前调度入口
 
-更新2026-10-29；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
+更新2026-10-30；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
 
 ## 1. 当前调度规则
 
@@ -36,8 +36,8 @@
 | 10/29 | REV-20261015-QD-SPEED-PRECISION | 10/29新情境`643/82`，用户选7.6并称“7.6多”；实际约7.84，最接近7.8 | `WRONG / REVIEW_NOT_PASSED`；实际测试日T+7=**11/05**新情境1题 |
 | 10/29 | REV-20261022-QU-OUTCOME-VS-PROB | 未把所求事件结果集合单独列出 | 新情境1题，NOT_ATTEMPTED |
 | 10/29 | REV-20261022-QU-COMPLEMENT | 至少一次正面原答2/3，标准7/8 | 新情境1题，NOT_ATTEMPTED |
-| 10/30 | 10/23年均增长量与单位 | 首答12，缺万件/年和独立列式 | 融入周五正式复测，不另叠加一组 |
-| 10/30 | 10/23比重变化 | 首答20%，标准5个百分点 | 融入周五正式复测，不另叠加一组 |
+| 10/30 | 10/23年均增长量与单位 | 10/30新情境独立算出`(27-12)÷5=3`；原答写“经过6年”，实际间隔5年，且未写“万辆/年”；课堂已判PASS | `PASS / METHOD_VERIFIED_WITH_WORDING_CORRECTION / UNIT_OMITTED_IN_RAW_ANSWER`；本轮关闭，但年份口径和单位书写以后自然混合继续检查 |
+| 10/30 | 10/23比重变化 | 10/30新情境：2024年25%、2025年35%，用户答提高10个百分点 | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
 | 11/02 | REV-20261019-QD-ANNUAL-RATE | 10/26原答“平均为27.6”，标准20% | 新情境1题，NOT_ATTEMPTED |
 | 11/02 | REV-20261019-QD-MIXED-RATE | 最终8%正确，原式“0.，6”与题设5%不一致；原判方法未过 | 保留原判及原文；输入可能笔误但未确认，不推断为一定不会公式；新情境独立验证 |
 | 11/02 | 方阵方法簇：REV-20261026-QU-OUTER / ADD / REMOVE / INVERSE / HOLLOW | 五个结果正确；前四未展示完整列式，空心题教师已给14²−10² | 归并成一次代表性迁移机会，记录实际测到的子技能；**不能一题自动结清五个子技能** |
@@ -136,3 +136,12 @@ NEXT_CANDIDATE = 2026-11-04
 - 新增归并卡`REV-20261029-QU-EQSUB`：方程设元/等量关系/求解＋代入选项验证＋方法选择合并为一个主方法簇；**2026-11-05**用一道新情境检验，不为课堂每个小步骤另建卡。
 - 10/29申论为原申论方法簇连续教学：分条结构通过，但漏“闲置空地改造”且“正确使用器材”改写不准确；不新增独立卡。常识题最终选B正确但理由不完整，不另建机械卡。
 - 当天实际学习时长`NOT_MEASURED`；无已发布未答题。
+
+
+## 9. 2026-10-30 周五综合复习实际结果
+- 原始课堂：`public-exam-knowledge/records/sessions/2026-10-30_WEEKLY_REVIEW_ESSAY.md`，commit `e22b8ce70fb5357bb3260a1a3e969f404444da2a`；日报：`daily/2026-10-30_XINGCE.md`。
+- 正式到期复测：年均增长量数值与除数方法正确，课堂判PASS；但原答把“涉及6个年份”写成“经过6年”且漏单位，证据边界保留。比重变化25%→35%，提高10个百分点，PASS。
+- 周五混合抽查：判断外圈位置A=正下方，随后一次不含解法的文字确认补“顺时针”，当前题PASS；言语老旧小区主旨选B并能抓转折/承接，当前题PASS；数量办公用品主动选代入并验证18/12→780，当前题PASS。
+- 上述周五混合题只记录当前题和跨日证据，不自动注销尚未到期的 `REV-20261027-JP-POSITION`、`REV-20261028-VB-MAIN`、`REV-20261029-QU-EQSUB` 正式迁移候选。
+- 申论短概括三项措施齐全，课堂判PASS；第二点把“帮助办理”写成“教学处理”，仍记 `WORDING_NEEDS_SOURCE_FIDELITY`。11/03原申论卡继续保留。
+- 周末不派课、不积欠题；当天实际学习时长 `NOT_MEASURED`，无已发布未答题。
