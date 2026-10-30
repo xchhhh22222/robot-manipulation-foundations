@@ -84,3 +84,11 @@
 - 官方 v1.3.5（2026-10-19）：https://github.com/frangoteam/FUXA/releases/tag/v1.3.5 。新增可配置 MQTT/Modbus 超时，修复 Modbus 写入失败反馈与 DAQ 查询会话作用域，强化认证/Node-RED 权限；具体兼容性和风险仍须未来在隔离环境实测。
 - 上游 LICENSE 仍为 MIT：https://github.com/frangoteam/FUXA/blob/master/LICENSE ；保留作者版权/许可，第三方素材、商标和 Pro 特性另行审查。版本更新不等于安全承诺、本人代码或测试完成。
 - 本轮只更新候选基线记录；不下载、不安装、不 fork、不创建新工程，也不改变 Linux C++ 主线及 P0/P1/P2 组件。详见 [2026-10-23 周雷达](EMBEDDED_AUTUMN_PROJECT_BENCHMARK_2026-10-12.md)。
+
+
+## 2026-10-30 FUXA 候选安全门与页面范围复核
+
+- **版本与许可：** 2026-10-30复核，上游最新正式发行仍为 2026-10-19 的 v1.3.5（https://github.com/frangoteam/FUXA/releases）；源码 LICENSE 仍为 MIT（https://github.com/frangoteam/FUXA/blob/master/LICENSE），保留版权/许可，商业Pro、素材、商标另核。
+- **安全信息去重：** 2026-10-29新披露 CVE-2026-42922（https://vuldb.com/cve/CVE-2026-42922）描述旧版 /nodered 授权绕过；与官方 2026-07-22 GHSA-5h5x-9h7x-23f4 / CVE-2026-67443（https://github.com/frangoteam/FUXA/security/advisories/GHSA-5h5x-9h7x-23f4）高度重合。官方旧公告明确 <=1.3.2 受影响、>=1.3.3 修复；**不能仅凭新CVE编号断言v1.3.5存在同一未修复漏洞，也不能宣称v1.3.5零风险**。
+- **后续C10验收细化（仅设计，不执行）：** 若采用FUXA且保留Node-RED，隔离环境验证guest/非管理员凭据不能访问其管理接口；若不用Node-RED则禁用并确认不可达。安全测试、版本钉住与权限检查是原C10范围内的小补充，不新增组件，不下载/安装/运行，不修改任何PASS。
+- **最新范围优先级：** 本文早期“预计七个产品页面”是历史候选；V4.4-RC2规定P0 Web最小页面上限为**设备列表、实时状态、告警追踪三页**，其余功能只作为未来扩展；保留旧段供溯源，不以历史候选扩张当前P0。详见[2026-10-30周雷达](EMBEDDED_AUTUMN_PROJECT_BENCHMARK_2026-10-12.md)。
