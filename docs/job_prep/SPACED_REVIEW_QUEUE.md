@@ -1,6 +1,6 @@
 # 复习队列｜V2.1 当前调度入口
 
-更新2026-10-30；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
+更新2026-11-02；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
 
 ## 1. 当前调度规则
 
@@ -34,17 +34,18 @@
 | 10/28 | REV-20261021-QU-ARRANGE | 10/28新情境识别组长/记录员为不同职位，有顺序，A(6,2)=30 | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
 | 10/28 | REV-20261021-QU-COMBINE | 10/29新情境：7人选3人、无职位差异；用户明确“用C不需要排列”，结果35 | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
 | 10/29 | REV-20261015-QD-SPEED-PRECISION | 10/29新情境`643/82`，用户选7.6并称“7.6多”；实际约7.84，最接近7.8 | `WRONG / REVIEW_NOT_PASSED`；实际测试日T+7=**11/05**新情境1题 |
-| 10/29 | REV-20261022-QU-OUTCOME-VS-PROB | 未把所求事件结果集合单独列出 | 新情境1题，NOT_ATTEMPTED |
-| 10/29 | REV-20261022-QU-COMPLEMENT | 至少一次正面原答2/3，标准7/8 | 新情境1题，NOT_ATTEMPTED |
+| 10/29 | REV-20261022-QU-OUTCOME-VS-PROB | 11/02新情境：先答“4种结果”有歧义；经一次不含解法确认后明确为4个非红球基本结果，`4/8=1/2` | `PASS / METHOD_VERIFIED_AFTER_NONLEADING_CLARIFICATION`；本轮关闭 |
+| 10/29 | REV-20261022-QU-COMPLEMENT | 11/02新情境：能识别至少一次正面的对立事件为三次全反面，但概率答错；正确`7/8` | `REVIEW_NOT_PASSED`；实际测试日T+7=**11/09**新情境1题 |
 | 10/30 | 10/23年均增长量与单位 | 10/30新情境独立算出`(27-12)÷5=3`；原答写“经过6年”，实际间隔5年，且未写“万辆/年”；课堂已判PASS | `PASS / METHOD_VERIFIED_WITH_WORDING_CORRECTION / UNIT_OMITTED_IN_RAW_ANSWER`；本轮关闭，但年份口径和单位书写以后自然混合继续检查 |
 | 10/30 | 10/23比重变化 | 10/30新情境：2024年25%、2025年35%，用户答提高10个百分点 | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
-| 11/02 | REV-20261019-QD-ANNUAL-RATE | 10/26原答“平均为27.6”，标准20% | 新情境1题，NOT_ATTEMPTED |
-| 11/02 | REV-20261019-QD-MIXED-RATE | 最终8%正确，原式“0.，6”与题设5%不一致；原判方法未过 | 保留原判及原文；输入可能笔误但未确认，不推断为一定不会公式；新情境独立验证 |
-| 11/02 | 方阵方法簇：REV-20261026-QU-OUTER / ADD / REMOVE / INVERSE / HOLLOW | 五个结果正确；前四未展示完整列式，空心题教师已给14²−10² | 归并成一次代表性迁移机会，记录实际测到的子技能；**不能一题自动结清五个子技能** |
+| 11/02 | REV-20261019-QD-ANNUAL-RATE | 10/26原答“平均为27.6”，标准20%；11/02课堂有年均增长率教学后迁移，但未作为正式旧卡复测 | 当日正式复测容量未轮到；保留原日期与`NOT_ATTEMPTED`，不算欠题、不自动顺延 |
+| 11/02 | REV-20261019-QD-MIXED-RATE | 最终8%正确，原式“0.，6”与题设5%不一致；原判方法未过 | 11/02因正式复测容量未轮到；保留原日期与`NOT_ATTEMPTED`，不算欠题、不自动顺延 |
+| 11/02 | 方阵方法簇：REV-20261026-QU-OUTER / ADD / REMOVE / INVERSE / HOLLOW | 11/02代表题：最外层44人，用户独立写`4n-4=44 → n=12 → n²=144` | `PASS / REPRESENTATIVE_METHOD_VERIFIED`；只验证“外层人数→边长→实心总人数”，不能自动结清加层、减层、空心等未被本题直接测到的子技能 |
 | 11/03 | REV-20261027-JP-POSITION | 单独旋转当前题通过，组合变化未通过 | 一张清晰新图复测，NOT_ATTEMPTED |
 | 11/03 | REV-20261027-EY-EXTRACT-MEASURES | 首次申论短答3/4措施，漏项 | 一份不同短材料复测，NOT_ATTEMPTED |
 | 11/04 | REV-20261028-VB-MAIN | 10/28中心理解多题能依据转折/结论词抓观点；无选项公共文化概括抓住核心对比但未完整写出最终对策 | 一段无选项新材料，独立写完整主旨；NOT_ATTEMPTED |
 | 11/05 | REV-20261029-QU-EQSUB | 10/29主课：设备题独立列方程并求解；代入法经教学后两题迁移正确；方程/代入方法选择2/2正确但未交理由 | 一道新情境先选方法，再独立完成；NOT_ATTEMPTED |
+| 11/09 | REV-20261102-EY-PROBLEM-SCOPE | 11/02申论问题概括：四类问题能找全，但有“可能存在/饮食习惯/最重要”等超出材料边界；辨析题又把工作人员不足原因带入只问问题的答案 | 新材料1题，只按题目要求提取问题/表现，不混入原因、对策或无依据程度判断；NOT_ATTEMPTED |
 
 已有日期中未轮到者保持候选，不因“周五大复习”改动为已经通过。方阵归并只改调度单元，不抹去五个历史ID、成绩或原11/02候选日。
 
@@ -199,3 +200,13 @@ false和25.5均独立正确；“新的赋值”解释错误，教师纠正scale
 - T+1 **2026-11-02（周一）**：一个不同情境，先独立回答，不复述10/30旧题。
 - T+7 **2026-11-06（周五）**：如果容量允许，用跨情境迁移核验职责与生命周期；只在真实作答后判定。
 - 周末不派课、不积欠题；开始/结束时间和实耗均 NOT_MEASURED。
+
+
+## 11. 2026-11-02 公考复测与新入队
+- 原始课堂：`public-exam-knowledge/records/sessions/2026-11-02_REVIEW_DATA_ESSAY.md`；日报：`daily/2026-11-02_XINGCE.md`。
+- `REV-20261022-QU-OUTCOME-VS-PROB`：经一次不含解法的歧义确认后，用户明确事件含4个非红球基本结果并算`4/8=1/2`，本轮PASS并关闭。
+- `REV-20261022-QU-COMPLEMENT`：对立事件识别正确，但概率错误；本轮未通过，不即时补题，**11/09** T+7。
+- 方阵方法簇代表题：`4n-4=44 → n=12 → 144`独立完成，代表题PASS；只记录实际测到的“外层→边长→实心总人数”，不把五个历史子技能全部判PASS。
+- `REV-20261019-QD-ANNUAL-RATE`、`REV-20261019-QD-MIXED-RATE`：11/02因容量未轮到，保持原到期日与`NOT_ATTEMPTED`。主课中年均增长率经教学后有迁移证据，但不能替代正式旧卡复测。
+- 新增申论归并单元`REV-20261102-EY-PROBLEM-SCOPE`，**11/09**候选；本周新增独立单元当前仅此1个。
+- 当天实际学习时长`NOT_MEASURED`，无已发布未答题。
