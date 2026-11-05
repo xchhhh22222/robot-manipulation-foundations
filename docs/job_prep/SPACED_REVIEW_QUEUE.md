@@ -1,6 +1,6 @@
 # 复习队列｜V2.1 当前调度入口
 
-更新2026-11-04；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
+更新2026-11-05；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
 
 ## 1. 当前调度规则
 
@@ -33,7 +33,7 @@
 | 10/28 | REV-20261021-QU-CLASSADD | 10/28新情境能独立说明线上5场与线下3场互斥任选其一，5+3=8 | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
 | 10/28 | REV-20261021-QU-ARRANGE | 10/28新情境识别组长/记录员为不同职位，有顺序，A(6,2)=30 | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
 | 10/28 | REV-20261021-QU-COMBINE | 10/29新情境：7人选3人、无职位差异；用户明确“用C不需要排列”，结果35 | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
-| 10/29 | REV-20261015-QD-SPEED-PRECISION | 10/29新情境`643/82`，用户选7.6并称“7.6多”；实际约7.84，最接近7.8 | `WRONG / REVIEW_NOT_PASSED`；实际测试日T+7=**11/05**新情境1题 |
+| 10/29 | REV-20261015-QD-SPEED-PRECISION | 11/05 T+7新情境`728/91`，用户选8.0并用`91×8=728`直接验证 | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
 | 10/29 | REV-20261022-QU-OUTCOME-VS-PROB | 11/02新情境：先答“4种结果”有歧义；经一次不含解法确认后明确为4个非红球基本结果，`4/8=1/2` | `PASS / METHOD_VERIFIED_AFTER_NONLEADING_CLARIFICATION`；本轮关闭 |
 | 10/29 | REV-20261022-QU-COMPLEMENT | 11/02新情境：能识别至少一次正面的对立事件为三次全反面，但概率答错；正确`7/8` | `REVIEW_NOT_PASSED`；实际测试日T+7=**11/09**新情境1题 |
 | 10/30 | 10/23年均增长量与单位 | 10/30新情境独立算出`(27-12)÷5=3`；原答写“经过6年”，实际间隔5年，且未写“万辆/年”；课堂已判PASS | `PASS / METHOD_VERIFIED_WITH_WORDING_CORRECTION / UNIT_OMITTED_IN_RAW_ANSWER`；本轮关闭，但年份口径和单位书写以后自然混合继续检查 |
@@ -44,7 +44,7 @@
 | 11/03 | REV-20261027-JP-POSITION | 11/03新图同时测位置与朝向；用户答“中间左边、朝左”，正确为右下、朝上 | `REVIEW_NOT_PASSED`；实际测试日T+7=**11/10**新情境1题 |
 | 11/03 | REV-20261027-EY-EXTRACT-MEASURES | 首次申论短答3/4措施，漏项；11/03因正式复测容量已满未轮到 | 保留原日期与`NOT_ATTEMPTED`，不算欠题、不自动顺延 |
 | 11/04 | REV-20261028-VB-MAIN | 11/04无选项老旧街区材料中，用户概括了保留老城区、排水消防、社区服务等具体措施，但未上升到“改善生活条件＋延续文化特色”的中心原则 | `DETAILS_CAPTURED / MAIN_IDEA_NOT_FULLY_EXTRACTED / REVIEW_NOT_PASSED`；实际测试日T+7=**11/11**新材料1题 |
-| 11/05 | REV-20261029-QU-EQSUB | 10/29主课：设备题独立列方程并求解；代入法经教学后两题迁移正确；方程/代入方法选择2/2正确但未交理由 | 一道新情境先选方法，再独立完成；NOT_ATTEMPTED |
+| 11/05 | REV-20261029-QU-EQSUB | 11/05新情境无选项且等量关系明确，用户自主设元并列`(2x+3)×80=1040`，解得甲5、乙8 | `PASS / METHOD_SELECTION_AND_SOLUTION_VERIFIED`；本轮关闭 |
 | 11/09 | REV-20261102-EY-PROBLEM-SCOPE | 11/02申论问题概括：四类问题能找全，但有“可能存在/饮食习惯/最重要”等超出材料边界；辨析题又把工作人员不足原因带入只问问题的答案 | 新材料1题，只按题目要求提取问题/表现，不混入原因、对策或无依据程度判断；NOT_ATTEMPTED |
 | 11/10 | REV-20261027-JP-POSITION | 11/03正式复测位置与朝向均未命中 | 新图1题，同时验证位置、步长、朝向、旋转方向与角度；NOT_ATTEMPTED |
 | 11/11 | REV-20261021-QU-3SET | 11/04容斥并集式正确，但最终目标“都没学过”漏做总数减并集 | 新情境1题，先写目标，再完成容斥并核对最终问法；NOT_ATTEMPTED |
@@ -234,3 +234,14 @@ false和25.5均独立正确；“新的赋值”解释错误，教师纠正scale
 - 言语主课完成必要/充分条件与并列结构；必要/充分和并列结构均出现过首答错误，后续教学后迁移可完成，不记跨日独立PASS。
 - 申论“概括影响”首题混入原因/措施；后续新材料已能控制范围，完整性逐步改善，正负影响能基本分类，但仍有中性结果误归积极影响。仅记当前课堂证据，不另建多张小卡。
 - 周三无政治常识短块；实际学习时长NOT_MEASURED，无已发布未答题。
+
+
+## 14. 2026-11-05 公考复测、数量、申论与政治常识
+- 原始课堂：`public-exam-knowledge/records/sessions/2026-11-05_REVIEW_QUANT_ESSAY_POLITICAL.md`；日报：`daily/2026-11-05_XINGCE.md`。
+- `REV-20261015-QD-SPEED-PRECISION`：新情境用整倍数验证`728÷91=8`，本轮PASS并关闭。
+- `REV-20261029-QU-EQSUB`：无选项新情境自主选择方程法并完整解出，方法选择＋求解均验证，本轮PASS并关闭。
+- 工程赋值主课：首轮仍出现48误称最小公倍数、剩余量误算、把4.5天取整为5天；经纠正后能在多道新情境中独立完成赋总量、效率、合作/退出/加入、分阶段和效率反推。记当前课堂迁移，不建跨日PASS卡。
+- 申论统筹同类信息：助餐、适老政务、电商助农三组材料中，用户能按功能合并/分开；一次把“大字版”写成“大字报”，继续保留材料用词准确性提醒。不另建多张小卡。
+- 政治常识：全国人大/国务院两项基础身份辨析2/2正确，只记当前题通过，不扩大为模块掌握，不另建机械卡。
+- 11/06周五进入W1综合复习；正式复测融入混合题，不重复做两轮。原`REV-20261027-EY-EXTRACT-MEASURES`仍是未正式复测的较早候选，是否纳入周五取决于当日容量。
+- 实际学习时长NOT_MEASURED，无已发布未答题。
