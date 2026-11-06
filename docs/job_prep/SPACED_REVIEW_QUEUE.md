@@ -1,6 +1,6 @@
 # 复习队列｜V2.1 当前调度入口
 
-更新2026-11-05；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
+更新2026-11-06；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
 
 ## 1. 当前调度规则
 
@@ -42,13 +42,14 @@
 | 11/02 | REV-20261019-QD-MIXED-RATE | 11/03新情境：A部门300增长20%，B部门200增长5%；用户独立算去年500、今年570、整体增长14% | `PASS / METHOD_VERIFIED_CURRENT_ITEM`；本轮关闭 |
 | 11/02 | 方阵方法簇：REV-20261026-QU-OUTER / ADD / REMOVE / INVERSE / HOLLOW | 11/02代表题：最外层44人，用户独立写`4n-4=44 → n=12 → n²=144` | `PASS / REPRESENTATIVE_METHOD_VERIFIED`；只验证“外层人数→边长→实心总人数”，不能自动结清加层、减层、空心等未被本题直接测到的子技能 |
 | 11/03 | REV-20261027-JP-POSITION | 11/03新图同时测位置与朝向；用户答“中间左边、朝左”，正确为右下、朝上 | `REVIEW_NOT_PASSED`；实际测试日T+7=**11/10**新情境1题 |
-| 11/03 | REV-20261027-EY-EXTRACT-MEASURES | 首次申论短答3/4措施，漏项；11/03因正式复测容量已满未轮到 | 保留原日期与`NOT_ATTEMPTED`，不算欠题、不自动顺延 |
+| 11/03 | REV-20261027-EY-EXTRACT-MEASURES | 11/06周五正式复测：用户提取到窗口集中＋综合受理、人工窗口＋志愿者指导、意见登记＋反馈调整，但漏“预约上门办理”和“高峰期调整排班、增加窗口人员” | `REVIEW_NOT_PASSED / EXTRACTION_DIRECTION_CORRECT / CONTENT_INCOMPLETE / MISSED_2_MEASURES`；实际测试日T+7=**11/13**新材料1题 |
 | 11/04 | REV-20261028-VB-MAIN | 11/04无选项老旧街区材料中，用户概括了保留老城区、排水消防、社区服务等具体措施，但未上升到“改善生活条件＋延续文化特色”的中心原则 | `DETAILS_CAPTURED / MAIN_IDEA_NOT_FULLY_EXTRACTED / REVIEW_NOT_PASSED`；实际测试日T+7=**11/11**新材料1题 |
 | 11/05 | REV-20261029-QU-EQSUB | 11/05新情境无选项且等量关系明确，用户自主设元并列`(2x+3)×80=1040`，解得甲5、乙8 | `PASS / METHOD_SELECTION_AND_SOLUTION_VERIFIED`；本轮关闭 |
 | 11/09 | REV-20261102-EY-PROBLEM-SCOPE | 11/02申论问题概括：四类问题能找全，但有“可能存在/饮食习惯/最重要”等超出材料边界；辨析题又把工作人员不足原因带入只问问题的答案 | 新材料1题，只按题目要求提取问题/表现，不混入原因、对策或无依据程度判断；NOT_ATTEMPTED |
 | 11/10 | REV-20261027-JP-POSITION | 11/03正式复测位置与朝向均未命中 | 新图1题，同时验证位置、步长、朝向、旋转方向与角度；NOT_ATTEMPTED |
 | 11/11 | REV-20261021-QU-3SET | 11/04容斥并集式正确，但最终目标“都没学过”漏做总数减并集 | 新情境1题，先写目标，再完成容斥并核对最终问法；NOT_ATTEMPTED |
 | 11/11 | REV-20261028-VB-MAIN | 11/04无选项主旨复测停留在具体措施，未提炼中心原则 | 新材料1题，独立写一句完整主旨；NOT_ATTEMPTED |
+| 11/13 | REV-20261027-EY-EXTRACT-MEASURES | 11/06正式复测漏2项独立措施，方向正确但完整性不足 | 不提示条数，用不同材料检验完整列项、动作词准确性与题目范围；NOT_ATTEMPTED |
 
 已有日期中未轮到者保持候选，不因“周五大复习”改动为已经通过。方阵归并只改调度单元，不抹去五个历史ID、成绩或原11/02候选日。
 
