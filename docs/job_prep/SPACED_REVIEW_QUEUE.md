@@ -1,6 +1,6 @@
-# 复习队列｜V2.1 当前调度入口
+# 复习队列｜V2.2 当前调度入口
 
-更新2026-11-09；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
+更新2026-11-10；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
 
 ## 1. 当前调度规则
 
@@ -46,7 +46,7 @@
 | 11/04 | REV-20261028-VB-MAIN | 11/04无选项老旧街区材料中，用户概括了保留老城区、排水消防、社区服务等具体措施，但未上升到“改善生活条件＋延续文化特色”的中心原则 | `DETAILS_CAPTURED / MAIN_IDEA_NOT_FULLY_EXTRACTED / REVIEW_NOT_PASSED`；实际测试日T+7=**11/11**新材料1题 |
 | 11/05 | REV-20261029-QU-EQSUB | 11/05新情境无选项且等量关系明确，用户自主设元并列`(2x+3)×80=1040`，解得甲5、乙8 | `PASS / METHOD_SELECTION_AND_SOLUTION_VERIFIED`；本轮关闭 |
 | 11/09 | REV-20261102-EY-PROBLEM-SCOPE | 11/09新材料首答列出3个问题，并把“厨师数量有限、送餐人员不足”作为第4项；经一次不含解法的澄清，用户自行判断“原因吧”并排除该项 | `PASS / METHOD_VERIFIED_AFTER_NONLEADING_CLARIFICATION`；本轮关闭 |
-| 11/10 | REV-20261027-JP-POSITION | 11/03正式复测位置与朝向均未命中 | 新图1题，同时验证位置、步长、朝向、旋转方向与角度；NOT_ATTEMPTED |
+| 11/10 | REV-20261027-JP-POSITION | 11/10用户独立答第④幅“箭头像左在右中块”，正确为右中←；该次老师当场宣布PASS；原答只提交位置与朝向，没有逐项说明移动步长/旋转角度 | `PASS / LOCATION_AND_ORIENTATION_CORRECT / METHOD_EXPLANATION_NOT_EXPLICIT_IN_RAW_ANSWER`；本轮关闭，后续混合自然验步骤 |
 | 11/11 | REV-20261021-QU-3SET | 11/04容斥并集式正确，但最终目标“都没学过”漏做总数减并集 | 新情境1题，先写目标，再完成容斥并核对最终问法；NOT_ATTEMPTED |
 | 11/11 | REV-20261028-VB-MAIN | 11/04无选项主旨复测停留在具体措施，未提炼中心原则 | 新材料1题，独立写一句完整主旨；NOT_ATTEMPTED |
 | 11/13 | REV-20261027-EY-EXTRACT-MEASURES | 11/06正式复测漏2项独立措施，方向正确但完整性不足 | 不提示条数，用不同材料检验完整列项、动作词准确性与题目范围；NOT_ATTEMPTED |
@@ -61,6 +61,25 @@
 - 当天没有新增独立复习卡。资料“百分数化分数/现期快速求增减量”和申论“问题—原因—对策/功能合并”只记本次教学与迁移证据，后续按既定综合课自然抽查，不机械另建卡。
 - 课堂中一题“2025年快递业务量18亿件，同比增长20%，求增长量”被用户明确暂缓，`DEFERRED_BY_USER / NOT_SCORED`；不计失败卡。
 
+## 3.2 2026-11-10实际复测与判断数量新授
+
+- 原始课堂：[11/10判断＋申论＋政治](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-11-10_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)；[当日日报](daily/2026-11-10_XINGCE.md)。
+- `REV-20261027-JP-POSITION`：用户独立答右中格←，位置和朝向正确；课堂已宣布PASS，本轮关闭。原答无独立步长/旋转角度解释，因此仅验证结果，不把教师讲评变学生方法。
+- 新方法簇“点线面素”：元素总数/种类、边数优先选择和三线共点均曾出现首答错误，教学后迁移改善；面数与简单交点正确；整簇标`TAUGHT / TRANSFER_PARTIAL`，**不判整讲PASS**。
+- 按本周新增复习单元容量，新增**仅一张归并方法簇**`REV-20261110-JP-COUNT`，候选**2026-11-17**（T+7）：一题清晰、未经提示的新图形序列检验应优先数点线面素中的哪个、能否准确数“不同交点位置”；不为素/线/面/点各建一张卡；未到期不提前刷题。
+- 11/10申论多道材料中已实施措施提取有当前题正向证据，但含首题经提示拆分；**11/13原措施提取卡继续保留**；周二发展理念2/2答案正确但理由未作答，不新增机械政治卡。
+- 11/11两卡`REV-20261021-QU-3SET`、`REV-20261028-VB-MAIN`仍`NOT_ATTEMPTED`，11/13措施卡仍`NOT_ATTEMPTED`，不抢先PASS或改原候选日。
+
+### 新归并单元：REV-20261110-JP-COUNT
+
+| 字段 | 记录 |
+|---|---|
+| 方法簇 | 图形数量：元素总数/种类、边/线、独立封闭面、不同交点位置，按特征选择计数入口 |
+| 实际首次课堂 | 2026-11-10；多题教学后改正，不算独立正式复测 |
+| 当前状态 | `NEW_UNIT / TAUGHT / TRANSFER_PARTIAL / INTERSECTION_CONCURRENCY_FIRST_ANSWER_WRONG` |
+| 首次候选日 | `2026-11-17`（T+7）；是否当天能测取决于2—3张容量，不测不算欠题 |
+| 新题要求 | 清晰不歧义图、无题型提示；先自主判断数什么，再答数量；至少验证三线共点与交点位置数，不用已经讲过的相同图 |
+| 验收边界 | 本卡只代表数量规律基础，不替代11/17空间重构新课，更不能自动关闭判断2整讲 |
 ## 4. 最近已宣布收官的事实（不自动重判）
 
 10/21三张旧卡3/3；10/22百分点/相对增长和分数比较通过；10/23平均数增长率有独立列式通过。10/26间隔增长率课堂宣布PASS，但原件仅最终答案，METHOD_NOT_VERIFIED；此历史判定保留，不假装用户提供过算式。10/27工程新参数和增长贡献率各完成一题方法迁移，本轮2/2 PASS；工程的工作量单位措辞提醒继续保留。对应原卷均在public-exam-knowledge/records/sessions，最新学生事实与原题优先。
