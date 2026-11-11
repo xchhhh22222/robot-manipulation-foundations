@@ -1,6 +1,6 @@
 # 复习队列｜V2.2 当前调度入口
 
-更新2026-11-10；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
+更新2026-11-11；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
 
 ## 1. 当前调度规则
 
@@ -47,9 +47,12 @@
 | 11/05 | REV-20261029-QU-EQSUB | 11/05新情境无选项且等量关系明确，用户自主设元并列`(2x+3)×80=1040`，解得甲5、乙8 | `PASS / METHOD_SELECTION_AND_SOLUTION_VERIFIED`；本轮关闭 |
 | 11/09 | REV-20261102-EY-PROBLEM-SCOPE | 11/09新材料首答列出3个问题，并把“厨师数量有限、送餐人员不足”作为第4项；经一次不含解法的澄清，用户自行判断“原因吧”并排除该项 | `PASS / METHOD_VERIFIED_AFTER_NONLEADING_CLARIFICATION`；本轮关闭 |
 | 11/10 | REV-20261027-JP-POSITION | 11/10用户独立答第④幅“箭头像左在右中块”，正确为右中←；该次老师当场宣布PASS；原答只提交位置与朝向，没有逐项说明移动步长/旋转角度 | `PASS / LOCATION_AND_ORIENTATION_CORRECT / METHOD_EXPLANATION_NOT_EXPLICIT_IN_RAW_ANSWER`；本轮关闭，后续混合自然验步骤 |
-| 11/11 | REV-20261021-QU-3SET | 11/04容斥并集式正确，但最终目标“都没学过”漏做总数减并集 | 新情境1题，先写目标，再完成容斥并核对最终问法；NOT_ATTEMPTED |
-| 11/11 | REV-20261028-VB-MAIN | 11/04无选项主旨复测停留在具体措施，未提炼中心原则 | 新材料1题，独立写一句完整主旨；NOT_ATTEMPTED |
+| 11/11（已实测） | REV-20261021-QU-3SET | 11/11新情境200人，原答`260-（260-90+10）=80`；容斥并集算180、识别最后取差，但把总人数200误用260，正确20 | `REVIEW_NOT_PASSED / SETUP_CORRECT / TOTAL_BASE_ERROR`；同卡T+7=**11/18**候选 |
+| 11/11（已实测） | REV-20261028-VB-MAIN | 11/11数字化政务无选项新材料，用户仅概括“为了解决老年人不会使用智能设备的问题。地方采取措施予以帮扶”，遗漏偏远群体与普惠原则 | `REVIEW_NOT_PASSED / PARTIAL_TOPIC / MAIN_IDEA_SCOPE_INCOMPLETE`；同卡T+7=**11/18**候选 |
 | 11/13 | REV-20261027-EY-EXTRACT-MEASURES | 11/06正式复测漏2项独立措施，方向正确但完整性不足 | 不提示条数，用不同材料检验完整列项、动作词准确性与题目范围；NOT_ATTEMPTED |
+| 11/17 | REV-20261110-JP-COUNT | 11/10数量点线面素已教、三线共点曾错；尚未独立跨日完成无提示综合识别 | 一张清晰新图归并复测，未轮到不算欠题；`NOT_ATTEMPTED` |
+| 11/18 | REV-20261021-QU-3SET | 11/11新情境并集法与最后取差方向正确，但总人数基准用错，80≠正确20 | 原卡复测一题；先确认总体与各集合口径，`NOT_ATTEMPTED` |
+| 11/18 | REV-20261028-VB-MAIN | 11/11主旨未覆盖偏远群体与公共服务普惠原则 | 原卡无选项完整主旨新材料复测，`NOT_ATTEMPTED` |
 
 已有日期中未轮到者保持候选，不因“周五大复习”改动为已经通过。方阵归并只改调度单元，不抹去五个历史ID、成绩或原11/02候选日。
 
@@ -80,6 +83,15 @@
 | 首次候选日 | `2026-11-17`（T+7）；是否当天能测取决于2—3张容量，不测不算欠题 |
 | 新题要求 | 清晰不歧义图、无题型提示；先自主判断数什么，再答数量；至少验证三线共点与交点位置数，不用已经讲过的相同图 |
 | 验收边界 | 本卡只代表数量规律基础，不替代11/17空间重构新课，更不能自动关闭判断2整讲 |
+## 3.3 2026-11-11正式复测与教学增量
+
+- 原始课堂：[11/11两卡复测、言语、申论](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-11-11_REVIEW_VERBAL_ESSAY.md)；[11/11日报](daily/2026-11-11_XINGCE.md)。
+- `REV-20261021-QU-3SET`：新情境总数200、并集180，用户原答`260-（260-90+10）=80`；已识别“总体减至少一个”，但把总体200错换260。该轮不通过，同卡11/18 T+7候选。
+- `REV-20261028-VB-MAIN`：新材料政务数字化、老年人操作与偏远地区网络两个困难，用户只概括老年人帮扶。缺跨群体完整主旨；该轮不通过，同卡11/18 T+7候选。
+- 言语细节判断四类首次系统教学，范围/程度/时态/主体与概念偷换4/4基础题答案正确，但部分未提交独立排除理由、无跨日方法证据。状态`TAUGHT / CURRENT_ITEM_ANSWER_PASS / TRANSFER_UNVERIFIED`。本次**不新建四张机械卡**，后续同科混合抽样；若将来需要新增一张方法簇复测，先检查当周上限5张。
+- 申论原因反推措施属11/09已学内容迁移：求职材料①表达不精准、②重复县城张贴未解决乡镇触达、③仅解决时间未充分处理参与地点；理解检查选B且追问理由正确，但用“不会上网”代替材料“不会使用预约系统”仍需用词控制。状态`TRANSFER_PARTIAL`，不因为后续追问正确重判原答。
+- 11/13措施旧卡及11/17数量图形归并卡仍保持原日期；11/09快递题仍`DEFERRED_BY_USER / NOT_SCORED`。周三无政治短块；实际耗时NOT_MEASURED。
+
 ## 4. 最近已宣布收官的事实（不自动重判）
 
 10/21三张旧卡3/3；10/22百分点/相对增长和分数比较通过；10/23平均数增长率有独立列式通过。10/26间隔增长率课堂宣布PASS，但原件仅最终答案，METHOD_NOT_VERIFIED；此历史判定保留，不假装用户提供过算式。10/27工程新参数和增长贡献率各完成一题方法迁移，本轮2/2 PASS；工程的工作量单位措辞提醒继续保留。对应原卷均在public-exam-knowledge/records/sessions，最新学生事实与原题优先。
