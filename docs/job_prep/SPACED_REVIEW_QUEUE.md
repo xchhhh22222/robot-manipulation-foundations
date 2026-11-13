@@ -1,6 +1,6 @@
 # 复习队列｜V2.2 当前调度入口
 
-更新2026-11-12；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
+更新2026-11-13；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
 
 ## 1. 当前调度规则
 
@@ -49,7 +49,7 @@
 | 11/10 | REV-20261027-JP-POSITION | 11/10用户独立答第④幅“箭头像左在右中块”，正确为右中←；该次老师当场宣布PASS；原答只提交位置与朝向，没有逐项说明移动步长/旋转角度 | `PASS / LOCATION_AND_ORIENTATION_CORRECT / METHOD_EXPLANATION_NOT_EXPLICIT_IN_RAW_ANSWER`；本轮关闭，后续混合自然验步骤 |
 | 11/11（已实测） | REV-20261021-QU-3SET | 11/11新情境200人，原答`260-（260-90+10）=80`；容斥并集算180、识别最后取差，但把总人数200误用260，正确20 | `REVIEW_NOT_PASSED / SETUP_CORRECT / TOTAL_BASE_ERROR`；同卡T+7=**11/18**候选 |
 | 11/11（已实测） | REV-20261028-VB-MAIN | 11/11数字化政务无选项新材料，用户仅概括“为了解决老年人不会使用智能设备的问题。地方采取措施予以帮扶”，遗漏偏远群体与普惠原则 | `REVIEW_NOT_PASSED / PARTIAL_TOPIC / MAIN_IDEA_SCOPE_INCOMPLETE`；同卡T+7=**11/18**候选 |
-| 11/13 | REV-20261027-EY-EXTRACT-MEASURES | 11/06正式复测漏2项独立措施，方向正确但完整性不足 | 不提示条数，用不同材料检验完整列项、动作词准确性与题目范围；NOT_ATTEMPTED |
+| 11/13（已实测） | REV-20261027-EY-EXTRACT-MEASURES | 11/06正式复测曾漏两项；11/13县域医保便民新材料，用户无提示提取5组已实施措施（综合窗口＋清单、指南下发讲解、集中代办、峰时增员、反馈台账与超时追踪），没有写入两项未启动计划 | `PASS / COMPLETE_EXTRACTION_5_OF_5 / SCOPE_CORRECT / CONCISENESS_IMPROVABLE`；**同一原卡本轮关闭**，保留11/06历史错，不另排失败T+7 |
 | 11/17 | REV-20261110-JP-COUNT | 11/10数量点线面素已教、三线共点曾错；尚未独立跨日完成无提示综合识别 | 一张清晰新图归并复测，未轮到不算欠题；`NOT_ATTEMPTED` |
 | 11/18 | REV-20261021-QU-3SET | 11/11新情境并集法与最后取差方向正确，但总人数基准用错，80≠正确20 | 原卡复测一题；先确认总体与各集合口径，`NOT_ATTEMPTED` |
 | 11/18 | REV-20261028-VB-MAIN | 11/11主旨未覆盖偏远群体与公共服务普惠原则 | 原卡无选项完整主旨新材料复测，`NOT_ATTEMPTED` |
@@ -114,6 +114,15 @@
 | 首次候选日 | **2026-11-19 T+7**；若当日容量不足，保留候选，不视为未完成作业 |
 | 新题要求 | 单一未见新情境，先自判分组/容量，再列“最多不满足+1”；避免复用原题数字或暗示分类；不混为旧概率卡 |
 | 验收边界 | 新卡本轮未PASS；首次教学后答对不是跨日独立验证。只代表最不利构造基础，不宣布数量4整讲CLOSED |
+
+## 3.5 2026-11-13周五W2混合与措施提取T+7正式PASS
+
+- [11/13申论原卷与四科原答](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-11-13_REVIEW_MIXED_ESSAY.md)；[11/13日报](daily/2026-11-13_XINGCE.md)。实际学习分钟数`NOT_MEASURED`。本日**正式复测1张PASS**，四科混合是周练不计独立T+7复测卡；本周新增独立复习单元仍是11/10图形、11/12抽屉两张，11/13无新卡。
+- `REV-20261027-EY-EXTRACT-MEASURES`：11/06正式失败“漏两项已实施措施”的历史判定完整保留。11/13新医保便民材料要求**只提已实施**，学生自主列5组，完整覆盖：综合窗口＋公开清单、乡镇服务站指南与宣讲、行动不便群众材料代办、高峰期增派人员、反馈台账＋超时追踪。**0项未实施计划混入**，教师课堂当场判`PASS / COMPLETE_EXTRACTION / SCOPE_CORRECT / CONCISENESS_IMPROVABLE`。本轮原卡关闭，不再按失败T+7派题；措辞有原文摘抄较长问题，以后正常申论自然检查概括，不开一个同法的机械卡。
+- 数量混合`(5+2×3)×3=33`用户选C且自主用组合简写列式，较11/12先错两题为**跨日新情境方法成立**；不扩展为排列组合全模块PASS。资料销量10000−8000得增长量2000，以8000为基期答25%，原答简写含“、”而非规范除号；`ANSWER_PASS_WITH_SHORTHAND`。
+- 言语细节“主城区12街道、郊区尚未确定”选择B正确，**A/C/D排除理由是教师追问后才提交**；本次细节迁移成立，不等于11/18`REV-20261028-VB-MAIN`**主旨概括**卡PASS。判断大正方形中横竖线分四小格，答4小＋1大＝5个正方形正确，**与11/17图形计数不同交点位置正式卡不等价**。
+- 之后候选日不变：11/17`REV-20261110-JP-COUNT`、11/18`REV-20261021-QU-3SET`和`REV-20261028-VB-MAIN`、11/19`REV-20261112-QU-PIGEONHOLE`，均**未做正式跨日复测**。11/09快递量题仍`DEFERRED_BY_USER / NOT_SCORED`，周末无补题。
+- 11/16周一资料主课按29讲及原卷诊断**基期比重公式方向与两期比重变动**；现期比重和百分点旧课不得重新包装NEW；申论仍须有新的实答，但今天这张措施提取卡不再复测。
 
 ## 4. 最近已宣布收官的事实（不自动重判）
 
