@@ -1,6 +1,6 @@
 # 复习队列｜V2.2 当前调度入口
 
-更新2026-11-13；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
+更新2026-11-16；[唯一主计划](CIVIL_SERVICE_MASTER_PLAN.md)。10/27已有真实课堂与作答，原始证据见[当日领域原卷](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-10-27_REVIEW_JUDGMENT_ESSAY_POLITICAL.md)。**原队列全部内容、原日期、review_id、技术复习和历史首答逐字保存在[变更前完整队列](archive/2026-10-26-before-v2.1/SPACED_REVIEW_QUEUE.md)**。原始源版本为3dde9412b19dc84d10420e9f42bfc845978a8485。
 
 ## 1. 当前调度规则
 
@@ -54,6 +54,7 @@
 | 11/18 | REV-20261021-QU-3SET | 11/11新情境并集法与最后取差方向正确，但总人数基准用错，80≠正确20 | 原卡复测一题；先确认总体与各集合口径，`NOT_ATTEMPTED` |
 | 11/18 | REV-20261028-VB-MAIN | 11/11主旨未覆盖偏远群体与公共服务普惠原则 | 原卡无选项完整主旨新材料复测，`NOT_ATTEMPTED` |
 | 11/19 | REV-20261112-QU-PIGEONHOLE | 11/12初次教学：不同容量球题首答5（正确7），互补配对1—20题选A10但解释又推20（正确11）；经反馈后红5蓝3黄1答6、1—6和7答4 | `NEW_UNIT / TAUGHT / METHOD_PARTIAL / CROSS_DAY_UNVERIFIED`；T+7新情境一题，需自主分组、计算最不利数量，`NOT_ATTEMPTED` |
+| 11/23（候选，尚未实测） | REV-20261116-EY-PHRASE | 11/16首次系统教学申论3“词句解释”：数字政务‘有没有/用不用得上’新材料，学生独立指出老年/偏远/反复往返等具体问题，但未提炼“可及性/实际效果”；填空追问后答“上线多少功能”“群众需要什么”，仍需引出真实能否用上 | `NEW_UNIT / TAUGHT / FIRST_ANSWER_PARTIAL / CORE_MEANING_AFTER_PROMPT / INDEPENDENT_TRANSFER_NOT_VERIFIED`；首次T+7在11/23另一份新材料无提示解释含义，单卡一次，只算本周**1个**新增独立方法簇，不拆关键词/原因/结论各三张；`NOT_ATTEMPTED` |
 
 已有日期中未轮到者保持候选，不因“周五大复习”改动为已经通过。方阵归并只改调度单元，不抹去五个历史ID、成绩或原11/02候选日。
 
@@ -123,6 +124,16 @@
 - 言语细节“主城区12街道、郊区尚未确定”选择B正确，**A/C/D排除理由是教师追问后才提交**；本次细节迁移成立，不等于11/18`REV-20261028-VB-MAIN`**主旨概括**卡PASS。判断大正方形中横竖线分四小格，答4小＋1大＝5个正方形正确，**与11/17图形计数不同交点位置正式卡不等价**。
 - 之后候选日不变：11/17`REV-20261110-JP-COUNT`、11/18`REV-20261021-QU-3SET`和`REV-20261028-VB-MAIN`、11/19`REV-20261112-QU-PIGEONHOLE`，均**未做正式跨日复测**。11/09快递量题仍`DEFERRED_BY_USER / NOT_SCORED`，周末无补题。
 - 11/16周一资料主课按29讲及原卷诊断**基期比重公式方向与两期比重变动**；现期比重和百分点旧课不得重新包装NEW；申论仍须有新的实答，但今天这张措施提取卡不再复测。
+
+## 3.6 2026-11-16 W3资料弱点诊断与申论词句解释新簇
+
+- [11/16完整原题、学生首答及教师追问](https://github.com/xchhhh22222/public-exam-knowledge/blob/main/records/sessions/2026-11-16_DATA_SHARE_ESSAY_PHRASE.md)；[日报](daily/2026-11-16_XINGCE.md)；[W3重排](W3_REPLAN_2026-11-16.md)。本日正式到期T+7卡**0张**，**没有正式复测PASS**；原始Q096最高不变；有效学习时间NOT_MEASURED。
+- **资料3旧知识修复**：基期比重新题部分360÷1.5=240、总1200÷1.2=1000，比重24%，学生独立选择A且提交还原方法，`BASE_RECOVERY_METHOD_VERIFIED_IN_NEW_CONTEXT`；10/15基期比重乘除错误仍保留历史，本次非正式T+7不自动倒改正式旧卡。`2026占比30%-2025占比24%=6`学生写“6%”，应为“6**个百分点**”，`UNIT_ERROR`；10/30先前比重差PASS保留，不把本次单位错隐藏。
+- **资料3增长快慢判断**：部分同比35%/总同比20%，学生首答“下降”，按`1.2÷1.35<1`判断（原文“1.2出1.35”），把新旧比重因子倒置；正确`1.35÷1.2>1`，应上升；`FIRST_ANSWER_WRONG / TEACHER_EXPLAINED / CROSS_DAY_UNVERIFIED`。已学方法的错误不单独创建无必要新卡，不当场刷到对；周五11/20择新材料在周混合自然验证，若再错再按原簇修复。
+- **申论3词句解释**首次系统教学“句意→背景问题→核心要求”一簇，用户首答只罗列手机/网络/往返问题；教师填空框架后说到“上线功能多少”与“群众需求”，仍没独立写“群众实际能不能使用、是否解决办事难”。`NEW_UNIT / TAUGHT / GUIDED / NOT_INDEPENDENTLY_VERIFIED`，建立且**只建立一张归并卡`REV-20261116-EY-PHRASE`**，11/23 T+7首次候选。11/20周内新材料独立课堂检测**不算11/23正式T+7**，且不自动关闭本卡。
+- **申论旧法对策**：A空泛/B具体正确，后来独立提出对策“社保部门增派人员、定向解决问题”没有代办/上门/材料预审动作；提示后才提乡镇和入户告知，记`INDEPENDENT_COUNTERMEASURE_PARTIAL / IMPROVEMENT_AFTER_GUIDANCE`。已学旧方法，不再重复NEW或新卡。
+- **保留原候选**：11/17`REV-20261110-JP-COUNT`，11/18`REV-20261021-QU-3SET`＋`REV-20261028-VB-MAIN`，11/19`REV-20261112-QU-PIGEONHOLE`，以上均**NOT_ATTEMPTED**。预计下周新增空间重构/排序卡，**只有实际新授及有用户作答时才建**；所有方法簇含申论政治每周≤5张。保持正常2小时、正式卡最多15分钟/2—3张与周末休息。
+- 11/09用户暂缓快递增长量题仍`DEFERRED_BY_USER / NOT_SCORED`。11/13申论旧卡已正式PASS关闭，不可再派同卡。
 
 ## 4. 最近已宣布收官的事实（不自动重判）
 
