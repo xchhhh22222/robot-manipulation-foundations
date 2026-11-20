@@ -108,3 +108,13 @@
 3. **FUXA官方发行/安全许可（2026-11-13核验）：** https://github.com/frangoteam/FUXA/releases 最新正式版仍为2026-10-19发布的v1.3.5；MIT许可证见 https://github.com/frangoteam/FUXA/blob/master/LICENSE ，衍生复用保留版权与许可，第三方素材、Pro功能另审。2026-11-11更新的CVE-2026-25939漏洞聚合记录涉及旧版1.2.8—1.2.10的scheduler权限绕过，公告修复版为1.2.11，不是v1.3.5本周新漏洞或新发布：https://github.com/frangoteam/FUXA/security/advisories/GHSA-c869-jx4c-q5fc 。沿用既有C10权限测试，不叠加重复风险任务。
 
 **范围/权限：** 仅更新本研究记录，不开工、不安装、不新建仓库、不调整主计划、源码或学习PASS；工时长期20:00后、周末频繁加班、代码归属不明的岗位不推荐。周末不派任务。
+
+## 2026-11-20 周五全国嵌入式求职与项目雷达（研究记录，不计学生开发进度）
+
+**结论：维持 V4.4-RC2 的 Linux C++ 设备通信/多线程/有界重连/SQLite/REST/三页Web 主线，不增加模块，不改路线或已批准的验收层级。** 本次仅检索和交叉核查外部信息，未投递岗位、开发项目、安装依赖、寄板、更新学习PASS。2028届真实可投岗位必须同时核实本人085404专业资格、双非学校限制、具体城市、本人代码职责与归属、工时、周末加班及是否驻厂；本轮未取得满足全部条件的单个岗位证据，不等于全国没有岗位。2027届历史JD与未标届别的校招页面一律不算2028届可投。
+
+1. **官方岗位参照（2026-11-20核验，非2028届可投确认）：** 乐鑫科技官网「Linux工程师（M5Stack）」深圳岗位页面标注**2026-07-01**，列出C/C++、GPIO/I²C/SPI/UART、U-Boot/设备树、板级调试与Bring-up，属于偏底层Linux/驱动能力的岗位；官网页面未明确2028届、085404精确代码/学校/工时/驻厂等资格，**不推荐为已核实可投**。来源：https://www.espressif.com/zh-hans/join-us/job-search?field_job_classification_tid%5B0%5D=2579&field_job_classification_tid%5B1%5D=2569&field_job_function_tid=2583&title= （企业官方，非课程营销）。中科曙光天津大学2026-09-08宣讲资料为**2027届**硕博（2027-01-01—12-31毕业），含嵌入式软件、驱动和C/C++通信库职位，城市见招聘简章，只有岗位大类而非个人职位工时与职责细目；来源：https://job.tju.edu.cn/recruitment/content/type/2/id/6157.html （高校发布的企业简章，非2028届）。两者都不足以要求把当前应用主产品改成BSP/驱动工程。
+2. **社区经验复核（不是新增JD强证据）：** B站2024-03-05 Linux C++多线程服务器＋Qt＋STM32个人项目，作者说明参考另一个收费项目，自编实现，但源代码许可未核实，禁止默认可直接复用：https://www.bilibili.com/video/BV1fz421X7gT/ 。2026-09-16 CSDN RK3588实时Linux压力/耐久测试文章许可声明为CC BY-SA 4.0，只能作为测试思路，文章数据不等于本人的实测、也不支持新增PREEMPT_RT：https://blog.csdn.net/weixin_41533008/article/details/165612115 。牛客2024—2026既有面经与本轮检索没有提供足以改变项目方向的多来源强证据；不据单篇营销/个人经历扩充Qt、V4L2、FreeRTOS、xv6。
+3. **FUXA候选上游发行、安全与许可（2026-11-20核验）：** 官方Releases仍以**2026-10-19 v1.3.5**为最新正式发布：https://github.com/frangoteam/FUXA/releases 。上游2026-11-12创建PR #2765试图升级Winston以修复轮转日志文件泄漏，2026-11-20读取GitHub仍为**open / unmerged**，不是已发布版修复、也不能从标题推断v1.3.5必然受影响：https://github.com/frangoteam/FUXA/pull/2765 。上游MIT版权/许可文本仍在：https://github.com/frangoteam/FUXA/blob/master/LICENSE ，二次复用须保留原作者许可声明；商业Pro、第三方图形/素材/商标另行核验。旧安全公告不以新检索结果重复计数，新PR不自动升级C10验收为新需求。
+
+**执行边界：** 2026-11-20本雷达不做技术项目开工/装环境；现有课程或主项目授权以各领域当前用户明确指令单独判断，不能由研究记录推导。没有用户本人的新代码、原始测试输出或答题，就不改 PASS。迭代：**无**。周末不派课。
